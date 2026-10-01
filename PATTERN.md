@@ -30,13 +30,13 @@ resulting packet, and perform any optional semantic review themselves.
 ## Reusable agent prompt
 
 ```text
-Use the installed `ctrlc` command to extract editable UI layers from the
-attached screenshot. Scope: application content only. Select and pass the
-appropriate ROI. Check the JSON result and read packet.json once. Review only
-uncertain component roles or grouping. Preserve measured bounds and colors;
-keep unsupported font, responsive, and behavior details unknown. Return the
-component tree, shared styles, and uncertainties in at most 300 words. Create
-a visual or code only when requested.
+If uv is missing, install it from https://docs.astral.sh/uv/getting-started/installation/.
+Install ctrlc 0.1.0 with `uv tool install https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl`; add `--force` if already installed. Check `ctrlc --version` and `ctrlc --help`.
+If `ctrlc` is not on PATH, invoke it by its full path under the directory printed by `uv tool dir --bin`.
+Set SCREENSHOT_PATH and OUTPUT_DIR from user-supplied paths. Ask only for missing paths. Inspect the screenshot, exclude OS chrome when present, and choose the application ROI in upright pixels; ask if bounds are unclear.
+Run `ctrlc extract "$SCREENSHOT_PATH" --roi X,Y,W,H --out "$OUTPUT_DIR" --inspector`. If native Vision OCR is unavailable, use `--ocr-json` only with compatible OCR supplied by the user; ask if missing.
+Check the success JSON and read its reported packet once. Review uncertain roles and grouping. Preserve measured bounds and colors; leave font, responsive, or behavior details unknown only when evidence is insufficient.
+Open the reported inspector HTML. If HTTP is needed, start `ctrlc serve "$OUTPUT_DIR/inspector.html" --port 0` in the background and open its URL. For style requests, render the reviewed scene with the same screenshot; do not extract again.
 ```
 
 After semantic review, render the saved scene with:

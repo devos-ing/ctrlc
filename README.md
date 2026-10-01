@@ -22,32 +22,49 @@ review.
 ## Installation
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) if needed.
-Python 3.10 or newer is required. From this checkout, install the command with:
+Python 3.10 or newer is required. Install the published command from any
+directory with:
 
 ```bash
-uv tool install .
+uv tool install https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl
 ```
 
 If `ctrlc` is already installed, replace that installation with:
 
 ```bash
-uv tool install --force .
+uv tool install --force https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl
 ```
 
-Native Vision OCR requires macOS and `swiftc`. On other platforms, use
-`--ocr-json` with OCR data from another provider.
+The PyPI distribution named `ctrlc` is an unrelated project. Use the release
+wheel URL above. For development, run `uv tool install .` from the repository
+root.
+
+Native Vision OCR requires macOS and `swiftc`. On other platforms, provide
+compatible OCR data with `--ocr-json`.
 
 ## Usage
 
-The saved brokerage example shows the rendering flow:
+Copy this prompt into a shell-capable agent:
+
+```text
+If uv is missing, install it from https://docs.astral.sh/uv/getting-started/installation/.
+Install ctrlc 0.1.0 with `uv tool install https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl`; add `--force` if already installed. Check `ctrlc --version` and `ctrlc --help`.
+If `ctrlc` is not on PATH, invoke it by its full path under the directory printed by `uv tool dir --bin`.
+Set SCREENSHOT_PATH and OUTPUT_DIR from user-supplied paths. Ask only for missing paths. Inspect the screenshot, exclude OS chrome when present, and choose the application ROI in upright pixels; ask if bounds are unclear.
+Run `ctrlc extract "$SCREENSHOT_PATH" --roi X,Y,W,H --out "$OUTPUT_DIR" --inspector`. If native Vision OCR is unavailable, use `--ocr-json` only with compatible OCR supplied by the user; ask if missing.
+Check the success JSON and read its reported packet once. Review uncertain roles and grouping. Preserve measured bounds and colors; leave font, responsive, or behavior details unknown only when evidence is insufficient.
+Open the reported inspector HTML. If HTTP is needed, start `ctrlc serve "$OUTPUT_DIR/inspector.html" --port 0` in the background and open its URL. For style requests, render the reviewed scene with the same screenshot; do not extract again.
+```
+
+The included brokerage example can be rendered and previewed from the checkout:
 
 ```bash
 ctrlc render brokerage/reviewed-scene.json brokerage/source.png --out brokerage/inspector.html
 ctrlc serve brokerage/inspector.html --port 0
 ```
 
-`render` uses the reviewed scene and its matching screenshot, preserves the
-white canvas and style panels, and leaves saved extraction data untouched.
+`render` uses the saved scene and matching screenshot, preserves the white
+canvas and style panels, and does not rerun OCR.
 
 ## Commands
 
