@@ -20,22 +20,15 @@ review names, roles, or grouping.
 
 ## Installation
 
-From a checkout, run:
+Run this in your terminal:
 
 ```bash
-sh install.sh
+curl -fsSL https://raw.githubusercontent.com/devos-ing/ctrlc/main/install.sh | sh
 ```
 
 The script installs `uv` if you need it, installs `ctrlc` 0.1.0, and checks
 `ctrlc --version`. Run it again to replace an existing installation. If the
 command isn't on your PATH, the script prints the full path you can use.
-
-You can also install without cloning:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/devos-ing/ctrlc/main/install.sh -o ctrlc-install.sh
-sh ctrlc-install.sh
-```
 
 ### If you already use uv
 
@@ -62,7 +55,7 @@ your own OCR data with `--ocr-json`. See [the OCR format](PATTERN.md#supplied-oc
 ### Ask an agent to install it
 
 ```text
-From the ctrlc checkout, run `sh install.sh`.
+Install ctrlc with `curl -fsSL https://raw.githubusercontent.com/devos-ing/ctrlc/main/install.sh | sh`.
 The script installs uv if needed and checks `ctrlc --version` after installation.
 If ctrlc isn't on PATH, use the full path printed by the script.
 ```
