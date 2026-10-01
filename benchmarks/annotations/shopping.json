@@ -1,0 +1,950 @@
+{
+  "version": 1,
+  "source_sha256": "a28a375d149374194005dc765adf3f04802c64082a59517bb869b67dff1a662c",
+  "width": 1179,
+  "height": 2676,
+  "roi": [
+    0,
+    140,
+    1179,
+    2416
+  ],
+  "nodes": [
+    {
+      "id": "shortcuts",
+      "box": [
+        48,
+        36,
+        1107,
+        126
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "avatar",
+      "box": [
+        49,
+        38,
+        122,
+        122
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "shortcuts",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Avatar"
+    },
+    {
+      "id": "notifications",
+      "box": [
+        184,
+        38,
+        122,
+        122
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "notification-icon",
+      "box": [
+        226,
+        77,
+        39,
+        43
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "notifications",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Bell"
+    },
+    {
+      "id": "shortcut-0",
+      "box": [
+        319,
+        38,
+        239,
+        122
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Deals",
+      "required": true
+    },
+    {
+      "id": "shortcut-0-icon",
+      "box": [
+        358,
+        76,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-0",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-0-text",
+      "box": [
+        411,
+        80,
+        113,
+        43
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Deals",
+      "required": true
+    },
+    {
+      "id": "shortcut-1",
+      "box": [
+        573,
+        38,
+        322,
+        122
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Following",
+      "required": true
+    },
+    {
+      "id": "shortcut-1-icon",
+      "box": [
+        612,
+        76,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-1",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-1-text",
+      "box": [
+        664,
+        80,
+        194,
+        43
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Following",
+      "required": true
+    },
+    {
+      "id": "shortcut-2",
+      "box": [
+        906,
+        38,
+        249,
+        122
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Saved",
+      "required": true
+    },
+    {
+      "id": "shortcut-2-icon",
+      "box": [
+        945,
+        76,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-2",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-2-text",
+      "box": [
+        983,
+        80,
+        138,
+        43
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-2",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Saved",
+      "required": true
+    },
+    {
+      "id": "order",
+      "box": [
+        48,
+        205,
+        1083,
+        184
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "order-logo",
+      "box": [
+        86,
+        249,
+        96,
+        96
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "order",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "KITSCH logo"
+    },
+    {
+      "id": "order-status",
+      "box": [
+        217,
+        252,
+        400,
+        98
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "order",
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "merchant",
+      "box": [
+        217,
+        253,
+        133,
+        36
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "order-status",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "KITSCH"
+    },
+    {
+      "id": "order-date",
+      "box": [
+        218,
+        309,
+        284,
+        39
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "order-status",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Ordered Jul 27",
+      "required": true
+    },
+    {
+      "id": "order-thumbnail",
+      "box": [
+        998,
+        249,
+        96,
+        96
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "order",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Order thumbnail"
+    },
+    {
+      "id": "email",
+      "box": [
+        48,
+        436,
+        1083,
+        188
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "package-icon",
+      "box": [
+        98,
+        494,
+        94,
+        74
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "email",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Package illustration"
+    },
+    {
+      "id": "email-copy",
+      "box": [
+        228,
+        491,
+        730,
+        100
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "email",
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "email-title",
+      "box": [
+        228,
+        492,
+        726,
+        39
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "email-copy",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Connect email to see more deliveries",
+      "required": true
+    },
+    {
+      "id": "email-description",
+      "box": [
+        228,
+        548,
+        649,
+        42
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "email-copy",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Track more of your packages with Shop"
+    },
+    {
+      "id": "email-chevron",
+      "box": [
+        1041,
+        516,
+        24,
+        30
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "email",
+      "atomic": true,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "recently-viewed",
+      "box": [
+        48,
+        674,
+        1083,
+        924
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "jump-heading",
+      "box": [
+        96,
+        728,
+        222,
+        43
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "recently-viewed",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Jump back in"
+    },
+    {
+      "id": "recent-product-0",
+      "box": [
+        96,
+        902,
+        405,
+        406
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "recently-viewed",
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "recent-product-0-photo",
+      "box": [
+        96,
+        902,
+        405,
+        406
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "recent-product-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Product photograph"
+    },
+    {
+      "id": "recent-product-0-price",
+      "box": [
+        148,
+        947,
+        127,
+        35
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "recent-product-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "$250.00"
+    },
+    {
+      "id": "recent-product-0-save",
+      "box": [
+        368,
+        1173,
+        98,
+        98
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "recent-product-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Save action",
+      "required": true
+    },
+    {
+      "id": "recent-product-1",
+      "box": [
+        525,
+        902,
+        405,
+        406
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "recently-viewed",
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "recent-product-1-photo",
+      "box": [
+        525,
+        902,
+        405,
+        406
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "recent-product-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Product photograph"
+    },
+    {
+      "id": "recent-product-1-price",
+      "box": [
+        576,
+        947,
+        134,
+        37
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "recent-product-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Save $20"
+    },
+    {
+      "id": "recent-product-1-save",
+      "box": [
+        797,
+        1173,
+        98,
+        98
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "recent-product-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Save action",
+      "required": true
+    },
+    {
+      "id": "recent-product-2",
+      "box": [
+        954,
+        902,
+        177,
+        406
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "recently-viewed",
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "recent-product-2-photo",
+      "box": [
+        954,
+        902,
+        177,
+        406
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "recent-product-2",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Product photograph"
+    },
+    {
+      "id": "recent-product-2-price",
+      "box": [
+        1004,
+        947,
+        102,
+        35
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "recent-product-2",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "$14.90"
+    },
+    {
+      "id": "recent-heading",
+      "box": [
+        95,
+        1468,
+        535,
+        74
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "recently-viewed",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Recently viewed",
+      "required": true
+    },
+    {
+      "id": "recent-action",
+      "box": [
+        985,
+        1452,
+        99,
+        99
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "recently-viewed",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "recent-arrow",
+      "box": [
+        1013,
+        1484,
+        42,
+        30
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "recent-action",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "brand-card",
+      "box": [
+        48,
+        1647,
+        1083,
+        744
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "brand-header",
+      "box": [
+        96,
+        1692,
+        964,
+        130
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "brand-card",
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "brand-avatar",
+      "box": [
+        96,
+        1692,
+        130,
+        130
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "brand-header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "VEHLA logo"
+    },
+    {
+      "id": "brand-name",
+      "box": [
+        249,
+        1710,
+        144,
+        39
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "brand-header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "VEHLA"
+    },
+    {
+      "id": "brand-rating",
+      "box": [
+        249,
+        1764,
+        201,
+        44
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "brand-header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "4.2 (2.1K)"
+    },
+    {
+      "id": "brand-menu",
+      "box": [
+        1004,
+        1749,
+        56,
+        18
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "brand-header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Three-dot menu",
+      "required": true
+    },
+    {
+      "id": "product-row",
+      "box": [
+        96,
+        1871,
+        987,
+        467
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "brand-card",
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "product-image",
+      "box": [
+        123,
+        1903,
+        430,
+        430
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "product-row",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Sunglasses photograph"
+    },
+    {
+      "id": "product-title",
+      "box": [
+        600,
+        2051,
+        333,
+        39
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "product-row",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Cleo - Black/Smoke",
+      "required": true
+    },
+    {
+      "id": "product-stars",
+      "box": [
+        604,
+        2096,
+        188,
+        39
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "product-row",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Rating stars"
+    },
+    {
+      "id": "product-reviews",
+      "box": [
+        812,
+        2103,
+        62,
+        36
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "product-row",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "(54)"
+    },
+    {
+      "id": "navigation",
+      "box": [
+        258,
+        2152,
+        665,
+        168
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-0",
+      "box": [
+        297,
+        2168,
+        113,
+        120
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Home",
+      "required": true
+    },
+    {
+      "id": "nav-0-icon",
+      "box": [
+        322,
+        2201,
+        67,
+        67
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Home",
+      "required": true
+    },
+    {
+      "id": "nav-1",
+      "box": [
+        455,
+        2168,
+        113,
+        120
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Search",
+      "required": true
+    },
+    {
+      "id": "nav-1-icon",
+      "box": [
+        480,
+        2201,
+        67,
+        67
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Search",
+      "required": true
+    },
+    {
+      "id": "nav-2",
+      "box": [
+        610,
+        2168,
+        113,
+        120
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Browse",
+      "required": true
+    },
+    {
+      "id": "nav-2-icon",
+      "box": [
+        635,
+        2201,
+        67,
+        67
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-2",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Browse",
+      "required": true
+    },
+    {
+      "id": "nav-3",
+      "box": [
+        766,
+        2168,
+        113,
+        120
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Bag",
+      "required": true
+    },
+    {
+      "id": "nav-3-icon",
+      "box": [
+        791,
+        2201,
+        67,
+        67
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-3",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Bag",
+      "required": true
+    }
+  ],
+  "ignore_regions": [],
+  "ambiguities": [
+    {
+      "reason": "Floating navigation overlaps the lower product card. Product photo bounds describe its visible frame, not hidden image content. Third carousel card is clipped at its parent edge."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "root",
+    "method": "manual coordinate annotation from original screenshot inspection",
+    "human_verified": false,
+    "independently_reviewed": true,
+    "bounds_tolerance_px": 3,
+    "reviewer": "gpt-6.1-sol-xhigh",
+    "review_method": "Independent original screenshot and annotation-overlay inspection",
+    "review_status": "model-reviewed-not-human-verified"
+  }
+}

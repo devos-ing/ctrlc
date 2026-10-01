@@ -1,0 +1,288 @@
+{
+  "version": 1,
+  "source_sha256": "e5bf668099caad9a67825bd4ef277012feeca7235160f85c1c6cdbc86c3421fe",
+  "width": 1125,
+  "height": 2556,
+  "roi": [
+    0,
+    215,
+    1125,
+    1200
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "box": [
+        260,
+        80,
+        610,
+        350
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "logo",
+      "box": [
+        478,
+        83,
+        155,
+        159
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Brand logo"
+    },
+    {
+      "id": "title",
+      "box": [
+        267,
+        353,
+        596,
+        68
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Log in or sign up",
+      "required": true
+    },
+    {
+      "id": "credentials",
+      "box": [
+        84,
+        478,
+        958,
+        299
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "email",
+      "box": [
+        87,
+        479,
+        953,
+        129
+      ],
+      "level": 2,
+      "type": "input",
+      "parent_id": "credentials",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "email-text",
+      "box": [
+        144,
+        523,
+        600,
+        48
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "email",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Email address",
+      "required": true
+    },
+    {
+      "id": "clear",
+      "box": [
+        941,
+        520,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "email",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Clear icon"
+    },
+    {
+      "id": "continue",
+      "box": [
+        84,
+        641,
+        958,
+        135
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "credentials",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "continue-label",
+      "box": [
+        439,
+        685,
+        246,
+        48
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "continue",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Continue",
+      "required": true
+    },
+    {
+      "id": "providers",
+      "box": [
+        84,
+        812,
+        958,
+        373
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "or",
+      "box": [
+        535,
+        813,
+        60,
+        46
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "providers",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "or"
+    },
+    {
+      "id": "google",
+      "box": [
+        84,
+        889,
+        958,
+        132
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "providers",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "google-icon",
+      "box": [
+        258,
+        925,
+        63,
+        61
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "google",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Google icon"
+    },
+    {
+      "id": "google-label",
+      "box": [
+        352,
+        934,
+        498,
+        48
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "google",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Continue with Google",
+      "required": true
+    },
+    {
+      "id": "apple",
+      "box": [
+        84,
+        1052,
+        958,
+        131
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "providers",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "apple-icon",
+      "box": [
+        278,
+        1090,
+        65,
+        69
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "apple",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Apple icon"
+    },
+    {
+      "id": "apple-label",
+      "box": [
+        367,
+        1095,
+        459,
+        48
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "apple",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Continue with Apple",
+      "required": true
+    }
+  ],
+  "ignore_regions": [],
+  "ambiguities": [
+    {
+      "reason": "Header and form section outer bounds are inferred whitespace groupings. Equivalent enclosing section bounds are acceptable; component bounds are independently visible."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "root",
+    "method": "manual coordinate annotation from original screenshot inspection",
+    "human_verified": false,
+    "independently_reviewed": true,
+    "bounds_tolerance_px": 3,
+    "reviewer": "gpt-6.1-sol-xhigh",
+    "review_method": "Independent original screenshot and annotation-overlay inspection",
+    "review_status": "model-reviewed-not-human-verified"
+  }
+}

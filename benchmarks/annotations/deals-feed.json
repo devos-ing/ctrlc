@@ -1,0 +1,500 @@
+{
+  "version": 1,
+  "status": "model-authored",
+  "source_sha256": "3f4d7e01ec5adcf08428baec441107333ae6dc54f92ad304ec86b84f3767d9fc",
+  "width": 520,
+  "height": 837,
+  "roi": [
+    0,
+    0,
+    520,
+    837
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "box": [
+        0,
+        0,
+        520,
+        76
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Deals header"
+    },
+    {
+      "id": "menu",
+      "box": [
+        16,
+        18,
+        40,
+        38
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "header",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Menu",
+      "required": true
+    },
+    {
+      "id": "menu-glyph",
+      "box": [
+        24,
+        27,
+        24,
+        20
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "menu",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete menu glyph"
+    },
+    {
+      "id": "title",
+      "box": [
+        80,
+        25,
+        67,
+        28
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Deals",
+      "required": true
+    },
+    {
+      "id": "search",
+      "box": [
+        473,
+        18,
+        36,
+        38
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "header",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Search",
+      "required": true
+    },
+    {
+      "id": "search-glyph",
+      "box": [
+        480,
+        25,
+        23,
+        24
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "search",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete search glyph"
+    },
+    {
+      "id": "tabs",
+      "box": [
+        0,
+        76,
+        520,
+        57
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Feed sorting tabs"
+    },
+    {
+      "id": "new",
+      "box": [
+        0,
+        76,
+        261,
+        57
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "tabs",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "New deals",
+      "required": true
+    },
+    {
+      "id": "new-label",
+      "box": [
+        110,
+        96,
+        41,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "new",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "NEW",
+      "required": true
+    },
+    {
+      "id": "popular",
+      "box": [
+        261,
+        76,
+        259,
+        57
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "tabs",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Popular deals",
+      "required": true
+    },
+    {
+      "id": "popular-label",
+      "box": [
+        351,
+        96,
+        81,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "popular",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "POPULAR",
+      "required": true
+    },
+    {
+      "id": "feed",
+      "box": [
+        0,
+        143,
+        520,
+        694
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Deals feed"
+    },
+    {
+      "id": "deal-lindsay",
+      "box": [
+        0,
+        143,
+        520,
+        244
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "feed",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "BonTon: Pink Rose Dresses\n$17 Shipped",
+      "required": true
+    },
+    {
+      "id": "deal-lindsay-avatar",
+      "box": [
+        20,
+        164,
+        42,
+        42
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "deal-lindsay",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic author avatar"
+    },
+    {
+      "id": "deal-lindsay-author",
+      "box": [
+        75,
+        167,
+        60,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "deal-lindsay",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Lindsay"
+    },
+    {
+      "id": "deal-lindsay-time",
+      "box": [
+        75,
+        186,
+        151,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "deal-lindsay",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Posted -172 minutes ago"
+    },
+    {
+      "id": "deal-lindsay-image",
+      "box": [
+        70,
+        214,
+        60,
+        154
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "deal-lindsay",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic product photograph"
+    },
+    {
+      "id": "deal-lindsay-title",
+      "box": [
+        197,
+        224,
+        280,
+        48
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "deal-lindsay",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "BonTon: Pink Rose Dresses\n$17 Shipped",
+      "required": true
+    },
+    {
+      "id": "deal-julie",
+      "box": [
+        0,
+        398,
+        520,
+        243
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "feed",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "WHBM: Extra 40% Off Sale",
+      "required": true
+    },
+    {
+      "id": "deal-julie-avatar",
+      "box": [
+        20,
+        416,
+        42,
+        42
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "deal-julie",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic author avatar"
+    },
+    {
+      "id": "deal-julie-author",
+      "box": [
+        75,
+        422,
+        34,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "deal-julie",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Julie"
+    },
+    {
+      "id": "deal-julie-time",
+      "box": [
+        75,
+        440,
+        151,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "deal-julie",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Posted -147 minutes ago"
+    },
+    {
+      "id": "deal-julie-image",
+      "box": [
+        20,
+        468,
+        151,
+        155
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "deal-julie",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic product photograph"
+    },
+    {
+      "id": "deal-julie-title",
+      "box": [
+        197,
+        479,
+        272,
+        27
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "deal-julie",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "WHBM: Extra 40% Off Sale",
+      "required": true
+    },
+    {
+      "id": "deal-chris",
+      "box": [
+        0,
+        652,
+        520,
+        185
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "feed",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "12 Ribbed Cotton Tank Tops\n$25 Shipped",
+      "required": true
+    },
+    {
+      "id": "deal-chris-avatar",
+      "box": [
+        20,
+        672,
+        42,
+        42
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "deal-chris",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic author avatar"
+    },
+    {
+      "id": "deal-chris-author",
+      "box": [
+        75,
+        676,
+        34,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "deal-chris",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Chris"
+    },
+    {
+      "id": "deal-chris-time",
+      "box": [
+        75,
+        695,
+        151,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "deal-chris",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Posted -106 minutes ago"
+    },
+    {
+      "id": "deal-chris-image",
+      "box": [
+        20,
+        722,
+        131,
+        115
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "deal-chris",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic product photograph, clipped by screenshot bottom"
+    },
+    {
+      "id": "deal-chris-title",
+      "box": [
+        197,
+        731,
+        289,
+        49
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "deal-chris",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "12 Ribbed Cotton Tank Tops\n$25 Shipped",
+      "required": true
+    }
+  ],
+  "ignore_regions": [],
+  "ambiguities": [
+    {
+      "node_ids": [
+        "deal-lindsay-image"
+      ],
+      "reason": "The first product photograph blends into the white card. Its box follows the visible dress/person extent rather than guessing an invisible rectangular source asset boundary."
+    },
+    {
+      "node_ids": [
+        "deal-chris",
+        "deal-chris-image"
+      ],
+      "reason": "Third deal is clipped by the bottom of the source screenshot. Visible bounds stop at y=837."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "gpt-6.1-sol-xhigh",
+    "method": "independent screenshot inspection",
+    "human_verified": false
+  }
+}

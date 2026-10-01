@@ -1,13 +1,13 @@
 # ctrlc showcase website
 
-Status: implemented.
+Status: implemented. Public showcase views expose only saved top-level nodes.
 
 [Figma layout draft](../design/website-figma.md): desktop, mobile, and representative hover states.
 
 ## Decisions
 
-- The first version shows curated screenshots and saved scenes.
-- Hover highlights the element beneath the cursor.
+- The first version shows curated screenshots and a first-level projection of saved scenes.
+- Hover highlights the top-level saved node beneath the cursor.
 - The page has three sections: header, install hero, and showcases.
 - Use a small monorepo. Keep the Python package at its current location and add the website under `apps/web`.
 - Use TanStack Start, React, TypeScript, and Bun. Prerender the homepage and each curated showcase route.
@@ -51,10 +51,10 @@ Keep the command on one line with horizontal scrolling when needed. Store it as 
 ## Screenshot interaction
 
 1. At rest, show the screenshot without labels covering its content.
-2. Hover highlights the deepest matching saved node and shows its name or type in a small label. Prefer the smallest box when matching nodes have equal depth.
+2. Hover highlights only the matching top-level saved node and shows its name or type in a small label. Nested saved children are outside the public showcase projection.
 3. Moving off the screenshot clears the highlight.
-4. Clicking or tapping opens the selected element in the detailed inspector. Keyboard users can open the inspector and choose elements from its list. Escape clears selection or closes the detail view.
-5. The detail route uses the existing generated inspector in an iframe, preserving its white panels, measured styles, and unknown fields. Its link remains shareable at `/showcases/$slug`.
+4. Clicking or tapping opens the selected top-level element in the detailed inspector. Keyboard users can open the inspector and choose only top-level elements from its list. Escape clears selection or closes the detail view.
+5. The detail route uses the existing renderer with a root-only scene projection in an iframe. It preserves the white panels, root measurements, styles, source hash, ROI, and unknown fields. It does not include child nodes, measurement artifacts, raw candidates, or depth controls. Its link remains shareable at `/showcases/$slug`.
 
 The gallery highlight is a thin adapter over saved bounds. It does not duplicate extraction, matte generation, style inference, or the existing inspector renderer.
 
@@ -66,14 +66,15 @@ Opening a selected node requires a small, documented selection interface in the 
 
 ```text
 catalog + existing source screenshots + saved scenes
-  -> validate matching source hashes and scene versions
-  -> existing ctrlc render generates full inspectors
+  -> validate matching source hashes, scene versions, and all original nodes
+  -> copy a root-only public scene projection without changing saved inputs
+  -> existing ctrlc render generates each public inspector from that projection
   -> prepare gallery images and node bounds
   -> Bun builds and TanStack Start prerenders pages
   -> static website assets
 ```
 
-The catalog accepts any compatible scene and screenshot pair. Brokerage is one entry. Prefer `brokerage/reviewed-scene.json` for its showcase, and label the existing sample scene as extracted rather than semantically reviewed.
+The catalog accepts any compatible scene and screenshot pair. Brokerage is one entry. Prefer `brokerage/reviewed-scene.json` for its showcase, and label the existing sample scene as extracted rather than semantically reviewed. Generated `scene.json` contains only the original top-level nodes with their `children` stripped; the source scene files remain unchanged.
 
 Use the existing renderer to validate source hash and dimensions while generating each inspector. Check the scene version at the web adapter. Generate public assets from the catalog so fixture paths have one source of truth. Preserve original scene JSON and screenshots.
 
@@ -94,8 +95,10 @@ catalog slug with link crawling disabled. Static files are written to
 TanStack Start runtime.
 
 The detail selection bridge is `?node=<id>` on the showcase route and
-`#node=<encoded-id>` in the generated inspector. The bridge validates node IDs
-before use and follows later inspector hash changes. The website replaces the
+`#node=<encoded-id>` in the generated inspector. It accepts only IDs from the
+root-only public scene; deep child IDs are invalid and cannot select an iframe
+element. Public inspectors have no measurement artifact, raw candidate view,
+depth selector, or child-family controls. The website replaces the
 iframe hash in the current history entry, keeping browser Back aligned with the
 detail route while preserving iframe focus. In embedded use, inspector messages
 require both the current origin and iframe window source; Escape closes the
@@ -107,8 +110,8 @@ Use GPT-6 Luna with xhigh effort for implementation and GPT-6.1 Sol with high or
 
 Keep verification at the browser E2E level:
 
-- Desktop flow: copy the real command, hover a known nested element, verify bounds at two preview sizes, open its inspector, and clear selection.
-- Mobile and keyboard flow: reach the same detail view without hover, select an element, and return to the gallery.
+- Desktop flow: copy the real command, hover and open a top-level node, verify bounds at two preview sizes, then confirm nested IDs and inspector controls are inaccessible.
+- Mobile and keyboard flow: tap or choose a top-level node, reject a child deep link, and verify Escape and browser Back return correctly.
 
 Run `bun run web:test:e2e` for the production static build and two real-browser
 flows. The local preview is `bun run web:preview`. Run existing CLI checks when

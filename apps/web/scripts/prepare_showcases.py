@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 import math
@@ -104,6 +105,39 @@ def validate_scene(scene: Any, slug: str) -> list[dict[str, Any]]:
     return flattened
 
 
+def first_level_projection(scene: dict[str, Any]) -> dict[str, Any]:
+    """Build the public showcase scene from top-level saved nodes only."""
+    projection = copy.deepcopy(scene)
+    roots = []
+    for node in scene["nodes"]:
+        root = copy.deepcopy(node)
+        root.pop("children", None)
+        if isinstance(root.get("level"), int):
+            root["level"] = 1
+        roots.append(root)
+    projection["nodes"] = roots
+    projection.pop("measurementArtifact", None)
+
+    hierarchy = projection.get("hierarchy")
+    if isinstance(hierarchy, dict):
+        depth = 1 if roots else 0
+        hierarchy["rootCount"] = len(roots)
+        hierarchy["recursiveNodeCount"] = len(roots)
+        hierarchy["requestedDepth"] = 1
+        hierarchy["achievedDepth"] = depth
+        hierarchy["availableDepth"] = depth
+        hierarchy["supportedDepth"] = 1
+        hierarchy["completedPasses"] = [1] if roots else []
+        hierarchy["stopReason"] = "showcase_first_level_projection"
+        hierarchy.pop("candidateAudit", None)
+        hierarchy.pop("measurementSha256", None)
+        pass_timings = hierarchy.get("passTimingsSeconds")
+        if isinstance(pass_timings, dict):
+            hierarchy["passTimingsSeconds"] = {key: value for key, value in pass_timings.items()
+                                                if key == "1"}
+    return projection
+
+
 def main() -> int:
     sys.path.insert(0, str(REPO_ROOT))
     from ctrlc.rendering import render_scene
@@ -140,7 +174,8 @@ def main() -> int:
                 scene = json.loads(scene_path.read_text(encoding="utf-8"))
             except (OSError, json.JSONDecodeError) as error:
                 raise CatalogError(f"{slug}: cannot read scene JSON: {error}") from error
-            nodes = validate_scene(scene, slug)
+            all_nodes = validate_scene(scene, slug)
+            nodes = [node for node in all_nodes if node["depth"] == 0]
             try:
                 with Image.open(source_path) as image:
                     oriented_size = ImageOps.exif_transpose(image).size
@@ -166,9 +201,11 @@ def main() -> int:
             target_dir = public_showcases / slug
             target_dir.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source_path, target_dir / "source.png")
-            shutil.copyfile(scene_path, target_dir / "scene.json")
+            public_scene = first_level_projection(scene)
+            (target_dir / "scene.json").write_text(
+                json.dumps(public_scene, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             render_result = render_scene(
-                scene_path,
+                public_scene,
                 source_path,
                 target_dir / "inspector.html",
             )

@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -21,6 +22,18 @@ class InstallScriptTests(unittest.TestCase):
         self.outside.mkdir()
         self.installer = self.outside / "install.sh"
         shutil.copyfile(ROOT / "install.sh", self.installer)
+        self.dist = self.work / "dist"
+        self.dist.mkdir()
+        build = subprocess.run(
+            [sys.executable, "-m", "build", "--wheel", "--no-isolation",
+             "--outdir", str(self.dist), str(ROOT)],
+            cwd=self.work, capture_output=True, text=True,
+        )
+        if build.returncode:
+            self.fail(f"wheel build failed:\n{build.stdout}\n{build.stderr}")
+        wheels = list(self.dist.glob("ctrlc-0.1.1-*.whl"))
+        self.assertEqual(len(wheels), 1, f"expected fresh 0.1.1 wheel, found {wheels}")
+        self.wheel = wheels[0]
         self.bin = self.work / "tool bin"
         self.env = {
             **os.environ,
@@ -28,6 +41,7 @@ class InstallScriptTests(unittest.TestCase):
             "UV_TOOL_BIN_DIR": str(self.bin),
             "UV_CACHE_DIR": str(self.work / "cache"),
             "UV_INSTALL_DIR": str(self.work / "uv bin"),
+            "CTRLC_WHEEL_PATH": str(self.wheel),
         }
 
     def run_installer(self, *, piped=False):
@@ -40,7 +54,8 @@ class InstallScriptTests(unittest.TestCase):
 
     def assert_installed(self, result):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        self.assertIn("ctrlc 0.1.0", result.stdout)
+        self.assertIn("Installing ctrlc 0.1.1", result.stdout)
+        self.assertIn("ctrlc 0.1.1", result.stdout)
         self.assertIn(f"Installed ctrlc at {self.bin / 'ctrlc'}", result.stdout)
         self.assertIn("to your PATH", result.stdout)
         rendered = self.outside / "inspector.html"
@@ -75,6 +90,7 @@ class InstallScriptTests(unittest.TestCase):
     def test_failed_download_does_not_report_success(self):
         if not shutil.which("uv"):
             self.skipTest("uv is required for the offline failure case")
+        self.env.pop("CTRLC_WHEEL_PATH", None)
         self.env["UV_OFFLINE"] = "1"
         result = self.run_installer()
         self.assertNotEqual(result.returncode, 0)

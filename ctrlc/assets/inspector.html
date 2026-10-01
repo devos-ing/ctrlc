@@ -28,6 +28,10 @@
     #ui-exploded-inspector .el-subtitle { color: var(--el-muted); margin: 3px 0 0; font-size: 13px; }
     #ui-exploded-inspector .el-toggle { padding: 9px 15px; background: var(--el-panel); border: 1px solid var(--el-border); border-radius: 9px; min-height: 44px; }
     #ui-exploded-inspector .el-toggle[aria-pressed="true"] { color: var(--el-purple); background: var(--el-purple-soft); border-color: var(--el-purple); }
+    #ui-exploded-inspector .el-view-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    #ui-exploded-inspector .el-depth { min-height: 44px; padding: 8px 12px; border: 1px solid var(--el-border); border-radius: 9px; background: #ffffff; color: var(--el-text); font: inherit; }
+    #ui-exploded-inspector .el-evidence-toggle { min-height: 44px; padding: 8px 12px; border: 1px solid var(--el-border); border-radius: 9px; background: #ffffff; color: var(--el-text); }
+    #ui-exploded-inspector .el-evidence-toggle[aria-pressed="true"] { color: var(--el-purple); background: var(--el-purple-soft); border-color: var(--el-purple); }
     #ui-exploded-inspector .el-board { position: relative; width: 100%; height: 455px; background: var(--el-board); border: 1px solid var(--el-border); border-radius: 12px; overflow: hidden; }
     #ui-exploded-inspector .el-stage-label { position: absolute; top: 17px; left: 20px; color: var(--el-board-text); font-size: 12px; letter-spacing: .03em; pointer-events: none; }
     #ui-exploded-inspector .el-screen { position: absolute; left: 0; top: 0; padding: 0; border: 0; background: #f6f6f6; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 36px light-dark(#19444f1a, #00000038); transition: opacity 160ms cubic-bezier(0.23, 1, 0.32, 1), transform 240ms var(--el-ease); }
@@ -55,6 +59,10 @@
     #ui-exploded-inspector .el-value { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
     #ui-exploded-inspector .el-swatch { display: inline-block; width: 16px; height: 16px; border: 1px solid var(--el-border); border-radius: 4px; flex-shrink: 0; }
     #ui-exploded-inspector .el-footnote { color: var(--el-muted); margin: 18px 0 0; font-size: 12px; }
+    #ui-exploded-inspector .el-evidence-panel { margin-top: 12px; padding: 14px 18px; border: 1px solid var(--el-border); border-radius: 12px; background: #ffffff; }
+    #ui-exploded-inspector .el-evidence-panel h3 { margin: 0 0 6px; font-size: 15px; }
+    #ui-exploded-inspector .el-evidence-panel p { margin: 0; color: var(--el-muted); }
+    #ui-exploded-inspector .el-evidence-panel ul { margin: 8px 0 0; padding-left: 20px; }
     #ui-exploded-inspector .el-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
     #ui-exploded-inspector[data-ready="false"] .el-piece,
     #ui-exploded-inspector[data-ready="false"] .el-screen,
@@ -76,6 +84,11 @@
     <div>
       <h2 class="el-title">Screenshot, separated</h2>
       <p class="el-subtitle">Hover to reveal components. Click one to inspect its styles.</p>
+    </div>
+    <div class="el-view-controls" hidden>
+      <label for="el-depth">Saved depth</label>
+      <select class="el-depth" id="el-depth" aria-label="Saved hierarchy depth"></select>
+      <button class="el-evidence-toggle cursor-interaction" type="button" aria-pressed="false">Raw candidates</button>
     </div>
     <button class="el-toggle cursor-interaction" type="button" aria-pressed="false" aria-controls="el-board">Separate layers</button>
   </div>
@@ -99,23 +112,38 @@
     </div>
     <p class="el-footnote" hidden>Bounds use screenshot pixels. Corner radii are estimates; exact fonts are unknown.</p>
   </section>
+  <section class="el-evidence-panel" hidden aria-label="Measurement evidence review">
+    <h3>Measurement evidence</h3>
+    <p class="el-evidence-summary"></p>
+    <ul class="el-evidence-reasons"></ul>
+  </section>
   <span class="el-status" role="status" aria-live="polite"></span>
   <script type="application/json" data-scene>__SCENE_JSON__</script>
+  <script type="application/json" data-measurements>__MEASUREMENTS_JSON__</script>
   <script>
     (() => {
       const root = document.getElementById('ui-exploded-inspector');
       root.dataset.ready = 'false';
       const scene = JSON.parse(root.querySelector('[data-scene]').textContent);
+      const measurement = JSON.parse(root.querySelector('[data-measurements]').textContent);
       const board = root.querySelector('.el-board');
       const screen = root.querySelector('.el-screen');
       const screenCanvas = screen.querySelector('canvas');
       const toggle = root.querySelector('.el-toggle');
-      const nodes = scene.nodes;
+      const depthSelect = root.querySelector('.el-depth');
+      const evidenceToggle = root.querySelector('.el-evidence-toggle');
+      const roots = scene.nodes;
+      let nodes = roots;
       const lookup = new Map();
       const parents = new Map();
       const pieces = new Map();
       const source = new Image();
       const fineHover = matchMedia('(hover: hover) and (pointer: fine)');
+      const hierarchy = scene.hierarchy || null;
+      const evidenceAudit = hierarchy?.candidateAudit || {};
+      const savedDepth = hierarchy?.achievedDepth || 1;
+      let visibleDepth = savedDepth;
+      let rawMode = false;
       let selected = null;
       let pinned = false;
       let hovered = false;
@@ -133,7 +161,7 @@
           return 'Icon';
         }
         if (parent && node.type === 'text') return 'Label';
-        if (node.type === 'image') return node.role === 'brandmark' || (nodes.length === 7 && nodes.some(n => n.type === 'input')) ? 'Logo' : 'Image';
+        if (node.type === 'image') return node.role === 'brandmark' || (roots.length === 7 && roots.some(n => n.type === 'input')) ? 'Logo' : 'Image';
         if (node.type === 'input') return /@/.test(text) ? 'Email input' : 'Input';
         if (node.type === 'button') {
           if (text.includes('google')) return 'Google button';
@@ -141,7 +169,7 @@
           return /^(continue|next|log in|sign up)$/.test(text) ? 'Primary button' : node.label || 'Button';
         }
         if (text === 'or' || node.role === 'separator') return 'Separator';
-        if (node.type === 'text') return nodes.length === 7 && nodes.some(n => n.type === 'input') ? 'Heading' : 'Text';
+        if (node.type === 'text') return roots.length === 7 && roots.some(n => n.type === 'input') ? 'Heading' : 'Text';
         return node.type.charAt(0).toUpperCase() + node.type.slice(1);
       }
 
@@ -150,7 +178,61 @@
         if (parent) parents.set(node.id, parent);
         (node.children || []).forEach(child => index(child, node));
       }
-      nodes.forEach(node => index(node, null));
+      roots.forEach(node => index(node, null));
+
+      function frontier(node, depth, parent = null, result = []) {
+        if (parent) parents.set(node.id, parent);
+        if ((node.level || 1) >= depth || !node.children?.length) {
+          result.push(node);
+        } else {
+          node.children.forEach(child => frontier(child, depth, node, result));
+        }
+        return result;
+      }
+
+      function rawCandidates() {
+        const measured = (measurement?.candidates || []).map(record => ({
+          ...record.node,
+          id: record.evidenceId,
+          evidenceId: record.evidenceId,
+          displayName: 'Raw candidate · ' + (record.node.label || record.node.text || record.node.role || record.node.type),
+          candidateDecision: evidenceAudit[record.evidenceId]?.reason || 'Retained as raw measurement evidence',
+          level: 0
+        }));
+        const surfaces = (measurement?.pixelRegions || []).map(region => ({
+          id: region.evidenceId,
+          evidenceId: region.evidenceId,
+          type: 'image',
+          role: 'pixel-surface-candidate',
+          displayName: 'Raw pixel contour',
+          box: region.box,
+          candidateDecision: 'Measured pixel contour; any merged enclosure references the source contour records.',
+          level: 0
+        }));
+        const localRegions = (measurement?.localRegions || []).map(region => ({
+          id: region.evidenceId,
+          evidenceId: region.evidenceId,
+          type: 'container',
+          role: 'local-pixel-region-candidate',
+          displayName: 'Raw local pixel region',
+          box: region.box,
+          evidenceRefs: [region.evidenceId, ...(region.parentEvidenceIds || [])],
+          candidateDecision: evidenceAudit[region.evidenceId]?.reason || 'Measured against a verified parent fill; not active until a saved hierarchy uses it.',
+          level: 0
+        }));
+        return [...measured, ...surfaces, ...localRegions];
+      }
+
+      function refreshVisibleNodes() {
+        nodes = rawMode ? rawCandidates() : hierarchy
+          ? roots.flatMap(node => frontier(node, visibleDepth)) : roots;
+        if (!loaded) return;
+        nodes.forEach(node => lookup.set(node.id, node));
+        board.querySelectorAll('.el-piece').forEach(piece => piece.remove());
+        pieces.clear();
+        makePieces();
+        place();
+      }
 
       function styleOf(node) {
         return node.styleMeasurements || scene.styles[node.styleRef] || {};
@@ -287,8 +369,10 @@
         screen.setAttribute('aria-expanded', String(expanded));
         nodes.forEach((node, i) => {
           const button = pieces.get(node.id);
+          if (!button || !button.isConnected) return;
           const base = screenWidth / scene.roi[2];
           const target = targets[i];
+          if (!target) return;
           const pieceWidth = target.width;
           const pieceHeight = pieceWidth * node.box[3] / node.box[2];
           const x = expanded ? target.x : screenX + node.box[0] * base;
@@ -303,7 +387,7 @@
             ? radius * pieceWidth / node.box[2] + 'px' : '0';
           button.disabled = !expanded;
           button.setAttribute('aria-hidden', String(!expanded));
-          const isSelected = selected && topNode(selected)?.id === node.id;
+          const isSelected = selected === node.id;
           button.dataset.selected = String(Boolean(isSelected));
           button.setAttribute('aria-pressed', String(Boolean(isSelected)));
         });
@@ -407,6 +491,7 @@
           addProperty('Font weight', textStyle.fontWeight == null ? 'Unknown' : String(textStyle.fontWeight));
         }
         if (node.type === 'image') addProperty('Source', 'Screenshot region; original asset unknown');
+        if (node.candidateDecision) addProperty('Evidence decision', node.candidateDecision);
         const shared = nodes.filter(other => other.id !== node.id && other.styleRef && other.styleRef === node.styleRef);
         if (shared.length) addProperty('Shared style', shared.map(other => name(other)).join(', '));
         root.querySelector('.el-status').textContent = title + ' styles selected';
@@ -454,6 +539,58 @@
         place();
       }
 
+      function updateEvidencePanel() {
+        const panel = root.querySelector('.el-evidence-panel');
+        panel.hidden = !rawMode;
+        if (!rawMode) return;
+        const candidates = [...(measurement?.candidates || []), ...(measurement?.pixelRegions || []),
+          ...(measurement?.localRegions || [])];
+        const omitted = Object.entries(evidenceAudit).filter(([, item]) => item.status === 'omitted');
+        root.querySelector('.el-evidence-summary').textContent =
+          `${candidates.length} measured candidates remain available. ${omitted.length} are omitted from the useful tree.`;
+        const list = root.querySelector('.el-evidence-reasons');
+        list.replaceChildren();
+        omitted.forEach(([id, item]) => {
+          const row = document.createElement('li');
+          row.textContent = `${id}: ${item.reason}`;
+          list.append(row);
+        });
+        if (!omitted.length) {
+          const row = document.createElement('li');
+          row.textContent = 'No candidates were omitted from the useful tree.';
+          list.append(row);
+        }
+      }
+
+      if (hierarchy && measurement) {
+        root.querySelector('.el-view-controls').hidden = false;
+        for (let depth = 1; depth <= savedDepth; depth += 1) {
+          const option = document.createElement('option');
+          option.value = String(depth);
+          option.textContent = `Depth ${depth}`;
+          depthSelect.append(option);
+        }
+        depthSelect.value = String(savedDepth);
+        depthSelect.addEventListener('change', () => {
+          visibleDepth = Number(depthSelect.value);
+          rawMode = false;
+          evidenceToggle.setAttribute('aria-pressed', 'false');
+          selected = null;
+          inspect();
+          refreshVisibleNodes();
+          updateEvidencePanel();
+        });
+        evidenceToggle.addEventListener('click', () => {
+          rawMode = !rawMode;
+          evidenceToggle.setAttribute('aria-pressed', String(rawMode));
+          evidenceToggle.textContent = rawMode ? 'Show useful tree' : 'Raw candidates';
+          selected = null;
+          inspect();
+          refreshVisibleNodes();
+          updateEvidencePanel();
+        });
+      }
+
       board.addEventListener('pointerenter', event => {
         if (fineHover.matches && event.pointerType !== 'touch') {
           root.dataset.keyboard = 'false';
@@ -494,7 +631,7 @@
         screenCanvas.height = scene.roi[3];
         screenCanvas.getContext('2d').drawImage(source, ...scene.roi,
           0, 0, screenCanvas.width, screenCanvas.height);
-        makePieces();
+        refreshVisibleNodes();
         restore(window.openai?.widgetState);
         if (new URLSearchParams(window.location.hash.slice(1)).has('node')) applyHashSelection();
         place();

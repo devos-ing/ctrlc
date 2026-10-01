@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "recordedDate": "2026-10-01",
+  "kind": "saved-scene-inventory",
+  "benchmarkStatus": "not-run",
+  "accuracyStatus": "unmeasured",
+  "method": "Read existing scene.json and run.json artifacts and compare screenshot hashes. No extraction, OCR, or packet reads.",
+  "timingComparability": "Historical timings have unknown execution conditions. They are not comparable benchmark results.",
+  "fixtures": [
+    {
+      "id": "sign-in",
+      "source": "sample/source.png",
+      "scene": "sample/scene.json",
+      "sourceSha256": "e5bf668099caad9a67825bd4ef277012feeca7235160f85c1c6cdbc86c3421fe",
+      "sourceMatches": true,
+      "imageSize": [1125, 2556],
+      "roi": [0, 215, 1125, 1200],
+      "rootCandidates": 7,
+      "recursiveNodes": 14,
+      "treeDepth": 2,
+      "nodeTypes": {"button": 3, "image": 4, "input": 1, "text": 6},
+      "unknownAssets": 1,
+      "historicalRun": {"cacheHit": false, "elapsedSeconds": 0.565, "llmCalls": 0, "modelTokens": 0, "packetBytes": 1997},
+      "independentlyAnnotated": false
+    },
+    {
+      "id": "brokerage",
+      "source": "brokerage/source.png",
+      "scene": "brokerage/scene.json",
+      "sourceSha256": "4bd97abda0c55a465346f3ecd18a8521360ab6bdf32fda0b7334786169dc6661",
+      "sourceMatches": true,
+      "imageSize": [1179, 2676],
+      "roi": [0, 150, 1179, 2370],
+      "rootCandidates": 29,
+      "recursiveNodes": 38,
+      "treeDepth": 2,
+      "nodeTypes": {"container": 1, "image": 14, "text": 23},
+      "unknownAssets": 11,
+      "historicalRun": {"cacheHit": false, "elapsedSeconds": 2.786, "llmCalls": 0, "modelTokens": 0, "packetBytes": 5128},
+      "reviewedScene": "brokerage/reviewed-scene.json",
+      "independentlyAnnotated": false
+    },
+    {
+      "id": "shopping",
+      "source": ".scratch/shop-ui-f322be70/source.png",
+      "scene": ".scratch/shop-ui-f322be70/scene.json",
+      "sourceSha256": "a28a375d149374194005dc765adf3f04802c64082a59517bb869b67dff1a662c",
+      "sourceMatches": true,
+      "imageSize": [1179, 2676],
+      "roi": [0, 140, 1179, 2416],
+      "rootCandidates": 37,
+      "recursiveNodes": 42,
+      "treeDepth": 2,
+      "nodeTypes": {"container": 1, "image": 21, "text": 20},
+      "unknownAssets": 19,
+      "historicalRun": {"cacheHit": false, "elapsedSeconds": 2.625, "llmCalls": 0, "modelTokens": 0, "packetBytes": 4750},
+      "independentlyAnnotated": false,
+      "fixtureAvailability": "Private local scratch artifact. Copy to a stable local benchmark directory before benchmark execution."
+    }
+  ]
+}

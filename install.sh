@@ -23,9 +23,9 @@ if [ -z "$uv_bin" ]; then
     fi
 fi
 
-wheel_url=https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl
-printf 'Installing ctrlc 0.1.0...\n'
-"$uv_bin" tool install --force "$wheel_url"
+wheel_source=${CTRLC_WHEEL_PATH:-https://github.com/devos-ing/ctrlc/releases/download/v0.1.1/ctrlc-0.1.1-py3-none-any.whl}
+printf 'Installing ctrlc 0.1.1...\n'
+"$uv_bin" tool install --force "$wheel_source"
 
 tool_bin=$("$uv_bin" tool dir --bin)
 "$tool_bin/ctrlc" --version

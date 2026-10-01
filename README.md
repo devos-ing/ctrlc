@@ -11,6 +11,8 @@ want an agent to review names, roles, or grouping, the agent handles that part.
 
 [Download the MP4 demo](demo/assets/ctrlc-demo.mp4)
 
+[Changelog](CHANGELOG.md) · [Download version 0.1.1](https://github.com/devos-ing/ctrlc/releases/tag/v0.1.1).
+
 ## Which agents have been tested?
 
 We've tested:
@@ -21,6 +23,13 @@ We've tested:
 Other models, including Grok, haven't been tested. Getting the CLI to run
 doesn't tell you how well an agent will review names, roles, or grouping.
 
+## Benchmark
+
+We evaluated 12 screenshots, including six held-out screens, with ten runs per
+configuration. Held-out depth-three macro F1 was **0.211**, so hierarchical
+extraction remains experimental and opt-in. Labels were model-reviewed, not
+human-verified. See [benchmark results and reproduction](BENCHMARK.md).
+
 ## Installation
 
 Run this in your terminal:
@@ -29,28 +38,34 @@ Run this in your terminal:
 curl -fsSL https://raw.githubusercontent.com/devos-ing/ctrlc/main/install.sh | sh
 ```
 
-The script installs `uv` if you need it, installs `ctrlc` 0.1.0, and checks
+The script installs `uv` if you need it, installs `ctrlc` 0.1.1, and checks
 `ctrlc --version`. Run it again to replace an existing installation. If the
 command isn't on your PATH, the script prints the full path you can use.
+The default wheel URL targets the 0.1.1 GitHub release asset.
+To install a locally built wheel, set
+`CTRLC_WHEEL_PATH` to its path when running `install.sh`.
 
 ### If you already use uv
 
 You'll need Python 3.10 or newer. Run this from any directory:
 
 ```bash
-uv tool install https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl
+uv tool install https://github.com/devos-ing/ctrlc/releases/download/v0.1.1/ctrlc-0.1.1-py3-none-any.whl
 ```
 
 If you already have `ctrlc` installed, use `--force` to replace it:
 
 ```bash
-uv tool install --force https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl
+uv tool install --force https://github.com/devos-ing/ctrlc/releases/download/v0.1.1/ctrlc-0.1.1-py3-none-any.whl
 ```
 
 Use the wheel URL above. `uv tool install ctrlc` installs a different project
 from PyPI.
 If you're working on this repo, run `uv tool install .` from the repository root
 instead.
+
+Local installs and installer tests can use a wheel path with
+`CTRLC_WHEEL_PATH=/path/to/ctrlc-0.1.1-py3-none-any.whl`.
 
 The built-in OCR uses macOS Vision and needs `swiftc`. On other platforms, pass
 your own OCR data with `--ocr-json`. See [the OCR format](PATTERN.md#supplied-ocr-and-compatibility).
@@ -94,7 +109,8 @@ again.
 
 | Command | What it does |
 | --- | --- |
-| `ctrlc extract IMAGE --out DIR` | Measure a screenshot. Options include `--roi`, `--languages`, `--ocr-json`, `--refresh`, and `--inspector`. |
+| `ctrlc extract IMAGE --out DIR` | Measure a screenshot. Options include `--roi`, `--languages`, `--ocr-json`, `--refresh`, `--inspector`, and the opt-in `--depth`. |
+| `ctrlc refine SCENE IMAGE --out DIR --depth N` | Refine a saved hierarchy from its measurement artifact without running OCR. |
 | `ctrlc render SCENE IMAGE --out HTML` | Render a saved scene without running extraction or OCR again. |
 | `ctrlc serve HTML [--port PORT]` | Serve an inspector on localhost. Use port `0` to let it pick an available port. |
 | `ctrlc --help` / `ctrlc COMMAND --help` | Show the available commands and options. |
@@ -104,6 +120,19 @@ Workflow commands return JSON so agents and scripts can read the results.
 Successful commands write to stdout and exit with code `0`. Errors write to
 stderr and exit with code `2` for argument errors or `1` for workflow errors.
 Help and version output are plain text.
+
+### Choose a hierarchy depth
+
+Omit `--depth` to keep the legacy scene format and grouping. Use `--depth 1`, `--depth 2`, or `--depth 3` to request sections, components, or meaningful contents. A pass stops when the saved evidence cannot support another useful level.
+
+```bash
+ctrlc extract screenshot.png --out result --depth 1 --inspector
+ctrlc refine result/scene.json screenshot.png --out refined --depth 3 --inspector
+```
+
+Hierarchical extraction saves OCR and pixel measurements in a content-addressed `measurements-*.json` artifact. Refinement validates that artifact and the screenshot hash, then reuses the saved measurements. The inspector can show a saved depth or raw candidates with their grouping decisions. Changing the view does not run extraction.
+
+The Python package exports `run_extraction(..., depth=None)` and `refine_scene(scene_source, image_path, output_dir, *, depth)`. Leave `depth` omitted to use the legacy workflow.
 
 The original scripts still work: `extract_ui.py`,
 `render_inspector.py`, and `preview_server.py`.
@@ -124,8 +153,10 @@ To check the installer too, run:
 uv run --extra test python -m unittest test_install_sh -v
 ```
 
-The installer tests download the release wheel and `uv` into temporary
-directories. They leave your installed tools alone.
+The installer tests build a 0.1.1 wheel locally and pass it to the real
+installer with `CTRLC_WHEEL_PATH`. The bootstrap case downloads `uv` only when
+needed, and the offline failure case uses the default release URL. Tests use
+temporary tool directories and leave your installed tools alone.
 
 Run the existing regression checks with:
 

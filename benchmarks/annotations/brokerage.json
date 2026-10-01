@@ -1,0 +1,877 @@
+{
+  "version": 1,
+  "source_sha256": "4bd97abda0c55a465346f3ecd18a8521360ab6bdf32fda0b7334786169dc6661",
+  "width": 1179,
+  "height": 2676,
+  "roi": [
+    0,
+    150,
+    1179,
+    2370
+  ],
+  "nodes": [
+    {
+      "id": "toolbar",
+      "box": [
+        48,
+        26,
+        1084,
+        150
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "account",
+      "box": [
+        48,
+        26,
+        400,
+        135
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "toolbar",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "menu",
+      "box": [
+        107,
+        74,
+        44,
+        39
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "account",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Menu icon"
+    },
+    {
+      "id": "account-label",
+      "box": [
+        179,
+        78,
+        214,
+        40
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "account",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Brokerage",
+      "required": true
+    },
+    {
+      "id": "theme",
+      "box": [
+        998,
+        27,
+        134,
+        134
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "toolbar",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "theme-icon",
+      "box": [
+        1042,
+        71,
+        45,
+        45
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "theme",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Theme icon"
+    },
+    {
+      "id": "summary",
+      "box": [
+        36,
+        243,
+        1096,
+        275
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "balance",
+      "box": [
+        47,
+        252,
+        280,
+        83
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "summary",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "$17.16",
+      "required": true
+    },
+    {
+      "id": "tabs",
+      "box": [
+        36,
+        428,
+        1096,
+        87
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "summary",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "tab-0",
+      "box": [
+        48,
+        433,
+        145,
+        43
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "tabs",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Return",
+      "required": true
+    },
+    {
+      "id": "tab-1",
+      "box": [
+        256,
+        433,
+        148,
+        43
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "tabs",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Income",
+      "required": true
+    },
+    {
+      "id": "tab-2",
+      "box": [
+        479,
+        433,
+        289,
+        43
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "tabs",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Account value",
+      "required": true
+    },
+    {
+      "id": "tab-3",
+      "box": [
+        842,
+        433,
+        206,
+        43
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "tabs",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Allocation",
+      "required": true
+    },
+    {
+      "id": "chart",
+      "box": [
+        47,
+        590,
+        1085,
+        918
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "return-caption",
+      "box": [
+        48,
+        602,
+        526,
+        43
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "chart",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "$0.04 (0.23%) today"
+    },
+    {
+      "id": "price-plot",
+      "box": [
+        47,
+        745,
+        1085,
+        531
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "chart",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Price chart including baseline"
+    },
+    {
+      "id": "chart-controls",
+      "box": [
+        47,
+        1401,
+        1085,
+        99
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "chart",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "period-0",
+      "box": [
+        77,
+        1434,
+        39,
+        26
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "chart-controls",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "1D",
+      "required": true
+    },
+    {
+      "id": "period-1",
+      "box": [
+        184,
+        1431,
+        66,
+        44
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "chart-controls",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "1W",
+      "required": true
+    },
+    {
+      "id": "period-2",
+      "box": [
+        304,
+        1431,
+        66,
+        44
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "chart-controls",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "1M",
+      "required": true
+    },
+    {
+      "id": "period-3",
+      "box": [
+        423,
+        1431,
+        66,
+        44
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "chart-controls",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "3M",
+      "required": true
+    },
+    {
+      "id": "period-4",
+      "box": [
+        548,
+        1431,
+        66,
+        44
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "chart-controls",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "6M",
+      "required": true
+    },
+    {
+      "id": "period-5",
+      "box": [
+        671,
+        1431,
+        80,
+        44
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "chart-controls",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "YTD",
+      "required": true
+    },
+    {
+      "id": "period-6",
+      "box": [
+        807,
+        1431,
+        59,
+        44
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "chart-controls",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "1Y",
+      "required": true
+    },
+    {
+      "id": "chart-action-0",
+      "box": [
+        914,
+        1427,
+        46,
+        46
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "chart-controls",
+      "atomic": true,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "chart-action-1",
+      "box": [
+        1004,
+        1427,
+        46,
+        46
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "chart-controls",
+      "atomic": true,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "chart-action-2",
+      "box": [
+        1086,
+        1427,
+        46,
+        46
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "chart-controls",
+      "atomic": true,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "buying-power",
+      "box": [
+        47,
+        1559,
+        1085,
+        153
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "margin-row",
+      "box": [
+        47,
+        1596,
+        1085,
+        64
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "buying-power",
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "margin-label",
+      "box": [
+        48,
+        1612,
+        430,
+        42
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "margin-row",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Margin buying power",
+      "required": true
+    },
+    {
+      "id": "margin-value",
+      "box": [
+        918,
+        1612,
+        155,
+        42
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "margin-row",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "$11.02"
+    },
+    {
+      "id": "margin-chevron",
+      "box": [
+        1106,
+        1610,
+        20,
+        37
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "margin-row",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "promotion",
+      "box": [
+        47,
+        1790,
+        1085,
+        386
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "promotion-card",
+      "box": [
+        47,
+        1790,
+        1085,
+        316
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "promotion",
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "promotion-title",
+      "box": [
+        84,
+        1833,
+        540,
+        42
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "promotion-card",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Options trading enabled"
+    },
+    {
+      "id": "promotion-copy",
+      "box": [
+        83,
+        1898,
+        1010,
+        86
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "promotion-card",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "promotion-link",
+      "box": [
+        83,
+        2022,
+        374,
+        48
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "promotion-card",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Explore Options",
+      "required": true
+    },
+    {
+      "id": "promotion-dismiss",
+      "box": [
+        1062,
+        1834,
+        29,
+        28
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "promotion-card",
+      "atomic": true,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "pagination",
+      "box": [
+        392,
+        2133,
+        400,
+        28
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "promotion",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Carousel pagination"
+    },
+    {
+      "id": "navigation",
+      "box": [
+        57,
+        2157,
+        1070,
+        188
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-0",
+      "box": [
+        92,
+        2188,
+        194,
+        132
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Portfolio",
+      "required": true
+    },
+    {
+      "id": "nav-0-icon",
+      "box": [
+        159,
+        2202,
+        54,
+        54
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-0",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-0-label",
+      "box": [
+        125,
+        2279,
+        121,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "nav-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Portfolio",
+      "required": true
+    },
+    {
+      "id": "nav-1",
+      "box": [
+        283,
+        2188,
+        194,
+        132
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Markets",
+      "required": true
+    },
+    {
+      "id": "nav-1-icon",
+      "box": [
+        368,
+        2199,
+        40,
+        60
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-1",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-1-label",
+      "box": [
+        330,
+        2280,
+        115,
+        22
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "nav-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Markets",
+      "required": true
+    },
+    {
+      "id": "nav-2",
+      "box": [
+        484,
+        2188,
+        194,
+        132
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Search",
+      "required": true
+    },
+    {
+      "id": "nav-2-icon",
+      "box": [
+        559,
+        2199,
+        60,
+        60
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-2",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-2-label",
+      "box": [
+        540,
+        2280,
+        98,
+        22
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "nav-2",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Search",
+      "required": true
+    },
+    {
+      "id": "nav-3",
+      "box": [
+        684,
+        2188,
+        194,
+        132
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Inbox",
+      "required": true
+    },
+    {
+      "id": "nav-3-icon",
+      "box": [
+        764,
+        2204,
+        54,
+        50
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-3",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-3-label",
+      "box": [
+        755,
+        2280,
+        76,
+        22
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "nav-3",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Inbox",
+      "required": true
+    },
+    {
+      "id": "nav-4",
+      "box": [
+        884,
+        2188,
+        194,
+        132
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Agents",
+      "required": true
+    },
+    {
+      "id": "nav-4-icon",
+      "box": [
+        966,
+        2202,
+        54,
+        54
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-4",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-4-label",
+      "box": [
+        943,
+        2280,
+        101,
+        28
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "nav-4",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Agents",
+      "required": true
+    }
+  ],
+  "ignore_regions": [
+    {
+      "box": [
+        46,
+        2345,
+        1060,
+        25
+      ],
+      "reason": "Partly obscured background content at bottom of ROI; no offscreen structure inferred."
+    }
+  ],
+  "ambiguities": [
+    {
+      "reason": "Independent screenshot geometry review corrected clipped or padded leaf bounds from source pixels. No extractor output or benchmark matches were used; original grouping intent and provenance are preserved."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "root",
+    "method": "manual coordinate annotation from original screenshot inspection",
+    "human_verified": false,
+    "independently_reviewed": true,
+    "bounds_tolerance_px": 3,
+    "reviewer": "gpt-6.1-sol-xhigh",
+    "review_method": "Independent original screenshot and annotation-overlay inspection; manually selected pixel windows for geometry corrections",
+    "review_status": "model-reviewed-not-human-verified"
+  }
+}

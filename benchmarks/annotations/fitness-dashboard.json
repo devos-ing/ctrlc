@@ -1,0 +1,792 @@
+{
+  "version": 1,
+  "source_sha256": "8f700d0720c3f892c6642be826f482db58c4c118a0856193971066d9548f743a",
+  "width": 1080,
+  "height": 1920,
+  "roi": [
+    0,
+    63,
+    1080,
+    1732
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "box": [
+        0,
+        0,
+        1080,
+        148
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "title",
+      "box": [
+        40,
+        52,
+        150,
+        53
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Learn"
+    },
+    {
+      "id": "menu",
+      "box": [
+        1007,
+        50,
+        29,
+        47
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "header",
+      "atomic": true,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "intro",
+      "box": [
+        86,
+        223,
+        909,
+        96
+      ],
+      "level": 1,
+      "type": "text",
+      "parent_id": null,
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Workout challenge explanation"
+    },
+    {
+      "id": "plans",
+      "box": [
+        27,
+        446,
+        1026,
+        405
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "plans-title",
+      "box": [
+        39,
+        447,
+        155,
+        56
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "plans",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Plans"
+    },
+    {
+      "id": "plan-0",
+      "box": [
+        27,
+        520,
+        333,
+        328
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "plans",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Healthy",
+      "required": true
+    },
+    {
+      "id": "plan-0-icon",
+      "box": [
+        123,
+        560,
+        144,
+        143
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "plan-0",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "plan-0-label",
+      "box": [
+        114,
+        731,
+        170,
+        56
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "plan-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Healthy",
+      "required": true
+    },
+    {
+      "id": "plan-1",
+      "box": [
+        373,
+        520,
+        333,
+        328
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "plans",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Sporty",
+      "required": true
+    },
+    {
+      "id": "plan-1-icon",
+      "box": [
+        469,
+        560,
+        144,
+        143
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "plan-1",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "plan-1-label",
+      "box": [
+        469,
+        731,
+        145,
+        56
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "plan-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Sporty",
+      "required": true
+    },
+    {
+      "id": "plan-2",
+      "box": [
+        720,
+        520,
+        333,
+        328
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "plans",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Weightloss",
+      "required": true
+    },
+    {
+      "id": "plan-2-icon",
+      "box": [
+        816,
+        560,
+        144,
+        143
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "plan-2",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "plan-2-label",
+      "box": [
+        773,
+        731,
+        231,
+        56
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "plan-2",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Weightloss",
+      "required": true
+    },
+    {
+      "id": "workouts",
+      "box": [
+        27,
+        938,
+        1026,
+        646
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "workouts-title",
+      "box": [
+        39,
+        939,
+        315,
+        61
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "workouts",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Get Started"
+    },
+    {
+      "id": "workout-0",
+      "box": [
+        27,
+        1011,
+        333,
+        328
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "workouts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Full Body",
+      "required": true
+    },
+    {
+      "id": "workout-0-icon",
+      "box": [
+        159,
+        1051,
+        66,
+        139
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "workout-0",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "workout-0-label",
+      "box": [
+        106,
+        1221,
+        179,
+        44
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "workout-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Full Body",
+      "required": true
+    },
+    {
+      "id": "workout-0-status",
+      "box": [
+        291,
+        1038,
+        49,
+        36
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "workout-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Completion or lock status"
+    },
+    {
+      "id": "workout-1",
+      "box": [
+        373,
+        1011,
+        333,
+        328
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "workouts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Upper Body",
+      "required": true
+    },
+    {
+      "id": "workout-1-icon",
+      "box": [
+        504,
+        1051,
+        67,
+        139
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "workout-1",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "workout-1-label",
+      "box": [
+        427,
+        1221,
+        228,
+        44
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "workout-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Upper Body",
+      "required": true
+    },
+    {
+      "id": "workout-1-status",
+      "box": [
+        645,
+        1035,
+        30,
+        42
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "workout-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Completion or lock status"
+    },
+    {
+      "id": "workout-2",
+      "box": [
+        720,
+        1011,
+        333,
+        328
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "workouts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Lower Body",
+      "required": true
+    },
+    {
+      "id": "workout-2-icon",
+      "box": [
+        851,
+        1051,
+        67,
+        140
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "workout-2",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "workout-2-label",
+      "box": [
+        772,
+        1221,
+        230,
+        44
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "workout-2",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Lower Body",
+      "required": true
+    },
+    {
+      "id": "workout-2-status",
+      "box": [
+        992,
+        1036,
+        29,
+        41
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "workout-2",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Completion or lock status"
+    },
+    {
+      "id": "workout-3",
+      "box": [
+        27,
+        1356,
+        333,
+        228
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "workouts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Stretch",
+      "required": true
+    },
+    {
+      "id": "workout-3-icon",
+      "box": [
+        124,
+        1410,
+        142,
+        114
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "workout-3",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "workout-3-status",
+      "box": [
+        299,
+        1382,
+        30,
+        42
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "workout-3",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Completion or lock status"
+    },
+    {
+      "id": "workout-4",
+      "box": [
+        373,
+        1356,
+        333,
+        228
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "workouts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Bootcamp",
+      "required": true
+    },
+    {
+      "id": "workout-4-icon",
+      "box": [
+        472,
+        1404,
+        133,
+        129
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "workout-4",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "workout-4-status",
+      "box": [
+        644,
+        1381,
+        31,
+        42
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "workout-4",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Completion or lock status"
+    },
+    {
+      "id": "navigation",
+      "box": [
+        0,
+        1584,
+        1080,
+        148
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-0",
+      "box": [
+        36,
+        1599,
+        210,
+        115
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Workout",
+      "required": true
+    },
+    {
+      "id": "nav-0-icon",
+      "box": [
+        114,
+        1608,
+        48,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-0",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-0-label",
+      "box": [
+        72,
+        1684,
+        133,
+        25
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "nav-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Workout",
+      "required": true
+    },
+    {
+      "id": "nav-1",
+      "box": [
+        306,
+        1599,
+        210,
+        115
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Learn",
+      "required": true
+    },
+    {
+      "id": "nav-1-icon",
+      "box": [
+        374,
+        1609,
+        63,
+        45
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-1",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-1-label",
+      "box": [
+        356,
+        1678,
+        100,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "nav-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Learn",
+      "required": true
+    },
+    {
+      "id": "nav-2",
+      "box": [
+        564,
+        1599,
+        223,
+        115
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Achievements",
+      "required": true
+    },
+    {
+      "id": "nav-2-icon",
+      "box": [
+        645,
+        1610,
+        58,
+        53
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-2",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-2-label",
+      "box": [
+        564,
+        1684,
+        223,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "nav-2",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Achievements",
+      "required": true
+    },
+    {
+      "id": "nav-3",
+      "box": [
+        846,
+        1599,
+        210,
+        115
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Track",
+      "required": true
+    },
+    {
+      "id": "nav-3-icon",
+      "box": [
+        910,
+        1612,
+        63,
+        51
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-3",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "nav-3-label",
+      "box": [
+        898,
+        1684,
+        86,
+        16
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "nav-3",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Track",
+      "required": true
+    },
+    {
+      "id": "workout-3-label",
+      "box": [
+        118,
+        1568,
+        147,
+        16
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "workout-3",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Stretch (visible upper portion)",
+      "required": true
+    },
+    {
+      "id": "workout-4-label",
+      "box": [
+        439,
+        1569,
+        201,
+        15
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "workout-4",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Bootcamp (visible upper portion)",
+      "required": true
+    }
+  ],
+  "ignore_regions": [],
+  "ambiguities": [
+    {
+      "reason": "Second workout row labels and bottom navigation text are partially clipped. Hidden labels or offscreen cards are not reconstructed."
+    },
+    {
+      "reason": "Independent screenshot geometry review corrected clipped or padded leaf bounds from source pixels. No extractor output or benchmark matches were used; original grouping intent and provenance are preserved."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "root",
+    "method": "manual coordinate annotation from original screenshot inspection",
+    "human_verified": false,
+    "independently_reviewed": true,
+    "bounds_tolerance_px": 3,
+    "reviewer": "gpt-6.1-sol-xhigh",
+    "review_method": "Independent original screenshot and annotation-overlay inspection; manually selected pixel windows for geometry corrections",
+    "review_status": "model-reviewed-not-human-verified"
+  }
+}

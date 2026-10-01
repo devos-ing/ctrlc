@@ -10,11 +10,13 @@ from typing import Sequence
 
 from . import __version__
 from .extraction import InvalidOCRDataError, compact, parse_roi, run_extraction
+from .hierarchy import InvalidHierarchyError
 from .preview import InvalidPreviewDocumentError, create_preview_server
 from .rendering import InvalidSceneError, render_scene
+from .workflows import refine_scene
 
 
-COMMANDS = {"extract", "render", "serve"}
+COMMANDS = {"extract", "refine", "render", "serve"}
 
 
 class ArgumentFailure(Exception):
@@ -40,6 +42,16 @@ def _argument_parser() -> JsonArgumentParser:
     extract.add_argument("--ocr-json", type=Path, help="use saved OCR instead of native Vision")
     extract.add_argument("--refresh", action="store_true", help="recompute this image/configuration")
     extract.add_argument("--inspector", action="store_true", help="also render a local inspector")
+    extract.add_argument("--depth", type=int, choices=(1, 2, 3),
+                         help="maximum hierarchy depth; omitted keeps legacy output")
+
+    refine = commands.add_parser("refine", help="refine a saved scene without running OCR")
+    refine.add_argument("scene", type=Path, help="saved scene with a measurement artifact")
+    refine.add_argument("image", type=Path, help="matching source screenshot")
+    refine.add_argument("--out", type=Path, required=True, help="directory for saved results")
+    refine.add_argument("--depth", type=int, choices=(1, 2, 3), required=True,
+                        help="maximum hierarchy depth to save")
+    refine.add_argument("--inspector", action="store_true", help="also render a local inspector")
 
     render = commands.add_parser("render", help="render an existing scene without extraction")
     render.add_argument("scene", type=Path, help="saved scene JSON")
@@ -75,6 +87,8 @@ def _error_envelope(command: str | None, code: str, message: str) -> dict:
 def _error_details(error: Exception) -> tuple[str, str]:
     if isinstance(error, InvalidSceneError):
         return "invalid_scene", str(error)
+    if isinstance(error, InvalidHierarchyError):
+        return "invalid_scene", str(error)
     if isinstance(error, InvalidOCRDataError):
         return "invalid_ocr", str(error)
     if isinstance(error, InvalidPreviewDocumentError):
@@ -107,7 +121,10 @@ def _run(args) -> dict:
     if args.command == "extract":
         return run_extraction(args.image, args.out, roi=args.roi, languages=args.languages,
                               ocr_json_path=args.ocr_json, refresh=args.refresh,
-                              inspector=args.inspector)
+                              inspector=args.inspector, depth=args.depth)
+    if args.command == "refine":
+        return refine_scene(args.scene, args.image, args.out, depth=args.depth,
+                            inspector=args.inspector)
     if args.command == "render":
         return render_scene(args.scene, args.image, args.out, fragment=args.fragment)
     if args.command == "serve":

@@ -115,6 +115,34 @@ def union(boxes):
     return [x, y, right - x, bottom - y]
 
 
+def _scaled_box_to_source(box, source_size, scaled_size):
+    """Map half-open raster edges with the actual per-axis resize ratios."""
+    source_width, source_height = source_size
+    scaled_width, scaled_height = scaled_size
+    x, y, width, height = box
+    left = max(0, min(source_width, round(x * source_width / scaled_width)))
+    top = max(0, min(source_height, round(y * source_height / scaled_height)))
+    right = max(left, min(source_width,
+                          round((x + width) * source_width / scaled_width)))
+    bottom = max(top, min(source_height,
+                          round((y + height) * source_height / scaled_height)))
+    return [left, top, right - left, bottom - top]
+
+
+def _source_box_to_scaled(box, source_size, scaled_size):
+    """Map source half-open edges back to the exact resized raster axes."""
+    source_width, source_height = source_size
+    scaled_width, scaled_height = scaled_size
+    x, y, width, height = box
+    left = max(0, min(scaled_width, round(x * scaled_width / source_width)))
+    top = max(0, min(scaled_height, round(y * scaled_height / source_height)))
+    right = max(left, min(scaled_width,
+                          round((x + width) * scaled_width / source_width)))
+    bottom = max(top, min(scaled_height,
+                          round((y + height) * scaled_height / source_height)))
+    return [left, top, right - left, bottom - top]
+
+
 def label(region):
     region = dict(region)
     # OCR sometimes reads a provider icon as a character before the button label.
@@ -130,17 +158,23 @@ def label(region):
     return region
 
 
-def native_ocr(image_path, cache, languages):
+def native_ocr(image_path, cache, languages, *, timing=None):
     if platform.system() != "Darwin" or not shutil.which("swiftc"):
         raise ValueError("Native OCR needs macOS and swiftc; alternatively pass --ocr-json")
     source = ASSETS / "vision_ocr.swift"
     digest = hashlib.sha256(source.read_bytes() + platform.mac_ver()[0].encode()).hexdigest()[:16]
     binary = cache / ("vision-ocr-" + digest)
+    compilation_started = time.perf_counter()
     if not binary.exists():
         subprocess.run(["swiftc", "-O", str(source), "-o", str(binary)],
                        check=True, capture_output=True, text=True, timeout=120)
+    if timing is not None:
+        timing["nativeOcrHelperCompilationSeconds"] = time.perf_counter() - compilation_started
+    ocr_started = time.perf_counter()
     result = subprocess.run([str(binary), str(image_path), languages], check=True,
                             capture_output=True, text=True, timeout=120)
+    if timing is not None:
+        timing["ocrSeconds"] = time.perf_counter() - ocr_started
     return json.loads(result.stdout)
 
 
@@ -167,6 +201,7 @@ def extract(image, ocr):
     width, height = image.size
     scale = min(1.0, 640 / width)
     small = image.resize((round(width * scale), round(height * scale)), Image.Resampling.BILINEAR)
+    scaled_size = small.size
     pixels = np.asarray(small.convert("RGB")).astype(np.int16)
     background = dominant(full)
     mask = np.max(np.abs(pixels - background.astype(np.int16)), axis=2) >= 12
@@ -174,9 +209,7 @@ def extract(image, ocr):
     boxes = []
     for x, y, w, h, area in shapes:
         if w >= small.width * .45 and small.width * .05 <= h <= small.width * .24:
-            candidate = [round(x / scale), round(y / scale),
-                          min(width - round(x / scale), round(w / scale)),
-                          min(height - round(y / scale), round(h / scale))]
+            candidate = _scaled_box_to_source([x, y, w, h], image.size, scaled_size)
             # Refine raster bounds at full resolution along the control's central axes.
             cx, cy, cw, ch = candidate
             left, right = max(0, cx - 8), min(width, cx + cw + 8)
@@ -286,14 +319,14 @@ def extract(image, ocr):
             nodes.append(node)
     asset_mask = mask.copy()
     for box in boxes + [region["box"] for region in regions]:
-        x, y, w, h = box
-        left, top = max(0, int(x * scale) - 3), max(0, int(y * scale) - 3)
-        right, bottom = min(small.width, round((x + w) * scale) + 3), min(small.height, round((y + h) * scale) + 3)
+        x, y, w, h = _source_box_to_scaled(box, image.size, scaled_size)
+        left, top = max(0, x - 3), max(0, y - 3)
+        right, bottom = min(small.width, x + w + 3), min(small.height, y + h + 3)
         asset_mask[top:bottom, left:right] = False
     for x, y, w, h, area in components(asset_mask):
         if w >= small.width * .025 and h >= small.width * .025 and area >= 40:
             nodes.append({"type": "image", "role": "unknown-asset",
-                          "box": [round(x / scale), round(y / scale), round(w / scale), round(h / scale)],
+                          "box": _scaled_box_to_source([x, y, w, h], image.size, scaled_size),
                           "evidence": "pixel-region"})
     nodes.sort(key=lambda n: (n["box"][1], n["box"][0]))
 
@@ -335,7 +368,8 @@ def run_extraction(image_path: str | Path, output_dir: str | Path, *,
                    roi: list[int] | None = None, languages: str = "en-US",
                    ocr_json_path: str | Path | None = None,
                    ocr_data: Mapping[str, Any] | None = None,
-                   refresh: bool = False, inspector: bool = False) -> dict[str, Any]:
+                   refresh: bool = False, inspector: bool = False,
+                   depth: int | None = None) -> dict[str, Any]:
     """Extract a screenshot into saved scene, packet, run, and optional HTML files.
 
     Callers may provide OCR as JSON on disk or as an already loaded mapping.
@@ -344,6 +378,12 @@ def run_extraction(image_path: str | Path, output_dir: str | Path, *,
     """
     if ocr_json_path is not None and ocr_data is not None:
         raise ValueError("Pass either ocr_json_path or ocr_data, not both")
+    if depth is not None:
+        from .workflows import run_hierarchical_extraction
+        return run_hierarchical_extraction(
+            image_path, output_dir, depth=depth, roi=roi, languages=languages,
+            ocr_json_path=ocr_json_path, ocr_data=ocr_data, refresh=refresh,
+            inspector=inspector)
     if roi is not None:
         if (not isinstance(roi, (list, tuple)) or len(roi) != 4
                 or any(type(value) is not int for value in roi)

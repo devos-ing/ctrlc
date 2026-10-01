@@ -1,0 +1,618 @@
+{
+  "version": 1,
+  "source_sha256": "64da23bbbfd696f70fa87ef39ed759baf6afaa96163a74b4e94d0a59c81978f3",
+  "width": 1920,
+  "height": 1040,
+  "roi": [
+    0,
+    152,
+    1920,
+    888
+  ],
+  "nodes": [
+    {
+      "id": "brand",
+      "box": [
+        825,
+        164,
+        269,
+        88
+      ],
+      "level": 1,
+      "type": "image",
+      "parent_id": null,
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Google logo"
+    },
+    {
+      "id": "search",
+      "box": [
+        680,
+        293,
+        561,
+        45
+      ],
+      "level": 1,
+      "type": "input",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "search-icon",
+      "box": [
+        699,
+        307,
+        17,
+        18
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "search",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "search-label",
+      "box": [
+        731,
+        308,
+        206,
+        19
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "search",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Search Google or type a URL",
+      "required": true
+    },
+    {
+      "id": "voice",
+      "box": [
+        1206,
+        306,
+        17,
+        22
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "search",
+      "atomic": true,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "shortcuts",
+      "box": [
+        701,
+        383,
+        520,
+        216
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-0",
+      "box": [
+        701,
+        383,
+        72,
+        86
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "MulongXie",
+      "required": true
+    },
+    {
+      "id": "shortcut-0-icon",
+      "box": [
+        713,
+        383,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-0",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-0-label",
+      "box": [
+        708,
+        455,
+        58,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-0",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "MulongXie"
+    },
+    {
+      "id": "shortcut-1",
+      "box": [
+        813,
+        383,
+        72,
+        86
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Dashboard",
+      "required": true
+    },
+    {
+      "id": "shortcut-1-icon",
+      "box": [
+        825,
+        383,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-1",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-1-label",
+      "box": [
+        820,
+        455,
+        57,
+        9
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-1",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Dashboard"
+    },
+    {
+      "id": "shortcut-2",
+      "box": [
+        917,
+        383,
+        80,
+        86
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Google scholar",
+      "required": true
+    },
+    {
+      "id": "shortcut-2-icon",
+      "box": [
+        937,
+        383,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-2",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-2-label",
+      "box": [
+        917,
+        454,
+        75,
+        13
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-2",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Google scholar"
+    },
+    {
+      "id": "shortcut-3",
+      "box": [
+        1037,
+        383,
+        72,
+        86
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "BBC",
+      "required": true
+    },
+    {
+      "id": "shortcut-3-icon",
+      "box": [
+        1049,
+        383,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-3",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-3-label",
+      "box": [
+        1063,
+        455,
+        20,
+        9
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-3",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "BBC"
+    },
+    {
+      "id": "shortcut-4",
+      "box": [
+        1141,
+        383,
+        80,
+        86
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Google Drive",
+      "required": true
+    },
+    {
+      "id": "shortcut-4-icon",
+      "box": [
+        1161,
+        383,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-4",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-4-label",
+      "box": [
+        1141,
+        454,
+        75,
+        13
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-4",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Google Drive"
+    },
+    {
+      "id": "shortcut-5",
+      "box": [
+        701,
+        511,
+        72,
+        86
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Bilibili",
+      "required": true
+    },
+    {
+      "id": "shortcut-5-icon",
+      "box": [
+        713,
+        511,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-5",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-5-label",
+      "box": [
+        703,
+        581,
+        58,
+        13
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-5",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Bilibili"
+    },
+    {
+      "id": "shortcut-6",
+      "box": [
+        813,
+        511,
+        72,
+        86
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Thesis",
+      "required": true
+    },
+    {
+      "id": "shortcut-6-icon",
+      "box": [
+        825,
+        511,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-6",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-6-label",
+      "box": [
+        832,
+        583,
+        33,
+        9
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-6",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Thesis"
+    },
+    {
+      "id": "shortcut-7",
+      "box": [
+        918,
+        511,
+        84,
+        86
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "News",
+      "required": true
+    },
+    {
+      "id": "shortcut-7-icon",
+      "box": [
+        937,
+        511,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-7",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-7-label",
+      "box": [
+        918,
+        583,
+        84,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-7",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "News"
+    },
+    {
+      "id": "shortcut-8",
+      "box": [
+        1030,
+        511,
+        84,
+        86
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Outlook",
+      "required": true
+    },
+    {
+      "id": "shortcut-8-icon",
+      "box": [
+        1049,
+        511,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-8",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-8-label",
+      "box": [
+        1030,
+        583,
+        84,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-8",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Outlook"
+    },
+    {
+      "id": "shortcut-9",
+      "box": [
+        1149,
+        511,
+        72,
+        86
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "shortcuts",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "163mail",
+      "required": true
+    },
+    {
+      "id": "shortcut-9-icon",
+      "box": [
+        1161,
+        511,
+        48,
+        48
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "shortcut-9",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "shortcut-9-label",
+      "box": [
+        1165,
+        583,
+        39,
+        9
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "shortcut-9",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "163mail"
+    },
+    {
+      "id": "customize",
+      "box": [
+        1793,
+        841,
+        113,
+        34
+      ],
+      "level": 1,
+      "type": "button",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Customise",
+      "required": true
+    },
+    {
+      "id": "customize-icon",
+      "box": [
+        1801,
+        851,
+        18,
+        17
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "customize",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "customize-label",
+      "box": [
+        1825,
+        848,
+        72,
+        21
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "customize",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Customise"
+    }
+  ],
+  "ignore_regions": [],
+  "ambiguities": [
+    {
+      "reason": "Several shortcut labels are truncated. Their full names and destinations remain unknown; labels identify visible tile roles only."
+    },
+    {
+      "reason": "Independent screenshot geometry review corrected clipped or padded leaf bounds from source pixels. No extractor output or benchmark matches were used; original grouping intent and provenance are preserved."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "root",
+    "method": "manual coordinate annotation from original screenshot inspection",
+    "human_verified": false,
+    "independently_reviewed": true,
+    "bounds_tolerance_px": 3,
+    "reviewer": "gpt-6.1-sol-xhigh",
+    "review_method": "Independent original screenshot and annotation-overlay inspection; manually selected pixel windows for geometry corrections",
+    "review_status": "model-reviewed-not-human-verified"
+  }
+}

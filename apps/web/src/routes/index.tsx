@@ -54,7 +54,7 @@ function HomePage() {
               <span>{copied ? 'Copied' : 'Copy'}</span>
             </button>
           </div>
-          <p className="hero-footnote">v0.1.0 · Built for shell-capable agents</p>
+          <p className="hero-footnote">v0.1.1 · Built for shell-capable agents</p>
           <p className="copy-status" role="status" aria-live="polite">{copyError}</p>
         </section>
         <section className="showcases" aria-labelledby="showcases-title">

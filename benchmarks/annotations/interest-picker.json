@@ -1,0 +1,890 @@
+{
+  "version": 1,
+  "status": "model-authored",
+  "source_sha256": "181cfd9d25c3befeec78f56e87a27cd9bbae8434d39677a5f61bd24f9937abcd",
+  "width": 517,
+  "height": 831,
+  "roi": [
+    0,
+    0,
+    517,
+    831
+  ],
+  "nodes": [
+    {
+      "id": "navigation",
+      "box": [
+        0,
+        0,
+        517,
+        61
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Onboarding navigation"
+    },
+    {
+      "id": "back",
+      "box": [
+        12,
+        11,
+        41,
+        40
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Back",
+      "required": true
+    },
+    {
+      "id": "back-glyph",
+      "box": [
+        19,
+        20,
+        24,
+        23
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "back",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete back arrow"
+    },
+    {
+      "id": "next",
+      "box": [
+        437,
+        12,
+        64,
+        39
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Next",
+      "required": true
+    },
+    {
+      "id": "next-label",
+      "box": [
+        453,
+        26,
+        30,
+        15
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "next",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Next",
+      "required": true
+    },
+    {
+      "id": "instructions",
+      "box": [
+        0,
+        61,
+        517,
+        89
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Interest selection instructions"
+    },
+    {
+      "id": "instructions-title",
+      "box": [
+        100,
+        75,
+        316,
+        23
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "instructions",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Let's choose what interests you.",
+      "required": true
+    },
+    {
+      "id": "instructions-description",
+      "box": [
+        72,
+        108,
+        373,
+        19
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "instructions",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Get content from these Communities in your feed."
+    },
+    {
+      "id": "communities",
+      "box": [
+        0,
+        150,
+        517,
+        681
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Selectable community grid"
+    },
+    {
+      "id": "community-funny",
+      "box": [
+        21,
+        168,
+        124,
+        161
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Funny",
+      "required": true
+    },
+    {
+      "id": "community-funny-image",
+      "box": [
+        21,
+        168,
+        123,
+        122
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-funny",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image"
+    },
+    {
+      "id": "community-funny-selection",
+      "box": [
+        109,
+        170,
+        36,
+        35
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-funny",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Selected red check",
+      "required": true
+    },
+    {
+      "id": "community-funny-label",
+      "box": [
+        59,
+        311,
+        49,
+        18
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "community-funny",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Funny",
+      "required": true
+    },
+    {
+      "id": "community-wtf",
+      "box": [
+        197,
+        168,
+        125,
+        161
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "WTF",
+      "required": true
+    },
+    {
+      "id": "community-wtf-image",
+      "box": [
+        197,
+        168,
+        125,
+        122
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-wtf",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image"
+    },
+    {
+      "id": "community-wtf-selection",
+      "box": [
+        283,
+        169,
+        35,
+        36
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-wtf",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Selected red check",
+      "required": true
+    },
+    {
+      "id": "community-wtf-label",
+      "box": [
+        239,
+        311,
+        36,
+        18
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "community-wtf",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "WTF",
+      "required": true
+    },
+    {
+      "id": "community-did-you-know",
+      "box": [
+        369,
+        168,
+        125,
+        161
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Did You Know?",
+      "required": true
+    },
+    {
+      "id": "community-did-you-know-image",
+      "box": [
+        369,
+        168,
+        125,
+        122
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-did-you-know",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image"
+    },
+    {
+      "id": "community-did-you-know-selection",
+      "box": [
+        455,
+        170,
+        36,
+        35
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-did-you-know",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Gray check; selection state not asserted",
+      "required": true
+    },
+    {
+      "id": "community-did-you-know-label",
+      "box": [
+        375,
+        311,
+        116,
+        18
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "community-did-you-know",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Did You Know?",
+      "required": true
+    },
+    {
+      "id": "community-love",
+      "box": [
+        21,
+        376,
+        124,
+        170
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Love & Relationship",
+      "required": true
+    },
+    {
+      "id": "community-love-image",
+      "box": [
+        21,
+        376,
+        124,
+        123
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-love",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image"
+    },
+    {
+      "id": "community-love-selection",
+      "box": [
+        108,
+        378,
+        36,
+        35
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-love",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Selected red check",
+      "required": true
+    },
+    {
+      "id": "community-love-label",
+      "box": [
+        35,
+        507,
+        99,
+        39
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "community-love",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Love & Relationship",
+      "required": true
+    },
+    {
+      "id": "community-married",
+      "box": [
+        189,
+        365,
+        137,
+        176
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Married Life",
+      "required": true
+    },
+    {
+      "id": "community-married-image",
+      "box": [
+        189,
+        365,
+        137,
+        135
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-married",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image"
+    },
+    {
+      "id": "community-married-selection",
+      "box": [
+        284,
+        367,
+        37,
+        36
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-married",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Gray check; selection state not asserted",
+      "required": true
+    },
+    {
+      "id": "community-married-label",
+      "box": [
+        206,
+        525,
+        111,
+        16
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "community-married",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Married Life",
+      "required": true
+    },
+    {
+      "id": "community-teen",
+      "box": [
+        363,
+        365,
+        139,
+        188
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Teen Relationships",
+      "required": true
+    },
+    {
+      "id": "community-teen-image",
+      "box": [
+        363,
+        365,
+        139,
+        135
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-teen",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image"
+    },
+    {
+      "id": "community-teen-selection",
+      "box": [
+        461,
+        367,
+        37,
+        36
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-teen",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Gray check; selection state not asserted",
+      "required": true
+    },
+    {
+      "id": "community-teen-label",
+      "box": [
+        375,
+        514,
+        116,
+        39
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "community-teen",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Teen Relationships",
+      "required": true
+    },
+    {
+      "id": "community-poetry",
+      "box": [
+        16,
+        573,
+        135,
+        177
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Poetry",
+      "required": true
+    },
+    {
+      "id": "community-poetry-image",
+      "box": [
+        16,
+        573,
+        135,
+        135
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-poetry",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image"
+    },
+    {
+      "id": "community-poetry-selection",
+      "box": [
+        111,
+        575,
+        38,
+        37
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-poetry",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Gray check; selection state not asserted",
+      "required": true
+    },
+    {
+      "id": "community-poetry-label",
+      "box": [
+        54,
+        731,
+        58,
+        19
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "community-poetry",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Poetry",
+      "required": true
+    },
+    {
+      "id": "community-health",
+      "box": [
+        197,
+        584,
+        125,
+        166
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Health",
+      "required": true
+    },
+    {
+      "id": "community-health-image",
+      "box": [
+        197,
+        584,
+        125,
+        124
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-health",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image"
+    },
+    {
+      "id": "community-health-selection",
+      "box": [
+        282,
+        585,
+        36,
+        35
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-health",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Gray check; selection state not asserted",
+      "required": true
+    },
+    {
+      "id": "community-health-label",
+      "box": [
+        226,
+        726,
+        64,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "community-health",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Health",
+      "required": true
+    },
+    {
+      "id": "community-kpop",
+      "box": [
+        369,
+        584,
+        125,
+        166
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "K-Pop",
+      "required": true
+    },
+    {
+      "id": "community-kpop-image",
+      "box": [
+        369,
+        584,
+        125,
+        124
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-kpop",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image"
+    },
+    {
+      "id": "community-kpop-selection",
+      "box": [
+        456,
+        585,
+        36,
+        35
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-kpop",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Gray check; selection state not asserted",
+      "required": true
+    },
+    {
+      "id": "community-kpop-label",
+      "box": [
+        406,
+        726,
+        50,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "community-kpop",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "K-Pop",
+      "required": true
+    },
+    {
+      "id": "community-partial-sports",
+      "box": [
+        25,
+        791,
+        118,
+        40
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Partially visible sports community",
+      "required": true
+    },
+    {
+      "id": "community-partial-sports-image",
+      "box": [
+        25,
+        791,
+        118,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-partial-sports",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image, clipped at screenshot boundary"
+    },
+    {
+      "id": "community-partial-sports-selection",
+      "box": [
+        109,
+        794,
+        34,
+        34
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-partial-sports",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Gray check; selection state not asserted",
+      "required": true
+    },
+    {
+      "id": "community-partial-film",
+      "box": [
+        199,
+        791,
+        119,
+        40
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Partially visible film community",
+      "required": true
+    },
+    {
+      "id": "community-partial-film-image",
+      "box": [
+        199,
+        791,
+        119,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-partial-film",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image, clipped at screenshot boundary"
+    },
+    {
+      "id": "community-partial-film-selection",
+      "box": [
+        283,
+        794,
+        35,
+        34
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-partial-film",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Gray check; selection state not asserted",
+      "required": true
+    },
+    {
+      "id": "community-partial-face",
+      "box": [
+        374,
+        791,
+        119,
+        40
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "communities",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Partially visible community with face photograph",
+      "required": true
+    },
+    {
+      "id": "community-partial-face-image",
+      "box": [
+        374,
+        791,
+        119,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-partial-face",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular community image, clipped at screenshot boundary"
+    },
+    {
+      "id": "community-partial-face-selection",
+      "box": [
+        456,
+        794,
+        36,
+        34
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "community-partial-face",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Gray check; selection state not asserted",
+      "required": true
+    }
+  ],
+  "ignore_regions": [],
+  "ambiguities": [
+    {
+      "node_ids": [
+        "community-partial-sports",
+        "community-partial-film",
+        "community-partial-face"
+      ],
+      "reason": "Bottom row is clipped by the source screenshot. Category names are absent. Visible image and selection glyph bounds are clipped, with no inferred offscreen circle or text."
+    },
+    {
+      "node_ids": [
+        "community-did-you-know-selection",
+        "community-married-selection",
+        "community-teen-selection",
+        "community-poetry-selection",
+        "community-health-selection",
+        "community-kpop-selection"
+      ],
+      "reason": "Gray checks differ visibly from red selected checks. The product meaning of the gray state remains unknown."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "gpt-6.1-sol-xhigh",
+    "method": "independent screenshot inspection",
+    "human_verified": false
+  }
+}

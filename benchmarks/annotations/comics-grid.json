@@ -1,0 +1,1152 @@
+{
+  "version": 1,
+  "status": "model-authored",
+  "source_sha256": "df7f42fbe68f12767fac43b869e2bb23337c1b612bcf192307030d2d69082d1b",
+  "width": 1080,
+  "height": 1747,
+  "roi": [
+    0,
+    0,
+    1080,
+    1747
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "box": [
+        0,
+        0,
+        1080,
+        153
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Comics header"
+    },
+    {
+      "id": "menu",
+      "box": [
+        43,
+        48,
+        46,
+        64
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "header",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Menu",
+      "required": true
+    },
+    {
+      "id": "menu-glyph",
+      "box": [
+        51,
+        61,
+        29,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "menu",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete three-bar menu glyph"
+    },
+    {
+      "id": "title",
+      "box": [
+        188,
+        57,
+        183,
+        50
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Comics",
+      "required": true
+    },
+    {
+      "id": "search",
+      "box": [
+        978,
+        39,
+        76,
+        80
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "header",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Search",
+      "required": true
+    },
+    {
+      "id": "search-glyph",
+      "box": [
+        986,
+        49,
+        62,
+        62
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "search",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete search glyph"
+    },
+    {
+      "id": "filter-section",
+      "box": [
+        0,
+        153,
+        1080,
+        104
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Country filter"
+    },
+    {
+      "id": "country",
+      "box": [
+        20,
+        182,
+        326,
+        49
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "filter-section",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Country selector",
+      "required": true
+    },
+    {
+      "id": "country-label",
+      "box": [
+        20,
+        191,
+        80,
+        38
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "country",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "USA",
+      "required": true
+    },
+    {
+      "id": "country-glyph",
+      "box": [
+        317,
+        199,
+        29,
+        17
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "country",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete dropdown arrow"
+    },
+    {
+      "id": "catalogue",
+      "box": [
+        0,
+        257,
+        1080,
+        1479
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Comic catalogue grid"
+    },
+    {
+      "id": "comic-01",
+      "box": [
+        6,
+        258,
+        263,
+        474
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "30 Days of Night: Bloodsucker Tales (2004-2005)",
+      "required": true
+    },
+    {
+      "id": "comic-01-cover",
+      "box": [
+        6,
+        258,
+        263,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-01",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-01-country",
+      "box": [
+        175,
+        272,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-01",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-01-title",
+      "box": [
+        8,
+        531,
+        259,
+        100
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-01",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "30 Days of Night:\nBloodsucker Tales\n(2004-2005)",
+      "required": true
+    },
+    {
+      "id": "comic-01-publisher",
+      "box": [
+        31,
+        675,
+        215,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-01",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "IDW Publishing"
+    },
+    {
+      "id": "comic-02",
+      "box": [
+        275,
+        258,
+        262,
+        474
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "30 Days of Night: Return to Barrow (2004)",
+      "required": true
+    },
+    {
+      "id": "comic-02-cover",
+      "box": [
+        275,
+        258,
+        262,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-02",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-02-country",
+      "box": [
+        444,
+        272,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-02",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-02-title",
+      "box": [
+        286,
+        531,
+        241,
+        100
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-02",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "30 Days of Night:\nReturn to Barrow\n(2004)",
+      "required": true
+    },
+    {
+      "id": "comic-02-publisher",
+      "box": [
+        300,
+        675,
+        214,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-02",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "IDW Publishing"
+    },
+    {
+      "id": "comic-03",
+      "box": [
+        543,
+        258,
+        263,
+        474
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "5 Ronin (2011)",
+      "required": true
+    },
+    {
+      "id": "comic-03-cover",
+      "box": [
+        543,
+        258,
+        263,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-03",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-03-country",
+      "box": [
+        712,
+        272,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-03",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-03-title",
+      "box": [
+        572,
+        568,
+        205,
+        34
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-03",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "5 Ronin (2011)",
+      "required": true
+    },
+    {
+      "id": "comic-03-publisher",
+      "box": [
+        569,
+        675,
+        213,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-03",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Marvel Comics"
+    },
+    {
+      "id": "comic-04",
+      "box": [
+        812,
+        258,
+        263,
+        474
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "52 (2006-2007)",
+      "required": true
+    },
+    {
+      "id": "comic-04-cover",
+      "box": [
+        812,
+        258,
+        263,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-04",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-04-country",
+      "box": [
+        981,
+        272,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-04",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-04-title",
+      "box": [
+        834,
+        568,
+        219,
+        34
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-04",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "52 (2006-2007)",
+      "required": true
+    },
+    {
+      "id": "comic-04-publisher",
+      "box": [
+        846,
+        675,
+        195,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-04",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "DC Comics"
+    },
+    {
+      "id": "comic-05",
+      "box": [
+        6,
+        758,
+        263,
+        476
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "A Celebration of 50 Years (2014)",
+      "required": true
+    },
+    {
+      "id": "comic-05-cover",
+      "box": [
+        6,
+        758,
+        263,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-05",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-05-country",
+      "box": [
+        175,
+        774,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-05",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-05-title",
+      "box": [
+        22,
+        1049,
+        232,
+        70
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-05",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "A Celebration of\n50 Years (2014)",
+      "required": true
+    },
+    {
+      "id": "comic-05-publisher",
+      "box": [
+        59,
+        1175,
+        155,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-05",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "DC Comics"
+    },
+    {
+      "id": "comic-06",
+      "box": [
+        275,
+        758,
+        262,
+        476
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "A Celebration of 75 Years (2013-)",
+      "required": true
+    },
+    {
+      "id": "comic-06-cover",
+      "box": [
+        275,
+        758,
+        262,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-06",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-06-country",
+      "box": [
+        444,
+        774,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-06",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-06-title",
+      "box": [
+        292,
+        1049,
+        229,
+        70
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-06",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "A Celebration of\n75 Years (2013-)",
+      "required": true
+    },
+    {
+      "id": "comic-06-publisher",
+      "box": [
+        326,
+        1175,
+        155,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-06",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "DC Comics"
+    },
+    {
+      "id": "comic-07",
+      "box": [
+        543,
+        758,
+        263,
+        476
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "A+X (2012-2014)",
+      "required": true
+    },
+    {
+      "id": "comic-07-cover",
+      "box": [
+        543,
+        758,
+        263,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-07",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-07-country",
+      "box": [
+        712,
+        774,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-07",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-07-title",
+      "box": [
+        551,
+        1068,
+        245,
+        34
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-07",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "A+X (2012-2014)",
+      "required": true
+    },
+    {
+      "id": "comic-07-publisher",
+      "box": [
+        569,
+        1175,
+        213,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-07",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Marvel Comics"
+    },
+    {
+      "id": "comic-08",
+      "box": [
+        812,
+        758,
+        263,
+        476
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "A-Force (2015)",
+      "required": true
+    },
+    {
+      "id": "comic-08-cover",
+      "box": [
+        812,
+        758,
+        263,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-08",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-08-country",
+      "box": [
+        981,
+        774,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-08",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-08-title",
+      "box": [
+        837,
+        1068,
+        213,
+        34
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-08",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "A-Force (2015)",
+      "required": true
+    },
+    {
+      "id": "comic-08-publisher",
+      "box": [
+        838,
+        1175,
+        213,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-08",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Marvel Comics"
+    },
+    {
+      "id": "comic-09",
+      "box": [
+        6,
+        1258,
+        263,
+        478
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "A-Force (2016-)",
+      "required": true
+    },
+    {
+      "id": "comic-09-cover",
+      "box": [
+        6,
+        1258,
+        263,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-09",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-09-country",
+      "box": [
+        175,
+        1274,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-09",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-09-title",
+      "box": [
+        27,
+        1567,
+        225,
+        35
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-09",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "A-Force (2016-)",
+      "required": true
+    },
+    {
+      "id": "comic-09-publisher",
+      "box": [
+        31,
+        1675,
+        215,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-09",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Marvel Comics"
+    },
+    {
+      "id": "comic-10",
+      "box": [
+        275,
+        1258,
+        262,
+        478
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "A-Next (1998-1999)",
+      "required": true
+    },
+    {
+      "id": "comic-10-cover",
+      "box": [
+        275,
+        1258,
+        262,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-10",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-10-country",
+      "box": [
+        444,
+        1274,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-10",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-10-title",
+      "box": [
+        329,
+        1552,
+        154,
+        67
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-10",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "A-Next\n(1998-1999)",
+      "required": true
+    },
+    {
+      "id": "comic-10-publisher",
+      "box": [
+        300,
+        1675,
+        214,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-10",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Marvel Comics"
+    },
+    {
+      "id": "comic-11",
+      "box": [
+        543,
+        1258,
+        263,
+        478
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "AVX: Consequences (2012)",
+      "required": true
+    },
+    {
+      "id": "comic-11-cover",
+      "box": [
+        543,
+        1258,
+        263,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-11",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-11-country",
+      "box": [
+        712,
+        1274,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-11",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-11-title",
+      "box": [
+        568,
+        1528,
+        212,
+        100
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-11",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "AVX:\nConsequences\n(2012)",
+      "required": true
+    },
+    {
+      "id": "comic-11-publisher",
+      "box": [
+        569,
+        1675,
+        213,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-11",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Marvel Comics"
+    },
+    {
+      "id": "comic-12",
+      "box": [
+        812,
+        1258,
+        263,
+        478
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "catalogue",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "AVX: VS (2012)",
+      "required": true
+    },
+    {
+      "id": "comic-12-cover",
+      "box": [
+        812,
+        1258,
+        263,
+        264
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-12",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic comic cover; letters/art within cover are not child UI"
+    },
+    {
+      "id": "comic-12-country",
+      "box": [
+        981,
+        1274,
+        82,
+        57
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "comic-12",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete USA flag badge over cover"
+    },
+    {
+      "id": "comic-12-title",
+      "box": [
+        834,
+        1567,
+        219,
+        35
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-12",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "AVX: VS (2012)",
+      "required": true
+    },
+    {
+      "id": "comic-12-publisher",
+      "box": [
+        838,
+        1675,
+        213,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "comic-12",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Marvel Comics"
+    }
+  ],
+  "ignore_regions": [
+    {
+      "box": [
+        0,
+        1736,
+        1080,
+        11
+      ],
+      "reason": "Bottom black screenshot boundary; no app component is visible."
+    }
+  ],
+  "ambiguities": [
+    {
+      "node_ids": [
+        "comic-01-cover",
+        "comic-02-cover",
+        "comic-03-cover",
+        "comic-04-cover",
+        "comic-05-cover",
+        "comic-06-cover",
+        "comic-07-cover",
+        "comic-08-cover",
+        "comic-09-cover",
+        "comic-10-cover",
+        "comic-11-cover",
+        "comic-12-cover"
+      ],
+      "reason": "Country badges overlap cover image boxes. Covers stay atomic; no hidden artwork beneath the badges is inferred."
+    },
+    {
+      "node_ids": [
+        "comic-12",
+        "comic-12-publisher"
+      ],
+      "reason": "Last row reaches the visible screenshot boundary. Card boxes are clipped to visible y=1736 without inferring further scrolling content."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "gpt-6.1-sol-xhigh",
+    "method": "independent screenshot inspection",
+    "human_verified": false
+  }
+}

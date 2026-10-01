@@ -1,0 +1,1059 @@
+{
+  "version": 1,
+  "status": "model-authored",
+  "source_sha256": "2529f48367902ccbcfc3b6b4cd478235699d765688377b4030515695a0ecdd66",
+  "width": 521,
+  "height": 835,
+  "roi": [
+    0,
+    0,
+    521,
+    835
+  ],
+  "nodes": [
+    {
+      "id": "search-header",
+      "box": [
+        0,
+        0,
+        521,
+        63
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Search header"
+    },
+    {
+      "id": "query",
+      "box": [
+        12,
+        9,
+        428,
+        44
+      ],
+      "level": 2,
+      "type": "input",
+      "parent_id": "search-header",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Search query",
+      "required": true
+    },
+    {
+      "id": "query-glyph",
+      "box": [
+        34,
+        18,
+        29,
+        27
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "query",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete search glyph"
+    },
+    {
+      "id": "query-text",
+      "box": [
+        82,
+        24,
+        39,
+        16
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "query",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "stuff",
+      "required": true
+    },
+    {
+      "id": "query-clear",
+      "box": [
+        402,
+        23,
+        19,
+        19
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "query",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Clear query glyph",
+      "required": true
+    },
+    {
+      "id": "cancel",
+      "box": [
+        447,
+        12,
+        66,
+        41
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "search-header",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Cancel search",
+      "required": true
+    },
+    {
+      "id": "cancel-label",
+      "box": [
+        448,
+        22,
+        63,
+        21
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "cancel",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Cancel",
+      "required": true
+    },
+    {
+      "id": "results",
+      "box": [
+        0,
+        63,
+        521,
+        741
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Podcast search results"
+    },
+    {
+      "id": "podcast-sysk",
+      "box": [
+        25,
+        64,
+        478,
+        89
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "results",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Stuff You Should Know",
+      "required": true
+    },
+    {
+      "id": "podcast-sysk-cover",
+      "box": [
+        26,
+        75,
+        76,
+        71
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-sysk",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic podcast cover"
+    },
+    {
+      "id": "podcast-sysk-title",
+      "box": [
+        108,
+        85,
+        188,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-sysk",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Stuff You Should Know",
+      "required": true
+    },
+    {
+      "id": "podcast-sysk-person-glyph",
+      "box": [
+        109,
+        116,
+        18,
+        17
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-sysk",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Person-plus glyph; metric meaning unknown"
+    },
+    {
+      "id": "podcast-sysk-count",
+      "box": [
+        130,
+        118,
+        34,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-sysk",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "26.7k"
+    },
+    {
+      "id": "podcast-sysk-play-glyph",
+      "box": [
+        182,
+        117,
+        12,
+        16
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-sysk",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Play glyph"
+    },
+    {
+      "id": "podcast-sysk-plays",
+      "box": [
+        199,
+        118,
+        42,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-sysk",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "665.0k"
+    },
+    {
+      "id": "podcast-history",
+      "box": [
+        25,
+        153,
+        478,
+        89
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "results",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Stuff You Missed in History Class",
+      "required": true
+    },
+    {
+      "id": "podcast-history-cover",
+      "box": [
+        26,
+        159,
+        76,
+        76
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-history",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic podcast cover"
+    },
+    {
+      "id": "podcast-history-title",
+      "box": [
+        108,
+        169,
+        328,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-history",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Stuff You Missed in History Class",
+      "required": true
+    },
+    {
+      "id": "podcast-history-person-glyph",
+      "box": [
+        109,
+        200,
+        18,
+        17
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-history",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Person-plus glyph; metric meaning unknown"
+    },
+    {
+      "id": "podcast-history-count",
+      "box": [
+        130,
+        202,
+        34,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-history",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "13.7k"
+    },
+    {
+      "id": "podcast-history-play-glyph",
+      "box": [
+        182,
+        201,
+        12,
+        16
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-history",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Play glyph"
+    },
+    {
+      "id": "podcast-history-plays",
+      "box": [
+        199,
+        202,
+        42,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-history",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "274.0k"
+    },
+    {
+      "id": "podcast-mind",
+      "box": [
+        25,
+        242,
+        478,
+        90
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "results",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Stuff To Blow Your Mind",
+      "required": true
+    },
+    {
+      "id": "podcast-mind-cover",
+      "box": [
+        26,
+        248,
+        76,
+        76
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-mind",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic podcast cover"
+    },
+    {
+      "id": "podcast-mind-title",
+      "box": [
+        108,
+        258,
+        235,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-mind",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Stuff To Blow Your Mind",
+      "required": true
+    },
+    {
+      "id": "podcast-mind-person-glyph",
+      "box": [
+        109,
+        289,
+        18,
+        17
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-mind",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Person-plus glyph; metric meaning unknown"
+    },
+    {
+      "id": "podcast-mind-count",
+      "box": [
+        130,
+        291,
+        34,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-mind",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "12.7k"
+    },
+    {
+      "id": "podcast-mind-play-glyph",
+      "box": [
+        182,
+        290,
+        12,
+        16
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-mind",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Play glyph"
+    },
+    {
+      "id": "podcast-mind-plays",
+      "box": [
+        199,
+        291,
+        42,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-mind",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "190.4k"
+    },
+    {
+      "id": "podcast-audio",
+      "box": [
+        25,
+        332,
+        478,
+        89
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "results",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Stuff They Don't Want You To Know Audio",
+      "required": true
+    },
+    {
+      "id": "podcast-audio-cover",
+      "box": [
+        26,
+        338,
+        76,
+        76
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-audio",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic podcast cover"
+    },
+    {
+      "id": "podcast-audio-title",
+      "box": [
+        108,
+        348,
+        384,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-audio",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Stuff They Don't Want You To Know Audio",
+      "required": true
+    },
+    {
+      "id": "podcast-audio-person-glyph",
+      "box": [
+        109,
+        379,
+        18,
+        17
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-audio",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Person-plus glyph; metric meaning unknown"
+    },
+    {
+      "id": "podcast-audio-count",
+      "box": [
+        130,
+        381,
+        34,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-audio",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "3.4k"
+    },
+    {
+      "id": "podcast-audio-play-glyph",
+      "box": [
+        175,
+        380,
+        12,
+        16
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-audio",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Play glyph"
+    },
+    {
+      "id": "podcast-audio-plays",
+      "box": [
+        192,
+        381,
+        42,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-audio",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "72.2k"
+    },
+    {
+      "id": "podcast-mom",
+      "box": [
+        25,
+        421,
+        478,
+        89
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "results",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Stuff Mom Never Told You",
+      "required": true
+    },
+    {
+      "id": "podcast-mom-cover",
+      "box": [
+        26,
+        428,
+        76,
+        76
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-mom",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic podcast cover"
+    },
+    {
+      "id": "podcast-mom-title",
+      "box": [
+        108,
+        438,
+        250,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-mom",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Stuff Mom Never Told You",
+      "required": true
+    },
+    {
+      "id": "podcast-mom-person-glyph",
+      "box": [
+        109,
+        469,
+        18,
+        17
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-mom",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Person-plus glyph; metric meaning unknown"
+    },
+    {
+      "id": "podcast-mom-count",
+      "box": [
+        130,
+        471,
+        34,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-mom",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "2.0k"
+    },
+    {
+      "id": "podcast-mom-play-glyph",
+      "box": [
+        175,
+        470,
+        12,
+        16
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-mom",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Play glyph"
+    },
+    {
+      "id": "podcast-mom-plays",
+      "box": [
+        192,
+        471,
+        42,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-mom",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "48.5k"
+    },
+    {
+      "id": "podcast-purple",
+      "box": [
+        25,
+        510,
+        478,
+        90
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "results",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "The Purple Stuff Podcast",
+      "required": true
+    },
+    {
+      "id": "podcast-purple-cover",
+      "box": [
+        26,
+        517,
+        76,
+        76
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-purple",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic podcast cover"
+    },
+    {
+      "id": "podcast-purple-title",
+      "box": [
+        108,
+        527,
+        242,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-purple",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "The Purple Stuff Podcast",
+      "required": true
+    },
+    {
+      "id": "podcast-purple-person-glyph",
+      "box": [
+        109,
+        558,
+        18,
+        17
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-purple",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Person-plus glyph; metric meaning unknown"
+    },
+    {
+      "id": "podcast-purple-count",
+      "box": [
+        130,
+        560,
+        22,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-purple",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "949"
+    },
+    {
+      "id": "podcast-purple-play-glyph",
+      "box": [
+        174,
+        559,
+        12,
+        16
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-purple",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Play glyph"
+    },
+    {
+      "id": "podcast-purple-plays",
+      "box": [
+        191,
+        560,
+        42,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-purple",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "625.3k"
+    },
+    {
+      "id": "podcast-catholic",
+      "box": [
+        25,
+        600,
+        478,
+        90
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "results",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Catholic Stuff You Should Know",
+      "required": true
+    },
+    {
+      "id": "podcast-catholic-cover",
+      "box": [
+        26,
+        607,
+        76,
+        76
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-catholic",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic podcast cover"
+    },
+    {
+      "id": "podcast-catholic-title",
+      "box": [
+        108,
+        617,
+        292,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-catholic",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Catholic Stuff You Should Know",
+      "required": true
+    },
+    {
+      "id": "podcast-catholic-person-glyph",
+      "box": [
+        109,
+        648,
+        18,
+        17
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-catholic",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Person-plus glyph; metric meaning unknown"
+    },
+    {
+      "id": "podcast-catholic-count",
+      "box": [
+        130,
+        650,
+        22,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-catholic",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "683"
+    },
+    {
+      "id": "podcast-catholic-play-glyph",
+      "box": [
+        166,
+        649,
+        12,
+        16
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-catholic",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Play glyph"
+    },
+    {
+      "id": "podcast-catholic-plays",
+      "box": [
+        183,
+        650,
+        31,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-catholic",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "8.8k"
+    },
+    {
+      "id": "podcast-unknown",
+      "box": [
+        25,
+        690,
+        478,
+        90
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "results",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Stuff They Don't Want You To Know",
+      "required": true
+    },
+    {
+      "id": "podcast-unknown-cover",
+      "box": [
+        26,
+        697,
+        76,
+        76
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-unknown",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic podcast cover"
+    },
+    {
+      "id": "podcast-unknown-title",
+      "box": [
+        108,
+        707,
+        336,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-unknown",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Stuff They Don't Want You To Know",
+      "required": true
+    },
+    {
+      "id": "podcast-unknown-person-glyph",
+      "box": [
+        109,
+        738,
+        18,
+        17
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-unknown",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Person-plus glyph; metric meaning unknown"
+    },
+    {
+      "id": "podcast-unknown-count",
+      "box": [
+        130,
+        740,
+        34,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-unknown",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "1.1k"
+    },
+    {
+      "id": "podcast-unknown-play-glyph",
+      "box": [
+        175,
+        739,
+        12,
+        16
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-unknown",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Play glyph"
+    },
+    {
+      "id": "podcast-unknown-plays",
+      "box": [
+        192,
+        740,
+        31,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "podcast-unknown",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "5.4k"
+    },
+    {
+      "id": "podcast-partial",
+      "box": [
+        25,
+        780,
+        478,
+        24
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "results",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Partially visible next result"
+    },
+    {
+      "id": "podcast-partial-cover",
+      "box": [
+        26,
+        786,
+        76,
+        18
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "podcast-partial",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Visible clipped yellow cover strip"
+    }
+  ],
+  "ignore_regions": [
+    {
+      "box": [
+        0,
+        804,
+        521,
+        31
+      ],
+      "reason": "Blank/faded bottom region. Further result text and offscreen content cannot be verified."
+    }
+  ],
+  "ambiguities": [
+    {
+      "node_ids": [
+        "podcast-partial",
+        "podcast-partial-cover"
+      ],
+      "reason": "Next result is visible only as a short cover strip. No title or metadata is inferred."
+    },
+    {
+      "node_ids": [
+        "query",
+        "query-clear"
+      ],
+      "reason": "Clear is a meaningful action glyph inside the input. It is retained at level 3 without adding a fourth-level icon child."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "gpt-6.1-sol-xhigh",
+    "method": "independent screenshot inspection",
+    "human_verified": false
+  }
+}

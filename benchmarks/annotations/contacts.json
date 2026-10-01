@@ -1,0 +1,956 @@
+{
+  "version": 1,
+  "status": "model-authored",
+  "source_sha256": "b2260c25264ef7afe547ad9ab04de15ae03d83cf270263c90a4fa612071210c0",
+  "width": 575,
+  "height": 1022,
+  "roi": [
+    0,
+    42,
+    575,
+    980
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "box": [
+        0,
+        0,
+        575,
+        88
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "App header clipped by two pixels at top"
+    },
+    {
+      "id": "header-menu",
+      "box": [
+        31,
+        22,
+        51,
+        44
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "header",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Menu",
+      "required": true
+    },
+    {
+      "id": "header-menu-glyph",
+      "box": [
+        35,
+        28,
+        44,
+        29
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "header-menu",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete menu glyph"
+    },
+    {
+      "id": "header-title",
+      "box": [
+        209,
+        29,
+        160,
+        28
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Contacts · 318",
+      "required": true
+    },
+    {
+      "id": "header-search",
+      "box": [
+        507,
+        22,
+        45,
+        45
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "header",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Search",
+      "required": true
+    },
+    {
+      "id": "header-search-glyph",
+      "box": [
+        513,
+        29,
+        31,
+        32
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "header-search",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete search glyph"
+    },
+    {
+      "id": "tabs",
+      "box": [
+        0,
+        88,
+        575,
+        83
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Communication tabs"
+    },
+    {
+      "id": "tab-phone",
+      "box": [
+        0,
+        88,
+        191,
+        83
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "tabs",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Phone tab",
+      "required": true
+    },
+    {
+      "id": "tab-phone-glyph",
+      "box": [
+        58,
+        115,
+        23,
+        23
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "tab-phone",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Phone tab complete glyph"
+    },
+    {
+      "id": "tab-messages",
+      "box": [
+        191,
+        88,
+        192,
+        83
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "tabs",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Messages tab",
+      "required": true
+    },
+    {
+      "id": "tab-messages-glyph",
+      "box": [
+        275,
+        109,
+        37,
+        31
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "tab-messages",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Messages tab complete glyph"
+    },
+    {
+      "id": "tab-contacts",
+      "box": [
+        383,
+        88,
+        192,
+        83
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "tabs",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Selected contacts tab",
+      "required": true
+    },
+    {
+      "id": "tab-contacts-glyph",
+      "box": [
+        488,
+        113,
+        35,
+        26
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "tab-contacts",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Selected contacts tab complete glyph"
+    },
+    {
+      "id": "contact-list",
+      "box": [
+        20,
+        171,
+        535,
+        809
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Contact list"
+    },
+    {
+      "id": "contact-peter",
+      "box": [
+        28,
+        171,
+        525,
+        112
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "contact-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Peter Limonez",
+      "required": true
+    },
+    {
+      "id": "contact-peter-avatar",
+      "box": [
+        32,
+        181,
+        92,
+        92
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "contact-peter",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular portrait"
+    },
+    {
+      "id": "contact-peter-badge",
+      "box": [
+        95,
+        188,
+        29,
+        28
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-peter",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "15"
+    },
+    {
+      "id": "contact-peter-name",
+      "box": [
+        143,
+        199,
+        148,
+        24
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-peter",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Peter Limonez",
+      "required": true
+    },
+    {
+      "id": "contact-peter-status",
+      "box": [
+        145,
+        242,
+        322,
+        20
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-peter",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "The road to success is always under construction. 😍"
+    },
+    {
+      "id": "contact-peter-mobile",
+      "box": [
+        501,
+        241,
+        48,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-peter",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "MOBILE"
+    },
+    {
+      "id": "contact-sofia",
+      "box": [
+        28,
+        283,
+        525,
+        113
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "contact-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Sofia Morell",
+      "required": true
+    },
+    {
+      "id": "contact-sofia-avatar",
+      "box": [
+        32,
+        294,
+        92,
+        92
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "contact-sofia",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular portrait"
+    },
+    {
+      "id": "contact-sofia-badge",
+      "box": [
+        95,
+        299,
+        29,
+        28
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-sofia",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "12"
+    },
+    {
+      "id": "contact-sofia-name",
+      "box": [
+        143,
+        311,
+        138,
+        24
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-sofia",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Sofia Morell",
+      "required": true
+    },
+    {
+      "id": "contact-sofia-status",
+      "box": [
+        145,
+        355,
+        296,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-sofia",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "My silence/smile is just another word for my pain."
+    },
+    {
+      "id": "contact-sofia-mobile",
+      "box": [
+        501,
+        351,
+        48,
+        22
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-sofia",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "MOBILE"
+    },
+    {
+      "id": "contact-saarah",
+      "box": [
+        28,
+        396,
+        525,
+        115
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "contact-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Saarah Laten",
+      "required": true
+    },
+    {
+      "id": "contact-saarah-avatar",
+      "box": [
+        32,
+        407,
+        93,
+        93
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "contact-saarah",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular portrait"
+    },
+    {
+      "id": "contact-saarah-badge",
+      "box": [
+        96,
+        413,
+        29,
+        28
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-saarah",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "24"
+    },
+    {
+      "id": "contact-saarah-name",
+      "box": [
+        143,
+        425,
+        130,
+        24
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-saarah",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Saarah Laten",
+      "required": true
+    },
+    {
+      "id": "contact-saarah-status",
+      "box": [
+        145,
+        468,
+        224,
+        20
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-saarah",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Sometimes It's better to be alone. 😨"
+    },
+    {
+      "id": "contact-saarah-mobile",
+      "box": [
+        501,
+        466,
+        48,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-saarah",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "MOBILE"
+    },
+    {
+      "id": "contact-alan",
+      "box": [
+        28,
+        511,
+        525,
+        115
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "contact-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Alan Leonardo",
+      "required": true
+    },
+    {
+      "id": "contact-alan-avatar",
+      "box": [
+        32,
+        524,
+        93,
+        92
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "contact-alan",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular portrait"
+    },
+    {
+      "id": "contact-alan-badge",
+      "box": [
+        96,
+        529,
+        29,
+        28
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-alan",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "14"
+    },
+    {
+      "id": "contact-alan-name",
+      "box": [
+        143,
+        540,
+        151,
+        24
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-alan",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Alan Leonardo",
+      "required": true
+    },
+    {
+      "id": "contact-alan-status",
+      "box": [
+        145,
+        584,
+        272,
+        18
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-alan",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "I'm not failed... my success is just postponed."
+    },
+    {
+      "id": "contact-alan-mobile",
+      "box": [
+        501,
+        581,
+        48,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-alan",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "MOBILE"
+    },
+    {
+      "id": "contact-alexandra",
+      "box": [
+        28,
+        626,
+        525,
+        114
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "contact-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Alexandra Stevanii",
+      "required": true
+    },
+    {
+      "id": "contact-alexandra-avatar",
+      "box": [
+        32,
+        637,
+        93,
+        92
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "contact-alexandra",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular portrait"
+    },
+    {
+      "id": "contact-alexandra-badge",
+      "box": [
+        96,
+        642,
+        29,
+        28
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-alexandra",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "35"
+    },
+    {
+      "id": "contact-alexandra-name",
+      "box": [
+        143,
+        654,
+        194,
+        25
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-alexandra",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Alexandra Stevanii",
+      "required": true
+    },
+    {
+      "id": "contact-alexandra-status",
+      "box": [
+        145,
+        698,
+        313,
+        18
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-alexandra",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "The only way to do great work is to love what you do."
+    },
+    {
+      "id": "contact-alexandra-mobile",
+      "box": [
+        501,
+        695,
+        48,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-alexandra",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "MOBILE"
+    },
+    {
+      "id": "contact-soraiea",
+      "box": [
+        28,
+        740,
+        525,
+        114
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "contact-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Soraiea Mertalez",
+      "required": true
+    },
+    {
+      "id": "contact-soraiea-avatar",
+      "box": [
+        32,
+        751,
+        93,
+        92
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "contact-soraiea",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular portrait"
+    },
+    {
+      "id": "contact-soraiea-badge",
+      "box": [
+        96,
+        755,
+        29,
+        29
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-soraiea",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "11"
+    },
+    {
+      "id": "contact-soraiea-name",
+      "box": [
+        143,
+        770,
+        173,
+        24
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-soraiea",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Soraiea Mertalez",
+      "required": true
+    },
+    {
+      "id": "contact-soraiea-status",
+      "box": [
+        145,
+        813,
+        329,
+        18
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-soraiea",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "A journey of a thousand miles begins with a single step."
+    },
+    {
+      "id": "contact-soraiea-mobile",
+      "box": [
+        501,
+        811,
+        48,
+        23
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-soraiea",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "MOBILE"
+    },
+    {
+      "id": "contact-leyla",
+      "box": [
+        28,
+        854,
+        525,
+        126
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "contact-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Leyla Mareen",
+      "required": true
+    },
+    {
+      "id": "contact-leyla-avatar",
+      "box": [
+        32,
+        868,
+        93,
+        92
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "contact-leyla",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic circular portrait"
+    },
+    {
+      "id": "contact-leyla-badge",
+      "box": [
+        96,
+        874,
+        29,
+        28
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-leyla",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "41"
+    },
+    {
+      "id": "contact-leyla-name",
+      "box": [
+        143,
+        882,
+        136,
+        24
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-leyla",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Leyla Mareen",
+      "required": true
+    },
+    {
+      "id": "contact-leyla-status",
+      "box": [
+        145,
+        927,
+        287,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-leyla",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Do not give up, the beginning is always the harde…"
+    },
+    {
+      "id": "contact-leyla-mobile",
+      "box": [
+        514,
+        924,
+        35,
+        21
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "contact-leyla",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "MOBILE, visibly occluded on last row"
+    },
+    {
+      "id": "floating-action",
+      "box": [
+        425,
+        849,
+        104,
+        104
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Floating contact action"
+    },
+    {
+      "id": "add-contact",
+      "box": [
+        425,
+        849,
+        104,
+        104
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "floating-action",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Add contact",
+      "required": true
+    },
+    {
+      "id": "add-contact-glyph",
+      "box": [
+        461,
+        886,
+        36,
+        30
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "add-contact",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Person-plus glyph"
+    }
+  ],
+  "ignore_regions": [],
+  "ambiguities": [
+    {
+      "node_ids": [
+        "contact-leyla-status",
+        "contact-leyla-mobile"
+      ],
+      "reason": "Floating action hides part of the last status and MOBILE badge. Boxes describe only visible text, not guessed hidden bounds."
+    },
+    {
+      "node_ids": [
+        "contact-peter-badge",
+        "contact-sofia-badge",
+        "contact-saarah-badge",
+        "contact-alan-badge",
+        "contact-alexandra-badge",
+        "contact-soraiea-badge",
+        "contact-leyla-badge"
+      ],
+      "reason": "Numeric circular badges are visible. Their product meaning is unknown."
+    },
+    {
+      "node_ids": [
+        "floating-action",
+        "add-contact"
+      ],
+      "reason": "Identical enclosures express the main floating section and its sole button at adjacent semantic levels. They are not two independent controls."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "gpt-6.1-sol-xhigh",
+    "method": "independent screenshot inspection",
+    "human_verified": false
+  }
+}

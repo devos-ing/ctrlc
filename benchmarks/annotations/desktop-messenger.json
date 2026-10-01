@@ -1,0 +1,1657 @@
+{
+  "version": 1,
+  "status": "model-authored",
+  "source_sha256": "3f5fff01048e758e43902d1b51fe1a2b33c4423ecd5f9c0eb206f0a38a6c6c8b",
+  "width": 842,
+  "height": 577,
+  "roi": [
+    0,
+    0,
+    842,
+    577
+  ],
+  "nodes": [
+    {
+      "id": "navigation",
+      "box": [
+        0,
+        0,
+        54,
+        577
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "App navigation sidebar"
+    },
+    {
+      "id": "profile",
+      "box": [
+        7,
+        19,
+        34,
+        34
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "navigation",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic profile image"
+    },
+    {
+      "id": "nav-chats",
+      "box": [
+        5,
+        71,
+        42,
+        39
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Chats",
+      "required": true
+    },
+    {
+      "id": "nav-chats-glyph",
+      "box": [
+        13,
+        82,
+        22,
+        21
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-chats",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete chats glyph"
+    },
+    {
+      "id": "nav-contacts",
+      "box": [
+        5,
+        122,
+        42,
+        38
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Contacts",
+      "required": true
+    },
+    {
+      "id": "nav-contacts-glyph",
+      "box": [
+        14,
+        132,
+        21,
+        19
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-contacts",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete contacts glyph"
+    },
+    {
+      "id": "nav-collections",
+      "box": [
+        5,
+        174,
+        42,
+        36
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Collections",
+      "required": true
+    },
+    {
+      "id": "nav-collections-glyph",
+      "box": [
+        14,
+        180,
+        21,
+        23
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-collections",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete collections glyph"
+    },
+    {
+      "id": "nav-files",
+      "box": [
+        5,
+        224,
+        42,
+        37
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Files",
+      "required": true
+    },
+    {
+      "id": "nav-files-glyph",
+      "box": [
+        14,
+        234,
+        21,
+        18
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-files",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete files glyph"
+    },
+    {
+      "id": "nav-applications",
+      "box": [
+        5,
+        273,
+        42,
+        37
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Applications",
+      "required": true
+    },
+    {
+      "id": "nav-applications-glyph",
+      "box": [
+        13,
+        281,
+        23,
+        23
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-applications",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete applications glyph"
+    },
+    {
+      "id": "nav-links",
+      "box": [
+        5,
+        450,
+        42,
+        36
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Links",
+      "required": true
+    },
+    {
+      "id": "nav-links-glyph",
+      "box": [
+        14,
+        459,
+        20,
+        20
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-links",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete links glyph"
+    },
+    {
+      "id": "nav-phone",
+      "box": [
+        5,
+        494,
+        42,
+        35
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Phone",
+      "required": true
+    },
+    {
+      "id": "nav-phone-glyph",
+      "box": [
+        17,
+        503,
+        14,
+        22
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-phone",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete phone glyph"
+    },
+    {
+      "id": "nav-menu",
+      "box": [
+        5,
+        535,
+        42,
+        36
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "navigation",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Menu",
+      "required": true
+    },
+    {
+      "id": "nav-menu-glyph",
+      "box": [
+        15,
+        544,
+        20,
+        18
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "nav-menu",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete menu glyph"
+    },
+    {
+      "id": "nav-chats-count",
+      "box": [
+        22,
+        77,
+        23,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "nav-chats",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "35"
+    },
+    {
+      "id": "conversation-list",
+      "box": [
+        54,
+        0,
+        250,
+        577
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Conversation list and search"
+    },
+    {
+      "id": "search",
+      "box": [
+        65,
+        24,
+        191,
+        26
+      ],
+      "level": 2,
+      "type": "input",
+      "parent_id": "conversation-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Search conversations",
+      "required": true
+    },
+    {
+      "id": "search-glyph",
+      "box": [
+        72,
+        31,
+        12,
+        12
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "search",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Search glyph"
+    },
+    {
+      "id": "search-placeholder",
+      "box": [
+        89,
+        30,
+        41,
+        13
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "search",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Search"
+    },
+    {
+      "id": "new-conversation",
+      "box": [
+        266,
+        24,
+        26,
+        26
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "conversation-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "New conversation",
+      "required": true
+    },
+    {
+      "id": "new-conversation-glyph",
+      "box": [
+        272,
+        30,
+        13,
+        13
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "new-conversation",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Plus glyph"
+    },
+    {
+      "id": "conversation-uidetection",
+      "box": [
+        54,
+        61,
+        250,
+        64
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "conversation-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "UIDetection",
+      "required": true
+    },
+    {
+      "id": "conversation-uidetection-avatar",
+      "box": [
+        66,
+        73,
+        39,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "conversation-uidetection",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic conversation avatar"
+    },
+    {
+      "id": "conversation-uidetection-title",
+      "box": [
+        116,
+        78,
+        87,
+        15
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-uidetection",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "UIDetection",
+      "required": true
+    },
+    {
+      "id": "conversation-uidetection-date",
+      "box": [
+        244,
+        77,
+        47,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-uidetection",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "9:42 AM"
+    },
+    {
+      "id": "conversation-uidetection-preview",
+      "box": [
+        116,
+        99,
+        136,
+        15
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-uidetection",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "ANU RSCS 邢振昌。: …"
+    },
+    {
+      "id": "conversation-uidetection-muted",
+      "box": [
+        279,
+        101,
+        12,
+        14
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "conversation-uidetection",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Muted notification glyph"
+    },
+    {
+      "id": "conversation-fenner",
+      "box": [
+        54,
+        125,
+        250,
+        64
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "conversation-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Fenner",
+      "required": true
+    },
+    {
+      "id": "conversation-fenner-avatar",
+      "box": [
+        66,
+        137,
+        39,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "conversation-fenner",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic conversation avatar"
+    },
+    {
+      "id": "conversation-fenner-title",
+      "box": [
+        116,
+        141,
+        48,
+        15
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-fenner",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Fenner",
+      "required": true
+    },
+    {
+      "id": "conversation-fenner-date",
+      "box": [
+        236,
+        141,
+        56,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-fenner",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Yesterday"
+    },
+    {
+      "id": "conversation-fenner-preview",
+      "box": [
+        116,
+        164,
+        142,
+        15
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-fenner",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "王一泓: 我对这个人也有…"
+    },
+    {
+      "id": "conversation-fenner-muted",
+      "box": [
+        279,
+        165,
+        12,
+        14
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "conversation-fenner",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Muted notification glyph"
+    },
+    {
+      "id": "conversation-video",
+      "box": [
+        54,
+        189,
+        250,
+        64
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "conversation-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "媛基吧松",
+      "required": true
+    },
+    {
+      "id": "conversation-video-avatar",
+      "box": [
+        66,
+        201,
+        39,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "conversation-video",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic conversation avatar"
+    },
+    {
+      "id": "conversation-video-title",
+      "box": [
+        116,
+        204,
+        66,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-video",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "媛基吧松",
+      "required": true
+    },
+    {
+      "id": "conversation-video-date",
+      "box": [
+        224,
+        205,
+        68,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-video",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Wednesday"
+    },
+    {
+      "id": "conversation-video-preview",
+      "box": [
+        116,
+        227,
+        49,
+        16
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-video",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "[Video]"
+    },
+    {
+      "id": "conversation-photo",
+      "box": [
+        54,
+        253,
+        250,
+        64
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "conversation-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "骑住猪仔去塞…",
+      "required": true
+    },
+    {
+      "id": "conversation-photo-avatar",
+      "box": [
+        66,
+        265,
+        39,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "conversation-photo",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic conversation avatar"
+    },
+    {
+      "id": "conversation-photo-title",
+      "box": [
+        116,
+        268,
+        101,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-photo",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "骑住猪仔去塞…",
+      "required": true
+    },
+    {
+      "id": "conversation-photo-date",
+      "box": [
+        236,
+        269,
+        56,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-photo",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Yesterday"
+    },
+    {
+      "id": "conversation-photo-preview",
+      "box": [
+        116,
+        291,
+        48,
+        16
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-photo",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "[Photo]"
+    },
+    {
+      "id": "conversation-xingge",
+      "box": [
+        54,
+        317,
+        250,
+        64
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "conversation-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "星哥",
+      "required": true
+    },
+    {
+      "id": "conversation-xingge-avatar",
+      "box": [
+        66,
+        329,
+        39,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "conversation-xingge",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic conversation avatar"
+    },
+    {
+      "id": "conversation-xingge-title",
+      "box": [
+        116,
+        332,
+        30,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-xingge",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "星哥",
+      "required": true
+    },
+    {
+      "id": "conversation-xingge-date",
+      "box": [
+        236,
+        333,
+        56,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-xingge",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Yesterday"
+    },
+    {
+      "id": "conversation-xingge-preview",
+      "box": [
+        116,
+        355,
+        27,
+        15
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-xingge",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "可以"
+    },
+    {
+      "id": "conversation-phd",
+      "box": [
+        54,
+        381,
+        250,
+        64
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "conversation-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "硕硕 phd",
+      "required": true
+    },
+    {
+      "id": "conversation-phd-avatar",
+      "box": [
+        66,
+        393,
+        39,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "conversation-phd",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic conversation avatar"
+    },
+    {
+      "id": "conversation-phd-title",
+      "box": [
+        116,
+        396,
+        65,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-phd",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "硕硕 phd",
+      "required": true
+    },
+    {
+      "id": "conversation-phd-date",
+      "box": [
+        236,
+        397,
+        56,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-phd",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Yesterday"
+    },
+    {
+      "id": "conversation-phd-preview",
+      "box": [
+        116,
+        419,
+        27,
+        15
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-phd",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "确实"
+    },
+    {
+      "id": "conversation-subscriptions",
+      "box": [
+        54,
+        445,
+        250,
+        64
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "conversation-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Subscriptions",
+      "required": true
+    },
+    {
+      "id": "conversation-subscriptions-avatar",
+      "box": [
+        66,
+        457,
+        39,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "conversation-subscriptions",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic conversation avatar"
+    },
+    {
+      "id": "conversation-subscriptions-title",
+      "box": [
+        116,
+        461,
+        107,
+        16
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-subscriptions",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Subscriptions",
+      "required": true
+    },
+    {
+      "id": "conversation-subscriptions-date",
+      "box": [
+        236,
+        461,
+        56,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-subscriptions",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Yesterday"
+    },
+    {
+      "id": "conversation-subscriptions-preview",
+      "box": [
+        116,
+        483,
+        143,
+        15
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-subscriptions",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "奇怪漫画: 江边浮起一具…"
+    },
+    {
+      "id": "conversation-news",
+      "box": [
+        54,
+        509,
+        250,
+        68
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "conversation-list",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "窝趣网",
+      "required": true
+    },
+    {
+      "id": "conversation-news-avatar",
+      "box": [
+        66,
+        521,
+        39,
+        40
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "conversation-news",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic conversation avatar"
+    },
+    {
+      "id": "conversation-news-title",
+      "box": [
+        116,
+        525,
+        42,
+        16
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-news",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "窝趣网",
+      "required": true
+    },
+    {
+      "id": "conversation-news-date",
+      "box": [
+        236,
+        525,
+        56,
+        12
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-news",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Yesterday"
+    },
+    {
+      "id": "conversation-news-preview",
+      "box": [
+        116,
+        547,
+        142,
+        15
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "conversation-news",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "多所高校公布暑假时间，…"
+    },
+    {
+      "id": "chat-header",
+      "box": [
+        304,
+        0,
+        538,
+        61
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Open conversation header"
+    },
+    {
+      "id": "chat-title",
+      "box": [
+        334,
+        27,
+        132,
+        18
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "chat-header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "UIDetection (5)",
+      "required": true
+    },
+    {
+      "id": "chat-options",
+      "box": [
+        802,
+        30,
+        34,
+        26
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "chat-header",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Conversation options",
+      "required": true
+    },
+    {
+      "id": "chat-options-glyph",
+      "box": [
+        810,
+        39,
+        18,
+        7
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "chat-options",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Three-dot glyph"
+    },
+    {
+      "id": "chat-history",
+      "box": [
+        304,
+        61,
+        538,
+        389
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Conversation history"
+    },
+    {
+      "id": "time-marker",
+      "box": [
+        543,
+        80,
+        60,
+        19
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "chat-history",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "9:39 AM"
+    },
+    {
+      "id": "message-one",
+      "box": [
+        334,
+        109,
+        329,
+        73
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "chat-history",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Message from ANU RSCS 邢振昌。"
+    },
+    {
+      "id": "message-one-avatar",
+      "box": [
+        334,
+        114,
+        34,
+        33
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "message-one",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic sender avatar"
+    },
+    {
+      "id": "message-one-sender",
+      "box": [
+        377,
+        109,
+        108,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "message-one",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "ANU RSCS 邢振昌。"
+    },
+    {
+      "id": "message-one-body",
+      "box": [
+        377,
+        129,
+        286,
+        52
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "message-one",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "要把文件大小限制在网站写明，不然人们也不知道到底什么出了问题"
+    },
+    {
+      "id": "message-two",
+      "box": [
+        334,
+        194,
+        329,
+        72
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "chat-history",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Message from ANU RSCS 邢振昌。"
+    },
+    {
+      "id": "message-two-avatar",
+      "box": [
+        334,
+        199,
+        34,
+        33
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "message-two",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic sender avatar"
+    },
+    {
+      "id": "message-two-sender",
+      "box": [
+        377,
+        194,
+        108,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "message-two",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "ANU RSCS 邢振昌。"
+    },
+    {
+      "id": "message-two-body",
+      "box": [
+        377,
+        213,
+        286,
+        53
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "message-two",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "微信那两张图肉眼看没有颜色没有太大不同的样子呀？"
+    },
+    {
+      "id": "message-three",
+      "box": [
+        334,
+        279,
+        329,
+        92
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "chat-history",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Message from ANU RSCS 邢振昌。"
+    },
+    {
+      "id": "message-three-avatar",
+      "box": [
+        334,
+        284,
+        34,
+        33
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "message-three",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic sender avatar"
+    },
+    {
+      "id": "message-three-sender",
+      "box": [
+        377,
+        279,
+        108,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "message-three",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "ANU RSCS 邢振昌。"
+    },
+    {
+      "id": "message-three-body",
+      "box": [
+        377,
+        298,
+        279,
+        73
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "message-three",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "有没有可能对一个image sample一下color然后自动浮动一下梯度阈值，而不是所有图片都用一个固定阈值？"
+    },
+    {
+      "id": "message-four",
+      "box": [
+        334,
+        384,
+        250,
+        52
+      ],
+      "level": 2,
+      "type": "container",
+      "parent_id": "chat-history",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Message from ANU RSCS 邢振昌。"
+    },
+    {
+      "id": "message-four-avatar",
+      "box": [
+        334,
+        389,
+        34,
+        33
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "message-four",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Atomic sender avatar"
+    },
+    {
+      "id": "message-four-sender",
+      "box": [
+        377,
+        384,
+        108,
+        14
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "message-four",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "ANU RSCS 邢振昌。"
+    },
+    {
+      "id": "message-four-body",
+      "box": [
+        377,
+        403,
+        207,
+        33
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "message-four",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "微信pc ui什么阈值就可以了？"
+    },
+    {
+      "id": "composer",
+      "box": [
+        304,
+        450,
+        538,
+        127
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Message composer"
+    },
+    {
+      "id": "compose-emoji",
+      "box": [
+        326,
+        458,
+        28,
+        28
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "composer",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Emoji",
+      "required": true
+    },
+    {
+      "id": "compose-emoji-glyph",
+      "box": [
+        332,
+        464,
+        16,
+        16
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "compose-emoji",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete emoji glyph"
+    },
+    {
+      "id": "compose-attach",
+      "box": [
+        358,
+        458,
+        28,
+        28
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "composer",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Attach file",
+      "required": true
+    },
+    {
+      "id": "compose-attach-glyph",
+      "box": [
+        363,
+        465,
+        17,
+        15
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "compose-attach",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete attach file glyph"
+    },
+    {
+      "id": "compose-screenshot",
+      "box": [
+        390,
+        458,
+        30,
+        28
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "composer",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Screenshot",
+      "required": true
+    },
+    {
+      "id": "compose-screenshot-glyph",
+      "box": [
+        397,
+        464,
+        19,
+        17
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "compose-screenshot",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete screenshot glyph"
+    },
+    {
+      "id": "compose-more",
+      "box": [
+        426,
+        458,
+        29,
+        28
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "composer",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "More tools",
+      "required": true
+    },
+    {
+      "id": "compose-more-glyph",
+      "box": [
+        432,
+        464,
+        16,
+        16
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "compose-more",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete more tools glyph"
+    },
+    {
+      "id": "compose-call",
+      "box": [
+        789,
+        458,
+        32,
+        29
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "composer",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Call",
+      "required": true
+    },
+    {
+      "id": "compose-call-glyph",
+      "box": [
+        797,
+        464,
+        16,
+        18
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "compose-call",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Complete call glyph"
+    },
+    {
+      "id": "compose-input",
+      "box": [
+        326,
+        487,
+        493,
+        56
+      ],
+      "level": 2,
+      "type": "input",
+      "parent_id": "composer",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Empty message input",
+      "required": true
+    },
+    {
+      "id": "send",
+      "box": [
+        739,
+        548,
+        68,
+        26
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "composer",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Send",
+      "required": true
+    },
+    {
+      "id": "send-label",
+      "box": [
+        745,
+        554,
+        56,
+        17
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "send",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Send (S)",
+      "required": true
+    }
+  ],
+  "ignore_regions": [
+    {
+      "box": [
+        710,
+        0,
+        132,
+        23
+      ],
+      "reason": "Native window pin, minimize, maximize and close controls; outside the application content hierarchy."
+    },
+    {
+      "box": [
+        297,
+        61,
+        7,
+        16
+      ],
+      "reason": "Tiny scrollbar thumb at conversation-list edge; decorative scrolling position, no independent useful component."
+    },
+    {
+      "box": [
+        653,
+        59,
+        117,
+        3
+      ],
+      "reason": "Unlabeled horizontal hairline beneath header; its function is unknown."
+    }
+  ],
+  "ambiguities": [
+    {
+      "node_ids": [
+        "message-one-body",
+        "message-two-body",
+        "message-three-body",
+        "message-four-body"
+      ],
+      "reason": "Text node boxes follow the visible speech-bubble enclosure. Bubble text is not a separate fourth semantic level."
+    },
+    {
+      "node_ids": [
+        "conversation-video-title",
+        "conversation-photo-title",
+        "conversation-news-title",
+        "conversation-phd-title"
+      ],
+      "reason": "Small Chinese labels may have uncertain exact transcription. Bounding boxes and component role are visible; transcription does not imply OCR verification."
+    },
+    {
+      "node_ids": [
+        "compose-input"
+      ],
+      "reason": "Empty message input has no visible border. Its bounds use the whitespace below the toolbar and above the send row; the caret is not a separate asset."
+    }
+  ],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "gpt-6.1-sol-xhigh",
+    "method": "independent screenshot inspection",
+    "human_verified": false
+  }
+}

@@ -19,3 +19,4 @@ dist/
 !.env.example
 *.visual-check.*
 docs/diagrams/*.receipt.json
+benchmarks/fixtures/

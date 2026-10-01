@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "source_sha256": "b264975108e7b48f82b3a30c2c0ee00d748d5926c3ad6c90c86e61d415ef5ec4",
+  "width": 540,
+  "height": 960,
+  "roi": [
+    0,
+    31,
+    540,
+    866
+  ],
+  "nodes": [
+    {
+      "id": "header",
+      "box": [
+        0,
+        0,
+        540,
+        72
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "back",
+      "box": [
+        27,
+        26,
+        27,
+        22
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Back arrow",
+      "required": true
+    },
+    {
+      "id": "header-title",
+      "box": [
+        153,
+        24,
+        239,
+        29
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "header",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Log in With Facebook"
+    },
+    {
+      "id": "identity",
+      "box": [
+        103,
+        229,
+        338,
+        288
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "app-logo",
+      "box": [
+        228,
+        229,
+        86,
+        86
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "identity",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Application logo"
+    },
+    {
+      "id": "account-name",
+      "box": [
+        170,
+        352,
+        202,
+        29
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "identity",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Continue as Sam",
+      "required": true
+    },
+    {
+      "id": "permissions",
+      "box": [
+        103,
+        410,
+        338,
+        46
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "identity",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Public profile and email permission",
+      "required": true
+    },
+    {
+      "id": "edit",
+      "box": [
+        218,
+        485,
+        111,
+        32
+      ],
+      "level": 2,
+      "type": "button",
+      "parent_id": "identity",
+      "atomic": false,
+      "status": "model-authored",
+      "label": "Edit This",
+      "required": true
+    },
+    {
+      "id": "edit-icon",
+      "box": [
+        219,
+        487,
+        24,
+        24
+      ],
+      "level": 3,
+      "type": "image",
+      "parent_id": "edit",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "edit-label",
+      "box": [
+        247,
+        485,
+        82,
+        29
+      ],
+      "level": 3,
+      "type": "text",
+      "parent_id": "edit",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Edit This",
+      "required": true
+    },
+    {
+      "id": "continue",
+      "box": [
+        138,
+        688,
+        264,
+        51
+      ],
+      "level": 1,
+      "type": "button",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored",
+      "required": true
+    },
+    {
+      "id": "continue-label",
+      "box": [
+        230,
+        701,
+        83,
+        26
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "continue",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Continue",
+      "required": true
+    },
+    {
+      "id": "privacy",
+      "box": [
+        102,
+        786,
+        340,
+        23
+      ],
+      "level": 1,
+      "type": "container",
+      "parent_id": null,
+      "atomic": false,
+      "status": "model-authored"
+    },
+    {
+      "id": "privacy-lock",
+      "box": [
+        102,
+        786,
+        15,
+        18
+      ],
+      "level": 2,
+      "type": "image",
+      "parent_id": "privacy",
+      "atomic": true,
+      "status": "model-authored"
+    },
+    {
+      "id": "privacy-label",
+      "box": [
+        122,
+        786,
+        320,
+        23
+      ],
+      "level": 2,
+      "type": "text",
+      "parent_id": "privacy",
+      "atomic": true,
+      "status": "model-authored",
+      "label": "Posting permission notice"
+    }
+  ],
+  "ignore_regions": [],
+  "ambiguities": [],
+  "allowed_alternatives": [],
+  "annotation_provenance": {
+    "author": "root",
+    "method": "manual coordinate annotation from original screenshot inspection",
+    "human_verified": false,
+    "independently_reviewed": true,
+    "bounds_tolerance_px": 3,
+    "reviewer": "gpt-6.1-sol-xhigh",
+    "review_method": "Independent original screenshot and annotation-overlay inspection",
+    "review_status": "model-reviewed-not-human-verified"
+  }
+}

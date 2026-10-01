@@ -7,8 +7,10 @@ only for uncertain names, roles, or grouping.
 1. Select the application region. Exclude keyboard, OS chrome, and watermarks
    when they are outside the requested UI. Record the ROI in screenshot pixels.
 2. Run `ctrlc extract` with the screenshot, ROI, and output directory. Add
-   `--inspector` only when a visual preview is requested. Native OCR uses
-   macOS Vision; elsewhere, supply compatible OCR with `--ocr-json`.
+   `--inspector` only when a visual preview is requested. Pass `--depth 1`,
+   `--depth 2`, or `--depth 3` to opt in to a hierarchy. Omit it to retain the
+   legacy scene. Native OCR uses macOS Vision; elsewhere, supply compatible OCR
+   with `--ocr-json`.
 3. Check the JSON response, then read the reported `packet.json` once. Keep
    `scene.json` on disk for detailed evidence. If the inferred roles and
    grouping already satisfy the request, finish here.
@@ -26,6 +28,28 @@ only for uncertain names, roles, or grouping.
 The command has no model client or network request. It never interprets prompts
 or constructs shell commands. Agents choose command arguments, read the
 resulting packet, and perform any optional semantic review themselves.
+
+## Saved hierarchy refinement
+
+An opted-in extraction saves immutable OCR and pixel evidence in a
+`measurements-*.json` file. The scene references that file by relative path and
+content hash. Keep the scene, measurement file, and matching screenshot together.
+
+Run `ctrlc refine` to request another saved depth:
+
+```bash
+ctrlc extract screenshot.png --out result --depth 1
+ctrlc refine result/scene.json screenshot.png --out refined --depth 3 --inspector
+```
+
+Refinement checks the screenshot hash, source dimensions, ROI, and measurement
+hash. It does not run OCR. It retains accepted section IDs and names when their
+evidence stays the same. The result reports the requested and achieved depths,
+completed passes, stop reason, node counts, cache state, and artifact paths.
+
+The inspector's depth selector only displays levels saved in the scene. Use
+`Raw candidates` to inspect measured OCR and pixel candidates with their
+grouping decisions. Changing the selector does not extract or refine data.
 
 ## Reusable agent prompt
 

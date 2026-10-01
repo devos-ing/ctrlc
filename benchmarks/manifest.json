@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "annotation_status": "model-authored-pending-independent-review",
+  "annotation_policy": "Screen-derived labels, not extracted-node gold. Report author and reviewer. Not human-verified.",
+  "fixtures": [
+    {
+      "id": "sign-in",
+      "screenshot": "fixtures/sign-in.png",
+      "legacy_scene": "../sample/scene.json",
+      "annotation": "annotations/sign-in.json",
+      "ocr": "fixtures/sign-in.ocr.json",
+      "split": "tuning",
+      "source_family": "local-sign-in",
+      "source_sha256": "e5bf668099caad9a67825bd4ef277012feeca7235160f85c1c6cdbc86c3421fe",
+      "width": 1125,
+      "height": 2556,
+      "roi": [
+        0,
+        215,
+        1125,
+        1200
+      ],
+      "provenance": {
+        "kind": "existing-local-fixture",
+        "original_path": "sample/source.png",
+        "redistribution": "not-authorized-by-this-task"
+      }
+    },
+    {
+      "id": "brokerage",
+      "screenshot": "fixtures/brokerage.png",
+      "legacy_scene": "../brokerage/scene.json",
+      "annotation": "annotations/brokerage.json",
+      "ocr": "fixtures/brokerage.ocr.json",
+      "split": "tuning",
+      "source_family": "local-brokerage",
+      "source_sha256": "4bd97abda0c55a465346f3ecd18a8521360ab6bdf32fda0b7334786169dc6661",
+      "width": 1179,
+      "height": 2676,
+      "roi": [
+        0,
+        150,
+        1179,
+        2370
+      ],
+      "provenance": {
+        "kind": "existing-local-fixture",
+        "original_path": "brokerage/source.png",
+        "redistribution": "not-authorized-by-this-task"
+      }
+    },
+    {
+      "id": "shopping",
+      "screenshot": "fixtures/shopping.png",
+      "legacy_scene": "../.scratch/shop-ui-f322be70/scene.json",
+      "annotation": "annotations/shopping.json",
+      "ocr": "fixtures/shopping.ocr.json",
+      "split": "tuning",
+      "source_family": "local-shopping",
+      "source_sha256": "a28a375d149374194005dc765adf3f04802c64082a59517bb869b67dff1a662c",
+      "width": 1179,
+      "height": 2676,
+      "roi": [
+        0,
+        140,
+        1179,
+        2416
+      ],
+      "provenance": {
+        "kind": "existing-local-fixture",
+        "original_path": ".scratch/shop-ui-f322be70/source.png",
+        "redistribution": "not-authorized-by-this-task"
+      }
+    },
+    {
+      "id": "dark-new-tab",
+      "screenshot": "fixtures/dark-new-tab.jpg",
+      "legacy_scene": null,
+      "annotation": "annotations/dark-new-tab.json",
+      "ocr": "fixtures/dark-new-tab.ocr.json",
+      "split": "tuning",
+      "source_family": "chrome-new-tab",
+      "source_sha256": "64da23bbbfd696f70fa87ef39ed759baf6afaa96163a74b4e94d0a59c81978f3",
+      "width": 1920,
+      "height": 1040,
+      "roi": [
+        0,
+        152,
+        1920,
+        888
+      ],
+      "provenance": {
+        "kind": "public-research-example",
+        "repository": "https://github.com/MulongXie/UIED",
+        "revision": "0a9862a7be69c9fd157e19c825a5a9e815f201cd",
+        "source_url": "https://raw.githubusercontent.com/MulongXie/UIED/0a9862a7be69c9fd157e19c825a5a9e815f201cd/data/input/1.jpg",
+        "repository_license": "Apache-2.0",
+        "screenshot_asset_license": "unknown"
+      }
+    },
+    {
+      "id": "contacts",
+      "screenshot": "fixtures/contacts.jpg",
+      "legacy_scene": null,
+      "annotation": "annotations/contacts.json",
+      "ocr": "fixtures/contacts.ocr.json",
+      "split": "holdout",
+      "source_family": "green-mobile",
+      "source_sha256": "b2260c25264ef7afe547ad9ab04de15ae03d83cf270263c90a4fa612071210c0",
+      "width": 575,
+      "height": 1022,
+      "roi": [
+        0,
+        42,
+        575,
+        980
+      ],
+      "provenance": {
+        "kind": "public-research-example",
+        "repository": "https://github.com/MulongXie/UIED",
+        "revision": "0a9862a7be69c9fd157e19c825a5a9e815f201cd",
+        "source_url": "https://raw.githubusercontent.com/MulongXie/UIED/0a9862a7be69c9fd157e19c825a5a9e815f201cd/data/input/2.jpg",
+        "repository_license": "Apache-2.0",
+        "screenshot_asset_license": "unknown"
+      }
+    },
+    {
+      "id": "desktop-messenger",
+      "screenshot": "fixtures/desktop-messenger.jpg",
+      "legacy_scene": null,
+      "annotation": "annotations/desktop-messenger.json",
+      "ocr": "fixtures/desktop-messenger.ocr.json",
+      "split": "holdout",
+      "source_family": "desktop-messenger",
+      "source_sha256": "3f5fff01048e758e43902d1b51fe1a2b33c4423ecd5f9c0eb206f0a38a6c6c8b",
+      "width": 842,
+      "height": 577,
+      "roi": [
+        0,
+        0,
+        842,
+        577
+      ],
+      "provenance": {
+        "kind": "public-research-example",
+        "repository": "https://github.com/MulongXie/UIED",
+        "revision": "0a9862a7be69c9fd157e19c825a5a9e815f201cd",
+        "source_url": "https://raw.githubusercontent.com/MulongXie/UIED/0a9862a7be69c9fd157e19c825a5a9e815f201cd/data/input/3.jpg",
+        "repository_license": "Apache-2.0",
+        "screenshot_asset_license": "unknown"
+      }
+    },
+    {
+      "id": "facebook-login",
+      "screenshot": "fixtures/facebook-login.jpg",
+      "legacy_scene": null,
+      "annotation": "annotations/facebook-login.json",
+      "ocr": "fixtures/facebook-login.ocr.json",
+      "split": "tuning",
+      "source_family": "facebook-login",
+      "source_sha256": "b264975108e7b48f82b3a30c2c0ee00d748d5926c3ad6c90c86e61d415ef5ec4",
+      "width": 540,
+      "height": 960,
+      "roi": [
+        0,
+        31,
+        540,
+        866
+      ],
+      "provenance": {
+        "kind": "public-research-example",
+        "repository": "https://github.com/MulongXie/UIED",
+        "revision": "0a9862a7be69c9fd157e19c825a5a9e815f201cd",
+        "source_url": "https://raw.githubusercontent.com/MulongXie/UIED/0a9862a7be69c9fd157e19c825a5a9e815f201cd/data/input/5.jpg",
+        "repository_license": "Apache-2.0",
+        "screenshot_asset_license": "unknown"
+      }
+    },
+    {
+      "id": "podcast-search",
+      "screenshot": "fixtures/podcast-search.jpg",
+      "legacy_scene": null,
+      "annotation": "annotations/podcast-search.json",
+      "ocr": "fixtures/podcast-search.ocr.json",
+      "split": "holdout",
+      "source_family": "green-mobile",
+      "source_sha256": "2529f48367902ccbcfc3b6b4cd478235699d765688377b4030515695a0ecdd66",
+      "width": 521,
+      "height": 835,
+      "roi": [
+        0,
+        0,
+        521,
+        835
+      ],
+      "provenance": {
+        "kind": "public-research-example",
+        "repository": "https://github.com/MulongXie/UIED",
+        "revision": "0a9862a7be69c9fd157e19c825a5a9e815f201cd",
+        "source_url": "https://raw.githubusercontent.com/MulongXie/UIED/0a9862a7be69c9fd157e19c825a5a9e815f201cd/data/input/7.jpg",
+        "repository_license": "Apache-2.0",
+        "screenshot_asset_license": "unknown"
+      }
+    },
+    {
+      "id": "interest-picker",
+      "screenshot": "fixtures/interest-picker.jpg",
+      "legacy_scene": null,
+      "annotation": "annotations/interest-picker.json",
+      "ocr": "fixtures/interest-picker.ocr.json",
+      "split": "holdout",
+      "source_family": "interest-picker",
+      "source_sha256": "181cfd9d25c3befeec78f56e87a27cd9bbae8434d39677a5f61bd24f9937abcd",
+      "width": 517,
+      "height": 831,
+      "roi": [
+        0,
+        0,
+        517,
+        831
+      ],
+      "provenance": {
+        "kind": "public-research-example",
+        "repository": "https://github.com/MulongXie/UIED",
+        "revision": "0a9862a7be69c9fd157e19c825a5a9e815f201cd",
+        "source_url": "https://raw.githubusercontent.com/MulongXie/UIED/0a9862a7be69c9fd157e19c825a5a9e815f201cd/data/input/9.jpg",
+        "repository_license": "Apache-2.0",
+        "screenshot_asset_license": "unknown"
+      }
+    },
+    {
+      "id": "fitness-dashboard",
+      "screenshot": "fixtures/fitness-dashboard.jpg",
+      "legacy_scene": null,
+      "annotation": "annotations/fitness-dashboard.json",
+      "ocr": "fixtures/fitness-dashboard.ocr.json",
+      "split": "tuning",
+      "source_family": "fitness-dashboard",
+      "source_sha256": "8f700d0720c3f892c6642be826f482db58c4c118a0856193971066d9548f743a",
+      "width": 1080,
+      "height": 1920,
+      "roi": [
+        0,
+        63,
+        1080,
+        1732
+      ],
+      "provenance": {
+        "kind": "public-research-example",
+        "repository": "https://github.com/MulongXie/UIED",
+        "revision": "0a9862a7be69c9fd157e19c825a5a9e815f201cd",
+        "source_url": "https://raw.githubusercontent.com/MulongXie/UIED/0a9862a7be69c9fd157e19c825a5a9e815f201cd/data/input/10.jpg",
+        "repository_license": "Apache-2.0",
+        "screenshot_asset_license": "unknown"
+      }
+    },
+    {
+      "id": "deals-feed",
+      "screenshot": "fixtures/deals-feed.jpg",
+      "legacy_scene": null,
+      "annotation": "annotations/deals-feed.json",
+      "ocr": "fixtures/deals-feed.ocr.json",
+      "split": "holdout",
+      "source_family": "deals-feed",
+      "source_sha256": "3f4d7e01ec5adcf08428baec441107333ae6dc54f92ad304ec86b84f3767d9fc",
+      "width": 520,
+      "height": 837,
+      "roi": [
+        0,
+        0,
+        520,
+        837
+      ],
+      "provenance": {
+        "kind": "public-research-example",
+        "repository": "https://github.com/MulongXie/UIED",
+        "revision": "0a9862a7be69c9fd157e19c825a5a9e815f201cd",
+        "source_url": "https://raw.githubusercontent.com/MulongXie/UIED/0a9862a7be69c9fd157e19c825a5a9e815f201cd/data/input/11.jpg",
+        "repository_license": "Apache-2.0",
+        "screenshot_asset_license": "unknown"
+      }
+    },
+    {
+      "id": "comics-grid",
+      "screenshot": "fixtures/comics-grid.jpg",
+      "legacy_scene": null,
+      "annotation": "annotations/comics-grid.json",
+      "ocr": "fixtures/comics-grid.ocr.json",
+      "split": "holdout",
+      "source_family": "comics-grid",
+      "source_sha256": "df7f42fbe68f12767fac43b869e2bb23337c1b612bcf192307030d2d69082d1b",
+      "width": 1080,
+      "height": 1747,
+      "roi": [
+        0,
+        0,
+        1080,
+        1747
+      ],
+      "provenance": {
+        "kind": "public-research-example",
+        "repository": "https://github.com/MulongXie/UIED",
+        "revision": "0a9862a7be69c9fd157e19c825a5a9e815f201cd",
+        "source_url": "https://raw.githubusercontent.com/MulongXie/UIED/0a9862a7be69c9fd157e19c825a5a9e815f201cd/data/input/18116.jpg",
+        "repository_license": "Apache-2.0",
+        "screenshot_asset_license": "unknown"
+      }
+    }
+  ]
+}
