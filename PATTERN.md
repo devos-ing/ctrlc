@@ -30,13 +30,16 @@ resulting packet, and perform any optional semantic review themselves.
 ## Reusable agent prompt
 
 For installation and PATH setup, see [README Installation](README.md#installation).
-Replace the paths below before using the prompt.
+Attach a screenshot or provide a local image path with this prompt.
 
 ```text
-Use ctrlc to analyze <screenshot-path> and save results in <output-directory>.
-Extract the application UI with --inspector, read the reported packet once, and open the inspector.
-Preserve measured bounds and colors. Mark unsupported details as unknown.
-For styling changes, render the saved scene without extracting again.
+Use ctrlc to analyze the screenshot I've attached, or the local image path I've provided.
+Use the attachment's local file if one is available. Otherwise, save the original attachment locally without resizing it.
+If you can't access or save the attachment, ask me for a local file path.
+Save the results in a new output folder unless I specify one, and tell me where it is.
+Extract the application UI with --inspector, read the reported packet.json once, and open the inspector.
+Keep the measured bounds and colors. Mark details you can't verify as unknown.
+If you change the inspector's styling, render the saved scene without extracting again.
 ```
 
 After semantic review, render the saved scene with:
