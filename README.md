@@ -1,117 +1,149 @@
 # Screenshot UI Inspector
 
-`ctrlc` 0.1.0 measures screenshot UI, renders saved scenes, and previews the
-resulting inspector locally. Shell-capable agents invoke the CLI without model
-integration in `ctrlc`.
+`ctrlc` turns a screenshot into a scene you can inspect in your browser. It
+measures UI bounds and colors, reads text with OCR, and saves the results locally.
+You can run it yourself or ask an agent to use it.
+
+Extraction and rendering don't make model calls or network requests. If you
+want an agent to review names, roles, or grouping, the agent handles that part.
 
 ![ctrlc demo preview](demo/assets/ctrlc-demo.gif)
 
 [Download the MP4 demo](demo/assets/ctrlc-demo.mp4)
 
-## Tested agent runtimes
+## Which agents have been tested?
 
-| Agent runtime | Model | Test status |
-| --- | --- | --- |
-| Codex | GPT-6.1 Sol (`gpt-6.1-sol`) | Tested |
-| Codex | Other models | Not tested |
-| Claude Code | Not recorded | Not tested |
-| Other shell-capable agents | Not recorded | Not tested |
-
-Only Codex with GPT-6.1 Sol has been tested. Agents using GLM or Grok are also
-untested. CLI compatibility alone does not verify an agent's optional semantic
-review.
+So far, only Codex with GPT-6.1 Sol, `gpt-6.1-sol`, has been tested. Other Codex
+models, Claude Code, and other agents, including those using GLM or Grok, haven't
+been tested. Getting the CLI to run doesn't tell you how well an agent will
+review names, roles, or grouping.
 
 ## Installation
 
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/) if needed.
-Python 3.10 or newer is required. Install the published command from any
-directory with:
+From a checkout, run:
+
+```bash
+sh install.sh
+```
+
+The script installs `uv` if you need it, installs `ctrlc` 0.1.0, and checks
+`ctrlc --version`. Run it again to replace an existing installation. If the
+command isn't on your PATH, the script prints the full path you can use.
+
+You can also install without cloning:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/devos-ing/ctrlc/main/install.sh -o ctrlc-install.sh
+sh ctrlc-install.sh
+```
+
+### If you already use uv
+
+You'll need Python 3.10 or newer. Run this from any directory:
 
 ```bash
 uv tool install https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl
 ```
 
-If `ctrlc` is already installed, replace that installation with:
+If you already have `ctrlc` installed, use `--force` to replace it:
 
 ```bash
 uv tool install --force https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl
 ```
 
-The PyPI distribution named `ctrlc` is an unrelated project. Use the release
-wheel URL above. For development, run `uv tool install .` from the repository
-root.
+Use the wheel URL above. `uv tool install ctrlc` installs a different project
+from PyPI.
+If you're working on this repo, run `uv tool install .` from the repository root
+instead.
 
-Native Vision OCR requires macOS and `swiftc`. On other platforms, provide
-compatible OCR data with `--ocr-json`.
+The built-in OCR uses macOS Vision and needs `swiftc`. On other platforms, pass
+your own OCR data with `--ocr-json`. See [the OCR format](PATTERN.md#supplied-ocr-and-compatibility).
 
-### Agent install prompt
+### Ask an agent to install it
 
 ```text
-If uv is missing, install it from https://docs.astral.sh/uv/getting-started/installation/.
-Install ctrlc 0.1.0 with `uv tool install https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl`.
-Add `--force` to replace an existing installation. Verify `ctrlc --version`.
-If ctrlc is not on PATH, use its full path in the directory reported by `uv tool dir --bin`.
+From the ctrlc checkout, run `sh install.sh`.
+The script installs uv if needed and checks `ctrlc --version` after installation.
+If ctrlc isn't on PATH, use the full path printed by the script.
 ```
 
-## Usage
+## Try it
 
-Replace the paths below, then copy this prompt into a shell-capable agent:
+Replace the paths below and give this prompt to an agent that can run shell
+commands:
 
 ```text
 Use ctrlc to analyze <screenshot-path> and save results in <output-directory>.
-Extract the application UI with --inspector, read the reported packet once, and open the inspector.
-Preserve measured bounds and colors. Mark unsupported details as unknown.
-For styling changes, render the saved scene without extracting again.
+Extract the application UI with --inspector, read the reported packet.json once, and open the inspector.
+Keep the measured bounds and colors. Mark details you can't verify as unknown.
+If you change the inspector's styling, render the saved scene without extracting again.
 ```
 
-The included brokerage example can be rendered and previewed from the checkout:
+To try the included brokerage example, run these commands from the repository
+root:
 
 ```bash
 ctrlc render brokerage/reviewed-scene.json brokerage/source.png --out brokerage/inspector.html
 ctrlc serve brokerage/inspector.html --port 0
 ```
 
-`render` uses the saved scene and matching screenshot, preserves the white
-canvas and style panels, and does not rerun OCR.
+`render` uses the saved scene and its matching screenshot. It keeps the white
+canvas and style panels, so you can check styling changes without running OCR
+again.
 
 ## Commands
 
-| Command | Purpose |
+| Command | What it does |
 | --- | --- |
-| `ctrlc extract IMAGE --out DIR` | Measure a screenshot; add `--roi`, `--languages`, `--ocr-json`, `--refresh`, or `--inspector` as needed. |
-| `ctrlc render SCENE IMAGE --out HTML` | Render a saved scene without repeating extraction or OCR. |
-| `ctrlc serve HTML [--port PORT]` | Serve one inspector on localhost; use port `0` to choose an available port. |
-| `ctrlc --help` / `ctrlc COMMAND --help` | Show readable command help. |
+| `ctrlc extract IMAGE --out DIR` | Measure a screenshot. Options include `--roi`, `--languages`, `--ocr-json`, `--refresh`, and `--inspector`. |
+| `ctrlc render SCENE IMAGE --out HTML` | Render a saved scene without running extraction or OCR again. |
+| `ctrlc serve HTML [--port PORT]` | Serve an inspector on localhost. Use port `0` to let it pick an available port. |
+| `ctrlc --help` / `ctrlc COMMAND --help` | Show the available commands and options. |
 | `ctrlc --version` | Print the installed version. |
 
-Successful commands print JSON to stdout. Failures print JSON to stderr and
-exit with status 2 for argument errors or 1 for workflow errors; success exits
-0. The root scripts `extract_ui.py`, `render_inspector.py`, and
-`preview_server.py` remain compatibility commands.
+Workflow commands return JSON so agents and scripts can read the results.
+Successful commands write to stdout and exit with code `0`. Errors write to
+stderr and exit with code `2` for argument errors or `1` for workflow errors.
+Help and version output are plain text.
+
+The original scripts still work: `extract_ui.py`,
+`render_inspector.py`, and `preview_server.py`.
 
 ## Development
 
-Sync the project and test dependencies, then run the installed-package E2E:
+Install the project and test dependencies, then run the end-to-end test. It
+checks the installed package from outside the source directory:
 
 ```bash
 uv sync --extra test
 uv run --extra test python -m unittest test_cli_e2e -v
 ```
 
-The existing regression checks are also available:
+To check the installer too, run:
+
+```bash
+uv run --extra test python -m unittest test_install_sh -v
+```
+
+The installer tests download the release wheel and `uv` into temporary
+directories. They leave your installed tools alone.
+
+Run the existing regression checks with:
 
 ```bash
 uv run --extra test python -m unittest test_extract_ui test_render_inspector -v
 node --test test_alpha_matte.js
 ```
 
-Reusable Python functions are `run_extraction`, `render_scene`, and
-`create_preview_server`. The renderer template and native OCR helper live in
+To call the workflows from Python, use `run_extraction`, `render_scene`, and
+`create_preview_server`. The renderer template and native OCR helper are in
 `ctrlc/assets/`.
 
 ## Contributions
 
 Read [AGENTS.md](AGENTS.md) and [PATTERN.md](PATTERN.md) before changing a
-workflow. Keep changes scoped, preserve measured evidence and the self-contained
-white-panel inspector, and add command-level E2E coverage only for a new
-workflow or material failure.
+workflow. Keep each change focused and preserve the measurements. The inspector
+should stay self-contained, with its white canvas and panels.
+
+For a new workflow or an important failure case, add an end-to-end test that runs the
+real command and checks its output.
