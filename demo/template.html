@@ -1,0 +1,546 @@
+<div id="ctrlc-cursor-demo" data-phase="ready" data-playing="false" data-active-variant="Desktop">
+  <style>
+    #ctrlc-cursor-demo { --cd-ink:#e8ebf0; --cd-muted:#a0a8b3; --cd-line:#303741; --cd-panel:#1d2229; --cd-soft:#272d36; --cd-accent:#8878e6; --cd-ease:cubic-bezier(.77,0,.175,1); color:var(--cd-ink); width:100%; font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    #ctrlc-cursor-demo *, #ctrlc-cursor-demo *::before, #ctrlc-cursor-demo *::after { box-sizing:border-box; }
+    #ctrlc-cursor-demo [hidden] { display:none!important; }
+    #ctrlc-cursor-demo .cd-rail { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:0 auto 12px; max-width:1120px; }
+    #ctrlc-cursor-demo .cd-preview-label { display:flex; align-items:center; gap:8px; margin-right:auto; color:var(--muted-foreground); font-size:12px; letter-spacing:.02em; }
+    #ctrlc-cursor-demo .cd-preview-label strong { color:var(--foreground); font-weight:600; }
+    #ctrlc-cursor-demo .cd-live { min-width:160px; color:var(--muted-foreground); font-size:12px; }
+    #ctrlc-cursor-demo .cd-actions { display:flex; flex-wrap:wrap; gap:6px; }
+    #ctrlc-cursor-demo .cd-shared-source { position:absolute; width:1px; height:1px; left:-9999px; opacity:0; pointer-events:none; }
+    #ctrlc-cursor-demo .cd-variant { height:650px; }
+    #ctrlc-cursor-demo .cd-variant[hidden] { display:none!important; }
+    #ctrlc-cursor-demo .cd-stage { position:relative; width:100%; height:650px; overflow:hidden; }
+    #ctrlc-cursor-demo .cd-window { display:flex; flex-direction:column; width:100%; height:650px; overflow:hidden; border:1px solid #343b45; border-radius:12px; background:var(--cd-panel); color:var(--cd-ink); color-scheme:dark; box-shadow:0 12px 40px #0005; }
+    #ctrlc-cursor-demo .cd-topbar { display:flex; align-items:center; gap:16px; height:49px; min-height:49px; flex:none; padding:0 16px; border-bottom:1px solid var(--cd-line); background:#171b21; }
+    #ctrlc-cursor-demo .cd-window-dots { display:flex; gap:6px; flex:none; }
+    #ctrlc-cursor-demo .cd-window-dots i { width:9px; height:9px; border-radius:50%; background:#59616c; }
+    #ctrlc-cursor-demo .cd-brand { display:flex; align-items:center; gap:8px; font-size:13px; font-weight:600; white-space:nowrap; }
+    #ctrlc-cursor-demo .cd-brand-mark { display:grid; width:20px; height:20px; place-items:center; border-radius:6px; background:#6957cb; color:#fff; font-size:11px; font-weight:600; }
+    #ctrlc-cursor-demo .cd-top-context { color:var(--cd-muted); font-size:12px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    #ctrlc-cursor-demo .cd-preview-chip { margin-left:auto; padding:4px 7px; border:1px solid var(--cd-line); border-radius:5px; color:var(--cd-muted); font-size:10px; letter-spacing:.06em; white-space:nowrap; }
+    #ctrlc-cursor-demo .cd-layout { display:flex; min-height:0; height:calc(100% - 49px); }
+    #ctrlc-cursor-demo .cd-sidebar { width:204px; height:100%; flex:none; overflow:auto; padding:16px 10px; border-right:1px solid var(--cd-line); background:#171b21; }
+    #ctrlc-cursor-demo .cd-sidebar-label { margin:17px 10px 7px; color:#87909d; font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+    #ctrlc-cursor-demo .cd-nav-item { display:flex; align-items:center; gap:9px; min-height:34px; padding:0 10px; border-radius:6px; color:#b4bbc5; font-size:12px; }
+    #ctrlc-cursor-demo .cd-nav-item::before { content:""; width:6px; height:6px; border:1px solid #77818e; border-radius:2px; }
+    #ctrlc-cursor-demo .cd-nav-item[data-current="true"] { background:#2a263e; color:#ded8ff; font-weight:500; }
+    #ctrlc-cursor-demo .cd-nav-item[data-current="true"]::before { border-color:#6c58cf; background:#6c58cf; }
+    #ctrlc-cursor-demo .cd-main { display:flex; min-width:0; min-height:0; height:100%; flex:1; justify-content:center; overflow:hidden; padding:14px 18px; }
+    #ctrlc-cursor-demo .cd-chat { display:flex; flex-direction:column; width:100%; max-width:810px; min-width:0; min-height:0; height:100%; }
+    #ctrlc-cursor-demo .cd-chat-head { display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:42px; flex:none; margin-bottom:10px; border-bottom:1px solid #303741; color:#e1e5eb; font-size:12px; font-weight:500; }
+    #ctrlc-cursor-demo .cd-chat-path { color:#a0a8b3; font-size:11px; font-weight:400; }
+    #ctrlc-cursor-demo .cd-thread { display:flex; min-height:0; flex:1; flex-direction:column; gap:14px; overflow:auto; overscroll-behavior:contain; padding:2px 6px 12px 0; scrollbar-gutter:stable; scroll-behavior:smooth; }
+    #ctrlc-cursor-demo .cd-user-message { display:flex; justify-content:flex-end; }
+    #ctrlc-cursor-demo .cd-user-bubble { max-width:min(92%,650px); padding:11px 13px; border:1px solid #3a414b; border-radius:10px 10px 3px 10px; background:#292f38; color:#e3e7ed; white-space:pre-wrap; overflow-wrap:anywhere; font-size:13px; }
+    #ctrlc-cursor-demo .cd-assistant-message { display:grid; grid-template-columns:26px minmax(0,1fr); gap:10px; align-items:start; }
+    #ctrlc-cursor-demo .cd-assistant-mark { display:grid; width:24px; height:24px; place-items:center; border:1px solid #454d58; border-radius:7px; background:#252b33; color:#b9adff; font-size:11px; font-weight:600; }
+    #ctrlc-cursor-demo .cd-answer { min-width:0; color:#d7dce3; font-size:13px; }
+    #ctrlc-cursor-demo .cd-answer-line { margin:2px 0 8px; }
+    #ctrlc-cursor-demo .cd-loading { display:flex; align-items:center; gap:8px; min-height:30px; color:#b2bac5; }
+    #ctrlc-cursor-demo .cd-loading-dot { width:7px; height:7px; border-radius:50%; background:#9a8bf1; animation:cd-pulse 850ms ease-in-out infinite alternate; }
+    @keyframes cd-pulse { to { opacity:.38; transform:scale(.9); } }
+    #ctrlc-cursor-demo .cd-result { width:100%; margin-top:7px; }
+    #ctrlc-cursor-demo .cd-composer { flex:none; margin-top:12px; padding:9px 10px 8px; border:1px solid #3b434e; border-radius:10px; background:#20262e; box-shadow:0 2px 8px #0004; transition:border-color 160ms ease, box-shadow 160ms ease; }
+    #ctrlc-cursor-demo .cd-composer[data-demo-pressed="true"] { border-color:#8a7bd9; box-shadow:0 0 0 3px #6c58cf20; }
+    #ctrlc-cursor-demo .cd-attachment { display:flex; align-items:center; gap:8px; width:max-content; max-width:100%; margin:0 0 5px; padding:4px 7px 4px 4px; border:1px solid #3b434d; border-radius:7px; background:#2a3038; color:#b6bec8; font-size:11px; }
+    #ctrlc-cursor-demo .cd-attachment img { display:block; width:28px; height:34px; border-radius:3px; object-fit:cover; object-position:top center; background:#303741; }
+    #ctrlc-cursor-demo .cd-compose-row { display:flex; align-items:flex-end; gap:8px; }
+    #ctrlc-cursor-demo .cd-prompt { display:block; width:100%; min-width:0; height:42px; min-height:42px; max-height:42px; padding:0 3px; border:0; background:transparent; color:#f1f3f6; font:400 14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; white-space:nowrap; }
+    #ctrlc-cursor-demo .cd-prompt::placeholder { color:#9aa3af; }
+    #ctrlc-cursor-demo .cd-send { flex:none; width:34px; height:34px; border:0; border-radius:7px; background:#7563dc; color:#fff; font-size:17px; line-height:1; }
+    #ctrlc-cursor-demo .cd-send:hover { background:#8a79ed; }
+    #ctrlc-cursor-demo .cd-send[data-demo-pressed="true"] { background:#998af5; transform:scale(.94); }
+    #ctrlc-cursor-demo .cd-composer-note { margin:5px 4px 0; color:#939ca8; font-size:10px; }
+    #ctrlc-cursor-demo .cd-cursor { position:absolute; z-index:30; top:0; left:0; display:flex; align-items:flex-start; gap:2px; opacity:0; pointer-events:none; will-change:transform,opacity; }
+    #ctrlc-cursor-demo .cd-cursor[data-visible="true"] { opacity:1; }
+    #ctrlc-cursor-demo .cd-pointer-glyph { color:#fff; font:24px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; filter:drop-shadow(0 1px 2px #101319); }
+    #ctrlc-cursor-demo .cd-pointer-glyph svg { width:20px; height:20px; stroke:#fff; stroke-width:1.8px; filter:drop-shadow(0 1px 2px #101319) drop-shadow(0 -1px 1px #101319); }
+    #ctrlc-cursor-demo .cd-cursor-tag { margin:15px 0 0 -2px; padding:2px 5px; border:1px solid #d9d1ff; border-radius:4px; background:#6351c8; color:#fff; font-size:10px; line-height:1.35; white-space:nowrap; box-shadow:0 1px 4px #0006; }
+    #ctrlc-cursor-demo[data-phase="complete"] .cd-cursor { transition:opacity 150ms cubic-bezier(.23,1,.32,1); }
+    #ctrlc-cursor-demo .cd-focus .cd-sidebar { display:none; }
+    #ctrlc-cursor-demo .cd-focus .cd-topbar { justify-content:center; }
+    #ctrlc-cursor-demo .cd-focus .cd-top-context { display:none; }
+    #ctrlc-cursor-demo .cd-variant[data-result-focus="true"] .cd-sidebar,
+    #ctrlc-cursor-demo .cd-variant[data-result-focus="true"] .cd-chat-head,
+    #ctrlc-cursor-demo .cd-variant[data-result-focus="true"] .cd-user-message,
+    #ctrlc-cursor-demo .cd-variant[data-result-focus="true"] .cd-composer,
+    #ctrlc-cursor-demo .cd-variant[data-result-focus="true"] .cd-assistant-mark,
+    #ctrlc-cursor-demo .cd-variant[data-result-focus="true"] .cd-answer-line { display:none!important; }
+    #ctrlc-cursor-demo .cd-variant[data-result-focus="true"] .cd-chat { max-width:none; }
+    #ctrlc-cursor-demo .cd-variant[data-result-focus="true"] .cd-assistant-message { grid-template-columns:minmax(0,1fr); gap:0; }
+    @media(max-width:700px) {
+      #ctrlc-cursor-demo .cd-variant, #ctrlc-cursor-demo .cd-stage, #ctrlc-cursor-demo .cd-window { height:720px; }
+      #ctrlc-cursor-demo .cd-sidebar { display:none; }
+      #ctrlc-cursor-demo .cd-main { padding:12px 12px 14px; }
+      #ctrlc-cursor-demo .cd-topbar { gap:10px; padding:0 11px; }
+      #ctrlc-cursor-demo .cd-top-context { display:none; }
+      #ctrlc-cursor-demo .cd-preview-chip { margin-left:auto; }
+    }
+    @media(max-width:420px) {
+      #ctrlc-cursor-demo .cd-rail { gap:8px; }
+      #ctrlc-cursor-demo .cd-preview-label { width:100%; }
+      #ctrlc-cursor-demo .cd-live { min-width:0; flex:1; }
+      #ctrlc-cursor-demo .cd-actions { width:100%; }
+      #ctrlc-cursor-demo .cd-window { border-radius:9px; }
+      #ctrlc-cursor-demo .cd-window-dots { display:none; }
+      #ctrlc-cursor-demo .cd-brand { font-size:12px; }
+      #ctrlc-cursor-demo .cd-preview-chip { font-size:9px; }
+      #ctrlc-cursor-demo .cd-chat-head { align-items:flex-start; flex-direction:column; justify-content:center; gap:1px; padding:5px 0; }
+      #ctrlc-cursor-demo .cd-user-bubble { max-width:100%; }
+    }
+    @media(pointer:coarse) {
+      #ctrlc-cursor-demo .cd-send { width:44px; height:44px; }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      #ctrlc-cursor-demo .cd-loading-dot { animation:none; }
+      #ctrlc-cursor-demo .cd-composer { transition:none; }
+      #ctrlc-cursor-demo .cd-thread { scroll-behavior:auto; }
+      #ctrlc-cursor-demo .cd-cursor { display:none!important; }
+    }
+  </style>
+
+  <header class="cd-rail" aria-label="Demo controls">
+    <div class="cd-preview-label"><strong>ctrlc 0.1.0</strong><span>Style preview · simulated Codex session</span></div>
+    <div class="cd-live" role="status" aria-live="polite" data-phase-caption>Ready to play</div>
+    <div class="cd-actions">
+      <button class="btn btn-primary cursor-interaction" type="button" data-action="play">Play demo</button>
+      <button class="btn cursor-interaction" type="button" data-action="pause" disabled>Pause</button>
+      <button class="btn cursor-interaction" type="button" data-action="replay">Replay</button>
+      <button class="btn cursor-interaction" type="button" data-action="inspect">Inspect result</button>
+    </div>
+  </header>
+
+  __SHARED_IMAGE__
+
+  <div class="viz-carousel" aria-label="Codex screenshot analysis framings">
+    <section class="cd-variant" data-variant="Desktop" aria-label="Desktop Codex app framing">
+      <div class="cd-stage">
+        <article class="cd-window">
+          <header class="cd-topbar">
+            <span class="cd-window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="cd-brand"><span class="cd-brand-mark" aria-hidden="true">C</span>Codex</span>
+            <span class="cd-top-context">Local project / ui-layer-flow</span>
+            <span class="cd-preview-chip">STYLE PREVIEW</span>
+          </header>
+          <div class="cd-layout">
+            <aside class="cd-sidebar" aria-label="Project and chat context">
+              <div class="cd-nav-item">New task</div>
+              <div class="cd-nav-item">Search</div>
+              <div class="cd-sidebar-label">Projects</div>
+              <div class="cd-nav-item" data-current="true">ui-layer-flow</div>
+              <div class="cd-sidebar-label">Chats</div>
+              <div class="cd-nav-item" data-current="true">Screenshot UI Inspector</div>
+              <div class="cd-nav-item">CLI packaging</div>
+            </aside>
+            <main class="cd-main">
+              <div class="cd-chat">
+                <div class="cd-chat-head"><span>Screenshot UI Inspector</span><span class="cd-chat-path">brokerage/source.png</span></div>
+                <div class="cd-thread">
+                  <article class="cd-user-message" data-user-message hidden><div class="cd-user-bubble" data-sent-prompt></div></article>
+                  <article class="cd-assistant-message" data-assistant-message hidden>
+                    <span class="cd-assistant-mark" aria-hidden="true">C</span>
+                    <div class="cd-answer">
+                      <div class="cd-loading" data-loading hidden><span class="cd-loading-dot" aria-hidden="true"></span><span>Analyzing screenshot…</span></div>
+                      <p class="cd-answer-line" data-answer-line hidden>I found 11 visible layers. Hover over the canvas to reveal them, then select a layer to inspect its measured styles.</p>
+                      <div class="cd-result" data-result hidden>__DESKTOP_INSPECTOR__</div>
+                    </div>
+                  </article>
+                </div>
+                <div class="cd-composer" data-composer>
+                  <div class="cd-attachment"><img data-screenshot-attachment alt="Attached brokerage screenshot"><span>source.png</span></div>
+                  <div class="cd-compose-row"><input class="cd-prompt" data-prompt type="text" aria-label="Message Codex" placeholder="Ask Codex to analyze this screenshot…"><button class="cd-send cursor-interaction" data-send type="button" aria-label="Send message">↑</button></div>
+                  <div class="cd-composer-note">Local workspace · screenshot attached</div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </article>
+        <div class="cd-cursor" aria-hidden="true" data-visible="false" data-pressing="false"><span class="cd-pointer-glyph"><i data-lucide="mouse-pointer-2" aria-hidden="true"><span>↖</span></i></span><span class="cd-cursor-tag">Codex</span></div>
+      </div>
+    </section>
+
+    <section class="cd-variant cd-focus" data-variant="Focus" aria-label="Focused Codex conversation framing" hidden>
+      <div class="cd-stage">
+        <article class="cd-window">
+          <header class="cd-topbar">
+            <span class="cd-window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="cd-brand"><span class="cd-brand-mark" aria-hidden="true">C</span>Codex</span>
+            <span class="cd-top-context">Screenshot UI Inspector</span>
+            <span class="cd-preview-chip">STYLE PREVIEW</span>
+          </header>
+          <div class="cd-layout">
+            <aside class="cd-sidebar" aria-hidden="true"></aside>
+            <main class="cd-main">
+              <div class="cd-chat">
+                <div class="cd-chat-head"><span>Screenshot UI Inspector</span><span class="cd-chat-path">Local project · ui-layer-flow</span></div>
+                <div class="cd-thread">
+                  <article class="cd-user-message" data-user-message hidden><div class="cd-user-bubble" data-sent-prompt></div></article>
+                  <article class="cd-assistant-message" data-assistant-message hidden>
+                    <span class="cd-assistant-mark" aria-hidden="true">C</span>
+                    <div class="cd-answer">
+                      <div class="cd-loading" data-loading hidden><span class="cd-loading-dot" aria-hidden="true"></span><span>Analyzing screenshot…</span></div>
+                      <p class="cd-answer-line" data-answer-line hidden>I found 11 visible layers. Hover over the canvas to reveal them, then select a layer to inspect its measured styles.</p>
+                      <div class="cd-result" data-result hidden>__FOCUS_INSPECTOR__</div>
+                    </div>
+                  </article>
+                </div>
+                <div class="cd-composer" data-composer>
+                  <div class="cd-attachment"><img data-screenshot-attachment alt="Attached brokerage screenshot"><span>source.png</span></div>
+                  <div class="cd-compose-row"><input class="cd-prompt" data-prompt type="text" aria-label="Message Codex" placeholder="Ask Codex to analyze this screenshot…"><button class="cd-send cursor-interaction" data-send type="button" aria-label="Send message">↑</button></div>
+                  <div class="cd-composer-note">Local workspace · screenshot attached</div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </article>
+        <div class="cd-cursor" aria-hidden="true" data-visible="false" data-pressing="false"><span class="cd-pointer-glyph"><i data-lucide="mouse-pointer-2" aria-hidden="true"><span>↖</span></i></span><span class="cd-cursor-tag">Codex</span></div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.getElementById('ctrlc-cursor-demo');
+      const carousel = root.querySelector('.viz-carousel');
+      const variants = [...carousel.querySelectorAll(':scope > [data-variant]')];
+      const caption = root.querySelector('[data-phase-caption]');
+      const playButton = root.querySelector('[data-action="play"]');
+      const pauseButton = root.querySelector('[data-action="pause"]');
+      const promptText = 'Use ctrlc to analyze this screenshot and show its UI elements.';
+      const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+      const sharedImage = document.getElementById('ctrlc-shared-source');
+      const duration = { enter:900, click:200, type:1500, sendMove:200, submit:100, loading:850, boardMove:900, hover:1600, pieceMove:700, finish:1500 };
+      let elapsed = 0;
+      let startedAt = 0;
+      let hoverStartedAt = null;
+      let frame = 0;
+      let running = false;
+      let lastPhase = '';
+      let selectedAutomatically = false;
+      let chartScrolled = false;
+      let handoffPoint = null;
+
+      function activeVariant() { return variants.find(variant => !variant.hidden) || variants[0]; }
+      function parts(variant) {
+        return {
+          stage: variant.querySelector('.cd-stage'), cursor: variant.querySelector('.cd-cursor'),
+          composer: variant.querySelector('[data-composer]'), prompt: variant.querySelector('[data-prompt]'),
+          thread: variant.querySelector('.cd-thread'),
+          send: variant.querySelector('[data-send]'), user: variant.querySelector('[data-user-message]'),
+          sent: variant.querySelector('[data-sent-prompt]'), assistant: variant.querySelector('[data-assistant-message]'),
+          loading: variant.querySelector('[data-loading]'), answer: variant.querySelector('[data-answer-line]'),
+          result: variant.querySelector('[data-result]'), board: variant.querySelector('.el-board'),
+          inspector: variant.querySelector('[id$="-inspector"]')
+        };
+      }
+      function setState(phase, label, playing = running) {
+        if (root.dataset.phase !== phase) root.dataset.phase = phase;
+        if (root.dataset.playing !== String(playing)) root.dataset.playing = String(playing);
+        if (root.dataset.activeVariant !== activeVariant().dataset.variant) root.dataset.activeVariant = activeVariant().dataset.variant;
+        if (lastPhase !== phase || caption.textContent !== label) caption.textContent = label;
+        lastPhase = phase;
+        const playLabel = playing ? 'Playing…' : elapsed > 0 && elapsed < 10000 ? 'Resume demo' : 'Play demo';
+        if (playButton.textContent !== playLabel) playButton.textContent = playLabel;
+        if (pauseButton.disabled === playing) pauseButton.disabled = !playing;
+      }
+      function showLoading(variant, text) {
+        const p = parts(variant);
+        handoffPoint = {variant, point:point(p.send, p.stage, .5, .5)};
+        variant.dataset.resultFocus = 'true';
+        p.send.dataset.demoPressed = 'false';
+        p.send.dataset.demoClick = 'false';
+        p.user.hidden = true;
+        p.assistant.hidden = false;
+        p.loading.hidden = false;
+        p.answer.hidden = true;
+        p.result.hidden = true;
+        p.prompt.value = '';
+      }
+      function showResult(variant, text) {
+        const p = parts(variant);
+        variant.dataset.resultFocus = 'true';
+        p.send.dataset.demoPressed = 'false';
+        p.send.dataset.demoClick = 'false';
+        p.user.hidden = true;
+        p.assistant.hidden = false;
+        p.loading.hidden = true;
+        p.answer.hidden = false;
+        p.result.hidden = false;
+        p.prompt.value = '';
+        requestAnimationFrame(() => requestAnimationFrame(() => scrollWithin(p, p.board, .12)));
+      }
+      function typeDemoPrompt(input, text) {
+        if (input.value !== text) input.value = text;
+        const end = input.value.length;
+        if (input.selectionStart !== end || input.selectionEnd !== end) input.setSelectionRange(end, end);
+        if (end && input.scrollWidth > input.clientWidth) input.scrollLeft = input.scrollWidth;
+      }
+      function hideCursor(variant) {
+        if (variant) parts(variant).cursor.dataset.visible = 'false';
+      }
+      function point(target, stage, xFactor = .5, yFactor = .5) {
+        if (!target) return {x: 20, y: 20};
+        const box = target.getBoundingClientRect();
+        const base = stage.getBoundingClientRect();
+        return {x: box.left - base.left + box.width * xFactor, y: box.top - base.top + box.height * yFactor};
+      }
+      function scrollWithin(p, target, alignment = .5) {
+        if (!p.thread || !target) return;
+        const threadRect = p.thread.getBoundingClientRect();
+        const targetRect = target.getBoundingClientRect();
+        const visibleSpace = Math.max(0, p.thread.clientHeight - Math.min(targetRect.height, p.thread.clientHeight));
+        const offset = targetRect.top - threadRect.top + p.thread.scrollTop;
+        p.thread.scrollTo({top:Math.max(0, offset - visibleSpace * alignment), behavior:reduced.matches ? 'instant' : 'smooth'});
+      }
+      function ensureExpanded(variant) {
+        const p = parts(variant);
+        if (p.inspector?.dataset.ready !== 'true') return false;
+        if (p.inspector.dataset.expanded !== 'true') {
+          if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            p.board.dispatchEvent(new PointerEvent('pointerenter', {bubbles:true, pointerType:'mouse'}));
+          } else {
+            p.inspector.querySelector('.el-toggle')?.click();
+          }
+        }
+        return p.inspector.dataset.expanded === 'true';
+      }
+      function mix(a, b, t) {
+        const eased = cubicBezier(Math.max(0, Math.min(1, t)));
+        return {x: a.x + (b.x - a.x) * eased, y: a.y + (b.y - a.y) * eased};
+      }
+      function cubicBezier(x) {
+        let t = x;
+        for (let i = 0; i < 6; i++) {
+          const omt = 1 - t;
+          const estimate = 3 * omt * omt * t * .77 + 3 * omt * t * t * .175 + t * t * t;
+          const slope = 3 * omt * omt * .77 + 6 * omt * t * (.175 - .77) + 3 * t * t * (1 - .175);
+          if (Math.abs(slope) < .001) break;
+          t = Math.max(0, Math.min(1, t - (estimate - x) / slope));
+        }
+        const omt = 1 - t;
+        return 3 * omt * t * t + t * t * t;
+      }
+      function positionCursor(variant, time) {
+        const p = parts(variant);
+        const composerTarget = point(p.prompt, p.stage, .2, .55);
+        const sendTarget = handoffPoint?.variant === variant
+          ? handoffPoint.point : point(p.send, p.stage, .5, .5);
+        const boardTarget = point(p.board, p.stage, .5, .5);
+        const piece = p.board?.querySelector('.el-piece[data-node="b6"]');
+        const pieceTarget = point(piece, p.stage, .5, .5);
+        let target = composerTarget;
+        let from = {x:-16, y:composerTarget.y + 30};
+        let progress = time / duration.enter;
+        let pressing = false;
+        if (time >= duration.enter && time < duration.enter + duration.click) {
+          target = composerTarget; pressing = true;
+        } else if (time < duration.enter + duration.click + duration.type) {
+          target = composerTarget;
+        } else if (time < duration.enter + duration.click + duration.type + duration.sendMove) {
+          const start = duration.enter + duration.click + duration.type;
+          target = mix(composerTarget, sendTarget, (time - start) / duration.sendMove);
+        } else if (time < duration.enter + duration.click + duration.type + duration.sendMove + duration.submit + duration.loading) {
+          target = sendTarget; pressing = time < duration.enter + duration.click + duration.type + duration.sendMove + duration.submit;
+        } else if (hoverStartedAt === null) {
+          const moveStart = duration.enter + duration.click + duration.type + duration.sendMove + duration.submit + duration.loading;
+          target = mix(sendTarget, boardTarget, (time - moveStart) / duration.boardMove);
+        } else if (time < hoverStartedAt + duration.hover) {
+          target = boardTarget;
+        } else if (time < hoverStartedAt + duration.hover + duration.pieceMove) {
+          target = mix(boardTarget, pieceTarget, (time - hoverStartedAt - duration.hover) / duration.pieceMove);
+        } else {
+          target = pieceTarget;
+        }
+        const transform = time < duration.enter ? mix(from, composerTarget, progress) : target;
+        p.cursor.style.transform = `translate3d(${transform.x}px, ${transform.y}px, 0) scale(${pressing ? .92 : 1})`;
+        p.cursor.dataset.pressing = String(pressing);
+        p.cursor.dataset.visible = 'true';
+      }
+      function phaseFor(time) {
+        const loadingAt = duration.enter + duration.click + duration.type + duration.sendMove + duration.submit;
+        const resultAt = loadingAt + duration.loading;
+        if (time < duration.enter) return ['entering', 'Cursor entering the composer'];
+        if (time < duration.enter + duration.click) return ['composer-click', 'Opening the prompt'];
+        if (time < duration.enter + duration.click + duration.type) return ['typing', 'Typing the request'];
+        if (time < loadingAt) return ['sending', 'Sending the prompt'];
+        if (time < resultAt) return ['loading', 'Analyzing screenshot…'];
+        if (hoverStartedAt === null || time < hoverStartedAt + duration.hover) return ['revealing', 'Result ready · hovering to reveal layers'];
+        if (time < hoverStartedAt + duration.hover + duration.pieceMove) return ['selecting', 'Selecting Return chart'];
+        return ['inspecting', 'Return chart styles are open'];
+      }
+      function resetInspector(variant) {
+        const p = parts(variant);
+        if (!p.inspector) return;
+        const toggle = p.inspector.querySelector('.el-toggle');
+        const hasSelection = Boolean(p.inspector.querySelector('.el-piece[data-selected="true"]'));
+        if (p.inspector.dataset.expanded !== 'true' && toggle?.getAttribute('aria-pressed') !== 'true' && !hasSelection) return;
+        p.board.dispatchEvent(new PointerEvent('pointerleave', {bubbles:true, pointerType:'mouse'}));
+        p.inspector.dispatchEvent(new KeyboardEvent('keydown', {key:'Escape', bubbles:true}));
+        toggle?.blur();
+      }
+      function resetVariant(variant) {
+        resetInspector(variant);
+        const p = parts(variant);
+        variant.removeAttribute('data-result-focus');
+        if (handoffPoint?.variant === variant) handoffPoint = null;
+        p.user.hidden = true; p.assistant.hidden = true; p.loading.hidden = true;
+        p.answer.hidden = true; p.result.hidden = true; p.prompt.value = '';
+        p.send.dataset.demoPressed = 'false'; p.send.dataset.demoClick = 'false';
+        p.cursor.dataset.visible = 'false'; p.cursor.dataset.pressing = 'false';
+        p.thread.scrollTop = 0;
+      }
+      function pause(manual = false) {
+        if (!running) return;
+        elapsed = performance.now() - startedAt;
+        running = false;
+        cancelAnimationFrame(frame);
+        parts(activeVariant()).send.dataset.demoPressed = 'false';
+        if (manual) { hideCursor(activeVariant()); chartScrolled = false; }
+        setState('paused', manual ? 'Paused · inspect the result' : 'Paused', false);
+      }
+      function finish(variant) {
+        running = false; elapsed = 10000;
+        hideCursor(variant);
+        setState('complete', 'Result ready · hover or click a layer', false);
+      }
+      function update(now) {
+        if (!running) return;
+        elapsed = now - startedAt;
+        const variant = activeVariant();
+        const p = parts(variant);
+        const t = elapsed;
+        const typeStart = duration.enter + duration.click;
+        const typeEnd = typeStart + duration.type;
+        const sendAt = typeEnd + duration.sendMove;
+        const loadingAt = sendAt + duration.submit;
+        const resultAt = loadingAt + duration.loading;
+        const boardAt = resultAt + duration.boardMove;
+        if (t < typeStart) typeDemoPrompt(p.prompt, '');
+        else if (t < typeEnd) typeDemoPrompt(p.prompt, promptText.slice(0, Math.floor((t - typeStart) / duration.type * promptText.length)));
+        else if (t < sendAt) typeDemoPrompt(p.prompt, promptText);
+        if (t >= sendAt && t < loadingAt) {
+          p.send.dataset.demoPressed = String(t < loadingAt);
+          if (p.user.hidden) {
+            p.send.dataset.demoClick = 'true';
+            p.send.click();
+            p.send.dataset.demoClick = 'false';
+          }
+        } else {
+          p.send.dataset.demoPressed = 'false';
+        }
+        if (t >= loadingAt && t < resultAt && p.loading.hidden) showLoading(variant, promptText);
+        if (t >= resultAt && p.result.hidden) showResult(variant, promptText);
+        if (t >= boardAt && hoverStartedAt === null && ensureExpanded(variant)) {
+          hoverStartedAt = t;
+        }
+        const chart = p.board.querySelector('.el-piece[data-node="b6"]');
+        if (selectedAutomatically && (chart?.dataset.selected !== 'true' || p.inspector.dataset.expanded !== 'true')) {
+          selectedAutomatically = false;
+          chartScrolled = false;
+        }
+        if (hoverStartedAt !== null && !selectedAutomatically) {
+          ensureExpanded(variant);
+          if (chart && !chart.disabled && t >= hoverStartedAt + duration.hover && !chartScrolled) {
+            scrollWithin(p, chart, .5);
+            chartScrolled = true;
+          }
+          if (chart && !chart.disabled && t >= hoverStartedAt + duration.hover + duration.pieceMove) {
+            chart.click(); selectedAutomatically = chart.dataset.selected === 'true';
+            if (selectedAutomatically) scrollWithin(p, p.inspector.querySelector('.el-inspector'), .5);
+          }
+        }
+        const [phase, label] = phaseFor(t);
+        setState(phase, label, true);
+        positionCursor(variant, t);
+        if (hoverStartedAt !== null && selectedAutomatically && t >= hoverStartedAt + duration.hover + duration.pieceMove + duration.finish) {
+          finish(variant); return;
+        }
+        frame = requestAnimationFrame(update);
+      }
+      function showStatic(variant) {
+        const p = parts(variant);
+        resetVariant(variant);
+        showResult(variant, promptText);
+        elapsed = 0; hoverStartedAt = null; selectedAutomatically = false; chartScrolled = false;
+        handoffPoint = null;
+        hideCursor(variant);
+        setState('result', 'Result ready · inspect the real layers', false);
+      }
+      function start() {
+        if (reduced.matches) { showStatic(activeVariant()); return; }
+        if (running) return;
+        if (elapsed >= 10000) { elapsed = 0; hoverStartedAt = null; selectedAutomatically = false; chartScrolled = false; resetVariant(activeVariant()); }
+        startedAt = performance.now() - elapsed;
+        running = true;
+        playButton.textContent = 'Playing…'; pauseButton.disabled = false;
+        frame = requestAnimationFrame(update);
+      }
+      function replay() {
+        running = false; cancelAnimationFrame(frame);
+        hoverStartedAt = null; selectedAutomatically = false; chartScrolled = false; elapsed = 0;
+        const variant = activeVariant(); resetVariant(variant);
+        if (reduced.matches) { showStatic(variant); return; }
+        setState('ready', 'Ready to play', false);
+        start();
+      }
+      function inspectResult() {
+        showTerminalResult(activeVariant(), promptText);
+      }
+      function showTerminalResult(variant, text) {
+        running = false; cancelAnimationFrame(frame); elapsed = 10000;
+        hoverStartedAt = null; selectedAutomatically = false; chartScrolled = false; handoffPoint = null;
+        variants.forEach(hideCursor);
+        resetInspector(variant);
+        showResult(variant, text);
+        setState('result', 'Result ready · hover or click a layer', false);
+      }
+      root.querySelector('[data-action="play"]').addEventListener('click', start);
+      pauseButton.addEventListener('click', () => pause(false));
+      root.querySelector('[data-action="replay"]').addEventListener('click', replay);
+      root.querySelector('[data-action="inspect"]').addEventListener('click', inspectResult);
+      variants.forEach(variant => {
+        const p = parts(variant);
+        p.send.addEventListener('click', () => {
+          if (p.send.dataset.demoClick === 'true') {
+            p.user.hidden = false;
+            p.sent.textContent = promptText;
+            p.prompt.value = '';
+            return;
+          }
+          const text = p.prompt.value.trim() || promptText;
+          showTerminalResult(variant, text);
+        });
+        p.prompt.addEventListener('input', event => { if (event.isTrusted && running) pause(true); });
+        p.board.addEventListener('pointerenter', event => { if (event.isTrusted && running) pause(true); });
+        p.inspector.querySelector('.el-inspector').addEventListener('pointerenter', event => { if (event.isTrusted && running) pause(true); });
+        p.prompt.addEventListener('keydown', event => {
+          if (event.key === 'Enter' && !event.shiftKey) { event.preventDefault(); p.send.click(); }
+        });
+        variant.addEventListener('pointerdown', event => {
+          if (event.isTrusted && running && event.target.closest('.el-board, .el-inspector')) pause(true);
+        }, true);
+        variant.addEventListener('keydown', event => { if (event.isTrusted && running && event.target.closest('.el-board, .el-inspector')) pause(true); }, true);
+        const attachment = variant.querySelector('[data-screenshot-attachment]');
+        attachment.src = sharedImage.src;
+      });
+      const changes = new MutationObserver(records => {
+        if (!records.some(record => variants.includes(record.target))) return;
+        running = false; cancelAnimationFrame(frame);
+        elapsed = 0; startedAt = 0; hoverStartedAt = null; selectedAutomatically = false;
+        chartScrolled = false; handoffPoint = null;
+        variants.forEach(hideCursor);
+        const variant = activeVariant();
+        if (reduced.matches) showStatic(variant);
+        else {
+          resetVariant(variant);
+          setState('ready', 'Ready to play', false);
+        }
+      });
+      variants.forEach(variant => changes.observe(variant, {attributes:true, attributeFilter:['hidden']}));
+      if (reduced.matches) showStatic(activeVariant());
+      else setState('ready', 'Ready to play', false);
+    })();
+  </script>
+</div>

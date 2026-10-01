@@ -1,0 +1,494 @@
+<div id="ui-exploded-inspector">
+  <style>
+    #ui-exploded-inspector {
+      --el-text: #182629;
+      --el-muted: #5d7278;
+      --el-board: #ffffff;
+      --el-board-text: #5d7278;
+      --el-board-purple: #9147de;
+      --el-panel: #ffffff;
+      --el-border: #d7e5e9;
+      --el-purple: #9147de;
+      --el-purple-soft: #f3e9fe;
+      --el-ease: cubic-bezier(0.77, 0, 0.175, 1);
+      font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--el-text);
+      width: 100%;
+      color-scheme: light;
+      background: #ffffff;
+      box-sizing: border-box;
+      padding: 16px;
+      border-radius: 16px;
+    }
+    #ui-exploded-inspector * { box-sizing: border-box; }
+    #ui-exploded-inspector [hidden] { display: none !important; }
+    #ui-exploded-inspector button { font: inherit; color: inherit; }
+    #ui-exploded-inspector .el-heading { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin-bottom: 14px; }
+    #ui-exploded-inspector .el-title { margin: 0; font-size: 19px; line-height: 1.3; font-weight: 600; }
+    #ui-exploded-inspector .el-subtitle { color: var(--el-muted); margin: 3px 0 0; font-size: 13px; }
+    #ui-exploded-inspector .el-toggle { padding: 9px 15px; background: var(--el-panel); border: 1px solid var(--el-border); border-radius: 9px; min-height: 44px; }
+    #ui-exploded-inspector .el-toggle[aria-pressed="true"] { color: var(--el-purple); background: var(--el-purple-soft); border-color: var(--el-purple); }
+    #ui-exploded-inspector .el-board { position: relative; width: 100%; height: 455px; background: var(--el-board); border: 1px solid var(--el-border); border-radius: 12px; overflow: hidden; }
+    #ui-exploded-inspector .el-stage-label { position: absolute; top: 17px; left: 20px; color: var(--el-board-text); font-size: 12px; letter-spacing: .03em; pointer-events: none; }
+    #ui-exploded-inspector .el-screen { position: absolute; left: 0; top: 0; padding: 0; border: 0; background: #f6f6f6; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 36px light-dark(#19444f1a, #00000038); transition: opacity 160ms cubic-bezier(0.23, 1, 0.32, 1), transform 240ms var(--el-ease); }
+    #ui-exploded-inspector .el-screen canvas { display: block; width: 100%; height: 100%; }
+    #ui-exploded-inspector .el-piece { position: absolute; left: 0; top: 0; padding: 0; margin: 0; background: transparent; border: 0; text-align: left; opacity: 0; transform-origin: top left; pointer-events: none; transition: transform 240ms var(--el-ease), opacity 140ms cubic-bezier(0.23, 1, 0.32, 1); }
+    #ui-exploded-inspector .el-piece canvas { display: block; width: 100%; height: 100%; }
+    #ui-exploded-inspector .el-piece-label { position: absolute; left: 0; bottom: calc(100% + 9px); display: flex; align-items: center; gap: 6px; width: max-content; max-width: 290px; color: var(--el-board-purple); font-size: 14px; line-height: 1.3; white-space: nowrap; }
+    #ui-exploded-inspector .el-piece-label b { font-weight: 400; font-size: 17px; line-height: 1; }
+    #ui-exploded-inspector .el-piece[data-selected="true"]::after { content: ""; position: absolute; inset: -6px; border: 2px solid var(--el-board-purple); border-radius: 8px; pointer-events: none; }
+    #ui-exploded-inspector[data-expanded="true"] .el-piece { opacity: 1; pointer-events: auto; }
+    #ui-exploded-inspector[data-expanded="true"] .el-screen { opacity: 0; pointer-events: none; box-shadow: none; }
+    #ui-exploded-inspector .el-board-note { position: absolute; bottom: 17px; left: 20px; right: 20px; color: var(--el-board-text); font-size: 12px; pointer-events: none; }
+    #ui-exploded-inspector .el-inspector { margin-top: 16px; border: 1px solid var(--el-border); border-radius: 14px; background: var(--el-panel); padding: 22px; }
+    #ui-exploded-inspector .el-empty { margin: 0; color: var(--el-muted); }
+    #ui-exploded-inspector .el-inspector-body { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 24px; }
+    #ui-exploded-inspector .el-selected-title { margin: 0 0 4px; font-size: 19px; line-height: 1.35; font-weight: 600; }
+    #ui-exploded-inspector .el-type { color: var(--el-muted); margin-bottom: 15px; }
+    #ui-exploded-inspector .el-preview { display: block; max-width: 100%; margin: 0 0 16px; background: #ffffff; }
+    #ui-exploded-inspector .el-children { display: flex; gap: 7px; flex-wrap: wrap; }
+    #ui-exploded-inspector .el-child { border: 1px solid var(--el-border); border-radius: 7px; background: transparent; padding: 6px 9px; min-height: 36px; }
+    #ui-exploded-inspector .el-child[aria-pressed="true"] { color: var(--el-purple); border-color: var(--el-purple); background: var(--el-purple-soft); }
+    #ui-exploded-inspector .el-details { display: grid; grid-template-columns: minmax(110px, .8fr) minmax(0, 1.2fr); gap: 11px 16px; margin: 0; align-content: start; }
+    #ui-exploded-inspector .el-details dt { color: var(--el-muted); }
+    #ui-exploded-inspector .el-details dd { margin: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+    #ui-exploded-inspector .el-value { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    #ui-exploded-inspector .el-swatch { display: inline-block; width: 16px; height: 16px; border: 1px solid var(--el-border); border-radius: 4px; flex-shrink: 0; }
+    #ui-exploded-inspector .el-footnote { color: var(--el-muted); margin: 18px 0 0; font-size: 12px; }
+    #ui-exploded-inspector .el-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    #ui-exploded-inspector[data-ready="false"] .el-piece,
+    #ui-exploded-inspector[data-ready="false"] .el-screen,
+    #ui-exploded-inspector[data-keyboard="true"] .el-piece,
+    #ui-exploded-inspector[data-keyboard="true"] .el-screen { transition: none; }
+    @media (prefers-reduced-motion: reduce) {
+      #ui-exploded-inspector .el-piece, #ui-exploded-inspector .el-screen { transition: opacity 100ms ease; }
+    }
+    @media (max-width: 560px) {
+      #ui-exploded-inspector .el-inspector-body { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+      #ui-exploded-inspector .el-inspector { padding: 17px; }
+    }
+    @media (pointer: coarse) {
+      #ui-exploded-inspector .el-child { min-height: 44px; }
+      #ui-exploded-inspector[data-expanded="true"] .el-piece { min-height: 44px; }
+    }
+  </style>
+  <div class="el-heading">
+    <div>
+      <h2 class="el-title">Screenshot, separated</h2>
+      <p class="el-subtitle">Hover to reveal components. Click one to inspect its styles.</p>
+    </div>
+    <button class="el-toggle cursor-interaction" type="button" aria-pressed="false" aria-controls="el-board">Separate layers</button>
+  </div>
+  <div class="el-board" id="el-board" role="group" aria-label="Interactive screenshot components">
+    <span class="el-stage-label">APPLICATION CONTENT</span>
+    <button class="el-screen cursor-interaction" type="button" aria-label="Separate screenshot into components" aria-expanded="false" aria-controls="el-board">
+      <canvas aria-hidden="true"></canvas>
+    </button>
+    <span class="el-board-note">Original positions → labeled components</span>
+  </div>
+  <section class="el-inspector" aria-label="Component style inspector">
+    <p class="el-empty">Select a separated component to see its colors, bounds, and styles.</p>
+    <div class="el-inspector-body" hidden>
+      <div>
+        <h3 class="el-selected-title"></h3>
+        <div class="el-type"></div>
+        <canvas class="el-preview" aria-label="Selected component preview" role="img"></canvas>
+        <div class="el-children" role="group" aria-label="Inspect nested component"></div>
+      </div>
+      <dl class="el-details"></dl>
+    </div>
+    <p class="el-footnote" hidden>Bounds use screenshot pixels. Corner radii are estimates; exact fonts are unknown.</p>
+  </section>
+  <span class="el-status" role="status" aria-live="polite"></span>
+  <script type="application/json" data-scene>__SCENE_JSON__</script>
+  <script>
+    (() => {
+      const root = document.getElementById('ui-exploded-inspector');
+      root.dataset.ready = 'false';
+      const scene = JSON.parse(root.querySelector('[data-scene]').textContent);
+      const board = root.querySelector('.el-board');
+      const screen = root.querySelector('.el-screen');
+      const screenCanvas = screen.querySelector('canvas');
+      const toggle = root.querySelector('.el-toggle');
+      const nodes = scene.nodes;
+      const lookup = new Map();
+      const parents = new Map();
+      const pieces = new Map();
+      const source = new Image();
+      const fineHover = matchMedia('(hover: hover) and (pointer: fine)');
+      let selected = null;
+      let pinned = false;
+      let hovered = false;
+      let focused = false;
+      let loaded = false;
+      let layout = null;
+
+      function name(node, parent) {
+        if (node.displayName) return node.displayName;
+        const text = (node.label || node.text || '').toLowerCase();
+        if (parent && node.type === 'image') {
+          if (/google/i.test(parent.label || '')) return 'Google icon';
+          if (/apple/i.test(parent.label || '')) return 'Apple icon';
+          if (parent.type === 'input') return 'Clear icon';
+          return 'Icon';
+        }
+        if (parent && node.type === 'text') return 'Label';
+        if (node.type === 'image') return node.role === 'brandmark' || (nodes.length === 7 && nodes.some(n => n.type === 'input')) ? 'Logo' : 'Image';
+        if (node.type === 'input') return /@/.test(text) ? 'Email input' : 'Input';
+        if (node.type === 'button') {
+          if (text.includes('google')) return 'Google button';
+          if (text.includes('apple')) return 'Apple button';
+          return /^(continue|next|log in|sign up)$/.test(text) ? 'Primary button' : node.label || 'Button';
+        }
+        if (text === 'or' || node.role === 'separator') return 'Separator';
+        if (node.type === 'text') return nodes.length === 7 && nodes.some(n => n.type === 'input') ? 'Heading' : 'Text';
+        return node.type.charAt(0).toUpperCase() + node.type.slice(1);
+      }
+
+      function index(node, parent) {
+        lookup.set(node.id, node);
+        if (parent) parents.set(node.id, parent);
+        (node.children || []).forEach(child => index(child, node));
+      }
+      nodes.forEach(node => index(node, null));
+
+      function styleOf(node) {
+        return node.styleMeasurements || scene.styles[node.styleRef] || {};
+      }
+
+      function topNode(id) {
+        let node = lookup.get(id);
+        while (node && parents.has(node.id)) node = parents.get(node.id);
+        return node;
+      }
+
+      __MATTE_JS__
+
+      function colorRGB(value) {
+        return value.match(/[0-9a-f]{2}/gi).map(v => parseInt(v, 16));
+      }
+
+      function crop(canvas, node) {
+        const [x, y, width, height] = node.box;
+        canvas.width = Math.max(1, Math.round(width));
+        canvas.height = Math.max(1, Math.round(height));
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(source, scene.roi[0] + x, scene.roi[1] + y, width, height,
+                      0, 0, canvas.width, canvas.height);
+        const asset = node.type === 'text' || node.type === 'image';
+        const parent = parents.get(node.id);
+        const style = styleOf(node);
+        if (node.matteMode === 'preserve' || (parent && styleOf(parent).backgroundKind === 'gradient')) {
+          canvas.dataset.transparentPixels = '0';
+          canvas.dataset.partialPixels = '0';
+          canvas.dataset.opaquePixels = String(canvas.width * canvas.height);
+          canvas.dataset.centerAlpha = '255';
+          return;
+        }
+        const bg = colorRGB(asset && parent ? styleOf(parent).fill || scene.background : scene.background);
+        const palette = asset || !style.fill ? null : [style.fill, style.border?.color].filter(Boolean).map(colorRGB);
+        const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const stats = mattePixels(pixels.data, canvas.width, canvas.height, bg, palette, node.type !== 'text');
+        if (node.isolationColor) {
+          const target = colorRGB(node.isolationColor);
+          for (let i = 0; i < pixels.data.length; i += 4) {
+            if (Math.max(...target.map((v, c) => Math.abs(pixels.data[i + c] - v))) > 20) pixels.data[i + 3] = 0;
+          }
+        }
+        ctx.putImageData(pixels, 0, 0);
+        canvas.dataset.transparentPixels = String(stats.transparent);
+        canvas.dataset.partialPixels = String(stats.partial);
+        canvas.dataset.opaquePixels = String(stats.opaque);
+        const center = (Math.floor(canvas.height / 2) * canvas.width + Math.floor(canvas.width / 2)) * 4 + 3;
+        canvas.dataset.centerAlpha = String(pixels.data[center]);
+      }
+
+      function makePieces() {
+        nodes.forEach(node => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'el-piece cursor-interaction';
+          button.dataset.node = node.id;
+          button.setAttribute('aria-label', 'Inspect ' + name(node));
+          button.setAttribute('aria-pressed', 'false');
+          button.disabled = true;
+          const label = document.createElement('span');
+          label.className = 'el-piece-label';
+          const glyph = document.createElement('b');
+          glyph.textContent = '◇';
+          glyph.setAttribute('aria-hidden', 'true');
+          label.append(glyph, document.createTextNode(name(node)));
+          const canvas = document.createElement('canvas');
+          canvas.setAttribute('aria-hidden', 'true');
+          crop(canvas, node);
+          button.append(label, canvas);
+          button.addEventListener('click', () => select(node.id));
+          board.append(button);
+          pieces.set(node.id, button);
+        });
+      }
+
+      function geometry() {
+        const width = board.getBoundingClientRect().width;
+        const small = width < 520;
+        const screenWidth = Math.min(260, width * (small ? .82 : .36));
+        const screenHeight = screenWidth * scene.roi[3] / scene.roi[2];
+        const screenX = (width - screenWidth) / 2;
+        const screenY = small ? 90 : 76;
+        const expanded = hovered || pinned || focused;
+        board.style.height = (small && expanded ? 665 : 455) + 'px';
+        const fallback = !(nodes.length === 7 && nodes.some(n => n.type === 'input') && nodes.filter(n => n.type === 'button').length === 3);
+        board.style.height = (fallback ? Math.max(455, screenY + screenHeight + 60) : small && expanded ? 665 : 455) + 'px';
+        let targets;
+        if (fallback) {
+          const column = small ? 1 : 2;
+          const tileWidth = small ? width * .80 : width * .40;
+          targets = [];
+          const columnY = Array(column).fill(80);
+          for (let i = 0; i < nodes.length; i++) {
+            const slot = i % column;
+            const node = nodes[i];
+            const ratio = node.box[2] / node.box[3];
+            const desiredWidth = node.type === 'toolbar' ? 210 : ratio < 1.5 ? 70 : node.type === 'text' ? 230 : node.type === 'button' ? 260 : tileWidth;
+            const itemWidth = Math.min(tileWidth, desiredWidth);
+            const x = column === 1 ? (width - itemWidth) / 2 : width * .05 + slot * width * .5 + (tileWidth - itemWidth) / 2;
+            targets.push({x, y: columnY[slot], width: itemWidth});
+            columnY[slot] += itemWidth / ratio + 55;
+          }
+          if (expanded) board.style.height = (Math.max(...columnY) + 30) + 'px';
+        } else if (small) {
+          const itemWidth = Math.min(290, width * .84);
+          const widths = [60, itemWidth, itemWidth, itemWidth, 24, itemWidth, itemWidth];
+          targets = [70, 172, 265, 350, 431, 504, 589].map((y, i) =>
+            ({x: (width - widths[i]) / 2, y, width: widths[i]}));
+        } else {
+          const itemWidth = Math.min(285, width * .40);
+          targets = [
+            {x: width * .10, y: 92, width: 66},
+            {x: width * .51, y: 93, width: itemWidth},
+            {x: width * .05, y: 220, width: itemWidth},
+            {x: width * .55, y: 192, width: itemWidth},
+            {x: width * .50 - 12, y: 284, width: 24},
+            {x: width * .05, y: 359, width: itemWidth},
+            {x: width * .55, y: 337, width: itemWidth}
+          ];
+        }
+        return {width, screenWidth, screenHeight, screenX, screenY, targets, expanded};
+      }
+
+      function place() {
+        if (!loaded) return;
+        layout = geometry();
+        const {screenWidth, screenHeight, screenX, screenY, targets, expanded} = layout;
+        root.dataset.expanded = String(expanded);
+        screen.style.width = screenWidth + 'px';
+        screen.style.height = screenHeight + 'px';
+        screen.style.transform = `translate(${screenX}px, ${screenY}px)`;
+        screen.setAttribute('aria-expanded', String(expanded));
+        nodes.forEach((node, i) => {
+          const button = pieces.get(node.id);
+          const base = screenWidth / scene.roi[2];
+          const target = targets[i];
+          const pieceWidth = target.width;
+          const pieceHeight = pieceWidth * node.box[3] / node.box[2];
+          const x = expanded ? target.x : screenX + node.box[0] * base;
+          const y = expanded ? target.y : screenY + node.box[1] * base;
+          button.style.width = pieceWidth + 'px';
+          button.style.height = pieceHeight + 'px';
+          const size = expanded ? 1 : node.box[2] * base / pieceWidth;
+          button.style.transform = `translate(${x}px, ${y}px) scale(${size})`;
+          button.querySelector('canvas').style.height = pieceHeight + 'px';
+          const radius = styleOf(node).cornerRadiusPxEstimate;
+          button.querySelector('canvas').style.borderRadius = node.matteMode === 'preserve' && radius
+            ? radius * pieceWidth / node.box[2] + 'px' : '0';
+          button.disabled = !expanded;
+          button.setAttribute('aria-hidden', String(!expanded));
+          const isSelected = selected && topNode(selected)?.id === node.id;
+          button.dataset.selected = String(Boolean(isSelected));
+          button.setAttribute('aria-pressed', String(Boolean(isSelected)));
+        });
+        toggle.setAttribute('aria-pressed', String(pinned));
+        toggle.textContent = pinned ? 'Reassemble' : 'Separate layers';
+        root.querySelector('.el-board-note').textContent = expanded
+          ? 'Click a component to pin its styles.' : 'Original positions → labeled components';
+      }
+
+      function addProperty(label, value, color) {
+        const dl = root.querySelector('.el-details');
+        const dt = document.createElement('dt');
+        dt.textContent = label;
+        const dd = document.createElement('dd');
+        const row = document.createElement('span');
+        row.className = 'el-value';
+        if (color && /^#[0-9a-f]{6}$/i.test(color)) {
+          const swatch = document.createElement('span');
+          swatch.className = 'el-swatch';
+          swatch.style.backgroundColor = color;
+          swatch.setAttribute('aria-hidden', 'true');
+          row.append(swatch);
+        }
+        row.append(document.createTextNode(value));
+        dd.append(row);
+        dl.append(dt, dd);
+      }
+
+      function inspect() {
+        const node = lookup.get(selected);
+        root.querySelector('.el-empty').hidden = Boolean(node);
+        root.querySelector('.el-inspector-body').hidden = !node;
+        root.querySelector('.el-footnote').hidden = !node;
+        if (!node || !loaded) return;
+        const parent = parents.get(node.id);
+        const title = name(node, parent);
+        root.querySelector('.el-selected-title').textContent = title;
+        root.querySelector('.el-type').textContent = node.type + (parent
+          ? ' · inside ' + name(parent) : node.children?.length
+            ? ' · ' + node.children.length + (node.children.length === 1 ? ' child' : ' children') : '');
+        const preview = root.querySelector('.el-preview');
+        crop(preview, node);
+        const previewInk = styleOf(node).textColor;
+        preview.dataset.lightInk = String(Boolean(previewInk && colorRGB(previewInk).every(c => c > 200)));
+        preview.style.backgroundColor = preview.dataset.lightInk === 'true'
+          ? (parent && styleOf(parent).fill) || '#25282e' : '#ffffff';
+        const smallAsset = node.type === 'image' && (node.role === 'icon' || Math.max(node.box[2], node.box[3]) < 250);
+        const previewWidth = Math.min(230, node.box[2], smallAsset ? 70 : 230);
+        preview.style.width = previewWidth + 'px';
+        preview.style.height = (previewWidth * node.box[3] / node.box[2]) + 'px';
+        const radius = styleOf(node).cornerRadiusPxEstimate;
+        preview.style.borderRadius = node.matteMode === 'preserve' && radius ? radius * previewWidth / node.box[2] + 'px' : '0';
+        preview.setAttribute('aria-label', title + ' screenshot crop');
+        const children = root.querySelector('.el-children');
+        const family = parent || node;
+        if (children.dataset.family !== family.id) {
+          children.replaceChildren();
+          children.dataset.family = family.id;
+        }
+        if (family.children?.length && !children.childElementCount) {
+          [family, ...family.children].forEach(child => {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'el-child cursor-interaction';
+            button.dataset.child = child.id;
+            button.textContent = child.id === family.id ? 'Whole component' : name(child, family);
+            button.setAttribute('aria-pressed', String(child.id === selected));
+            button.addEventListener('click', () => select(child.id));
+            children.append(button);
+          });
+        }
+        children.querySelectorAll('[data-child]').forEach(button => {
+          button.setAttribute('aria-pressed', String(button.dataset.child === selected));
+        });
+        root.querySelector('.el-details').replaceChildren();
+        const style = styleOf(node);
+        const textChild = (node.children || []).find(child => child.type === 'text');
+        const textStyle = node.type === 'text' ? style : textChild ? styleOf(textChild) : null;
+        const textColors = new Set();
+        function collectTextColors(item) {
+          if (item.type === 'text' && styleOf(item).textColor) textColors.add(styleOf(item).textColor);
+          (item.children || []).forEach(collectTextColors);
+        }
+        collectTextColors(node);
+        addProperty('Size', `${node.box[2]} × ${node.box[3]} px`);
+        addProperty('Position', `x ${node.box[0]} · y ${node.box[1]}`);
+        if (node.type === 'text' && node.text) addProperty('Text', node.text);
+        addProperty('Background', style.backgroundKind === 'gradient' ? 'Raster gradient preserved'
+          : node.matteMode === 'preserve' || (parent && styleOf(parent).backgroundKind === 'gradient') ? 'Original background retained'
+          : node.type === 'text' || node.type === 'image' || !style.fill ? 'Removed for display' : 'Outer corners transparent; fill retained');
+        if (style.fill) addProperty('Fill', style.fill, style.fill);
+        if (style.stroke) addProperty('Stroke', style.stroke, style.stroke);
+        if (style.shadow) addProperty('Shadow', style.shadow);
+        if ('border' in style) addProperty('Border', style.border?.color || 'None', style.border?.color);
+        if (style.cornerRadiusPxEstimate != null) addProperty('Corner radius', `≈ ${style.cornerRadiusPxEstimate} px`);
+        if (textStyle) {
+          if (textColors.size > 1) addProperty('Text colors', [...textColors].join(', '));
+          else if (textStyle.textColor) addProperty('Text color', textStyle.textColor, textStyle.textColor);
+          addProperty('Font family', textStyle.fontFamily || 'Unknown');
+          addProperty('Font size', textStyle.fontSizePx == null ? 'Unknown' : textStyle.fontSizePx + ' px');
+          addProperty('Font weight', textStyle.fontWeight == null ? 'Unknown' : String(textStyle.fontWeight));
+        }
+        if (node.type === 'image') addProperty('Source', 'Screenshot region; original asset unknown');
+        const shared = nodes.filter(other => other.id !== node.id && other.styleRef && other.styleRef === node.styleRef);
+        if (shared.length) addProperty('Shared style', shared.map(other => name(other)).join(', '));
+        root.querySelector('.el-status').textContent = title + ' styles selected';
+      }
+
+      function save() {
+        if (window.openai?.setWidgetState) window.openai.setWidgetState({
+          modelContent: {viewer: 'screenshot-components', source: scene.sourceSha256, selectedLayer: selected}, privateContent: {pinned}
+        }).catch(() => {});
+      }
+
+      function select(id) {
+        if (!lookup.has(id)) return;
+        selected = id;
+        pinned = true;
+        inspect();
+        place();
+        save();
+      }
+
+      function restore(state) {
+        const compatible = state?.modelContent?.viewer === 'screenshot-components' && state.modelContent.source === scene.sourceSha256;
+        const id = compatible ? state.modelContent.selectedLayer : null;
+        selected = lookup.has(id) ? id : null;
+        pinned = compatible && Boolean(state?.privateContent?.pinned);
+        inspect();
+        place();
+      }
+
+      board.addEventListener('pointerenter', event => {
+        if (fineHover.matches && event.pointerType !== 'touch') {
+          root.dataset.keyboard = 'false';
+          hovered = true;
+          place();
+        }
+      });
+      board.addEventListener('pointerleave', () => { hovered = false; place(); });
+      board.addEventListener('focusin', () => {
+        if (root.dataset.keyboard === 'true') { focused = true; place(); }
+      });
+      board.addEventListener('focusout', event => {
+        if (!board.contains(event.relatedTarget)) { focused = false; place(); }
+      });
+      root.addEventListener('keydown', event => {
+        root.dataset.keyboard = 'true';
+        if (event.key === 'Escape') {
+          pinned = false; hovered = false; focused = false;
+          selected = null; inspect(); place(); toggle.focus(); save();
+        }
+      });
+      root.addEventListener('pointerdown', () => { root.dataset.keyboard = 'false'; });
+      toggle.addEventListener('click', () => {
+        pinned = !pinned;
+        if (!pinned) { hovered = false; focused = false; }
+        place(); save();
+      });
+      screen.addEventListener('click', () => { pinned = true; place(); save(); });
+      window.addEventListener('openai:set_globals', event => {
+        if (event.detail?.globals && Object.hasOwn(event.detail.globals, 'widgetState')) restore(event.detail.globals.widgetState);
+      });
+      source.onload = () => {
+        loaded = true;
+        screenCanvas.width = scene.roi[2];
+        screenCanvas.height = scene.roi[3];
+        screenCanvas.getContext('2d').drawImage(source, ...scene.roi,
+          0, 0, screenCanvas.width, screenCanvas.height);
+        makePieces();
+        restore(window.openai?.widgetState);
+        place();
+        requestAnimationFrame(() => { root.dataset.ready = 'true'; });
+        let lastWidth = board.getBoundingClientRect().width;
+        new ResizeObserver(() => {
+          const width = board.getBoundingClientRect().width;
+          const resized = Math.abs(width - lastWidth) > .5;
+          if (resized) root.dataset.ready = 'false';
+          place();
+          lastWidth = width;
+          if (resized) requestAnimationFrame(() => requestAnimationFrame(() => { root.dataset.ready = 'true'; }));
+        }).observe(board);
+      };
+      source.onerror = () => { root.querySelector('.el-empty').textContent = 'Screenshot could not be loaded.'; };
+      source.src = '__IMAGE_DATA_URL__';
+    })();
+  </script>
+</div>

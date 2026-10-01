@@ -1,0 +1,1159 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "4bd97abda0c55a465346f3ecd18a8521360ab6bdf32fda0b7334786169dc6661",
+  "imageSize": [
+    1179,
+    2676
+  ],
+  "roi": [
+    0,
+    150,
+    1179,
+    2370
+  ],
+  "coordinates": "Top-left origin, ROI-relative pixels after EXIF orientation",
+  "llmCalls": 0,
+  "nodes": [
+    {
+      "type": "button",
+      "displayName": "Brokerage menu",
+      "box": [
+        48,
+        27,
+        401,
+        133
+      ],
+      "children": [
+        {
+          "type": "image",
+          "displayName": "Menu icon",
+          "box": [
+            107,
+            72,
+            44,
+            40
+          ],
+          "role": "icon",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n2"
+          ],
+          "id": "b1.1"
+        },
+        {
+          "type": "text",
+          "displayName": "Brokerage label",
+          "text": "Brokerage",
+          "box": [
+            175,
+            67,
+            221,
+            58
+          ],
+          "styleRef": "s-88738fe3",
+          "inkHeightPx": 58,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n2"
+          ],
+          "id": "b1.2"
+        }
+      ],
+      "styleRef": "review-16",
+      "evidence": "assistant-review",
+      "boundsInference": "Grouped bounds reviewed from screenshot",
+      "matteMode": "preserve",
+      "id": "b1"
+    },
+    {
+      "type": "button",
+      "displayName": "Theme button",
+      "box": [
+        999,
+        27,
+        132,
+        133
+      ],
+      "children": [
+        {
+          "type": "image",
+          "displayName": "Sun icon",
+          "box": [
+            1030,
+            64,
+            65,
+            62
+          ],
+          "role": "icon",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n1"
+          ],
+          "id": "b2.1"
+        }
+      ],
+      "styleRef": "review-16",
+      "evidence": "assistant-review",
+      "boundsInference": "Grouped bounds reviewed from screenshot",
+      "matteMode": "preserve",
+      "id": "b2"
+    },
+    {
+      "type": "text",
+      "displayName": "Headline value",
+      "text": "$17.16",
+      "box": [
+        48,
+        251,
+        278,
+        90
+      ],
+      "styleRef": "s-b3c504a3",
+      "inkHeightPx": 90,
+      "evidence": "ocr+assistant-review",
+      "sourceNodeIds": [
+        "n3"
+      ],
+      "id": "b3"
+    },
+    {
+      "type": "tabbar",
+      "displayName": "Account tabs",
+      "box": [
+        0,
+        417,
+        1179,
+        100
+      ],
+      "children": [
+        {
+          "type": "button",
+          "displayName": "Return tab · selected",
+          "box": [
+            36,
+            425,
+            162,
+            92
+          ],
+          "children": [
+            {
+              "type": "text",
+              "displayName": "Return label",
+              "text": "Return",
+              "box": [
+                48,
+                434,
+                141,
+                42
+              ],
+              "styleRef": "s-b3c504a3",
+              "inkHeightPx": 42,
+              "evidence": "ocr+assistant-review",
+              "sourceNodeIds": [
+                "n4"
+              ],
+              "id": "b4.1.1"
+            },
+            {
+              "type": "image",
+              "displayName": "Active underline",
+              "box": [
+                36,
+                513,
+                160,
+                4
+              ],
+              "role": "graphic",
+              "evidence": "pixel-region+assistant-review",
+              "sourceNodeIds": [
+                "n4"
+              ],
+              "id": "b4.1.2"
+            }
+          ],
+          "styleRef": null,
+          "evidence": "assistant-review",
+          "boundsInference": "Grouped bounds reviewed from screenshot",
+          "id": "b4.1"
+        },
+        {
+          "type": "text",
+          "displayName": "Income tab",
+          "text": "Income",
+          "box": [
+            247,
+            437,
+            219,
+            38
+          ],
+          "styleRef": "s-1c21881f",
+          "inkHeightPx": 38,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n6"
+          ],
+          "id": "b4.2"
+        },
+        {
+          "type": "text",
+          "displayName": "Account value tab",
+          "text": "Account value",
+          "box": [
+            471,
+            437,
+            296,
+            38
+          ],
+          "styleRef": "s-1c21881f",
+          "inkHeightPx": 38,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n6"
+          ],
+          "id": "b4.3"
+        },
+        {
+          "type": "text",
+          "displayName": "Allocation tab",
+          "text": "Allocation",
+          "box": [
+            832,
+            436,
+            214,
+            40
+          ],
+          "styleRef": "s-1c21881f",
+          "inkHeightPx": 40,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n5"
+          ],
+          "id": "b4.4"
+        }
+      ],
+      "styleRef": null,
+      "evidence": "assistant-review",
+      "boundsInference": "Grouped bounds reviewed from screenshot",
+      "id": "b4"
+    },
+    {
+      "type": "container",
+      "displayName": "Daily change",
+      "box": [
+        48,
+        606,
+        522,
+        45
+      ],
+      "children": [
+        {
+          "type": "image",
+          "displayName": "Positive-change icon",
+          "box": [
+            48,
+            606,
+            39,
+            45
+          ],
+          "role": "icon",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n7"
+          ],
+          "id": "b5.1"
+        },
+        {
+          "type": "text",
+          "displayName": "Change amount",
+          "text": "$0.04 (0.23%)",
+          "box": [
+            93,
+            606,
+            304,
+            45
+          ],
+          "styleRef": "s-d5c47995",
+          "inkHeightPx": 45,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n7"
+          ],
+          "id": "b5.2"
+        },
+        {
+          "type": "text",
+          "displayName": "Period label",
+          "text": "today",
+          "box": [
+            402,
+            606,
+            124,
+            45
+          ],
+          "styleRef": "s-1c21881f",
+          "inkHeightPx": 45,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n7"
+          ],
+          "id": "b5.3"
+        },
+        {
+          "type": "image",
+          "displayName": "Info icon",
+          "box": [
+            531,
+            606,
+            39,
+            45
+          ],
+          "role": "icon",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n7"
+          ],
+          "id": "b5.4"
+        }
+      ],
+      "styleRef": null,
+      "evidence": "assistant-review",
+      "boundsInference": "Grouped bounds reviewed from screenshot",
+      "id": "b5"
+    },
+    {
+      "type": "chart",
+      "displayName": "Return chart",
+      "box": [
+        40,
+        710,
+        1096,
+        660
+      ],
+      "children": [
+        {
+          "type": "image",
+          "displayName": "Return line",
+          "box": [
+            46,
+            746,
+            718,
+            525
+          ],
+          "role": "graphic",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n8"
+          ],
+          "isolationColor": "#54a32d",
+          "styleRef": "review-17",
+          "id": "b6.1"
+        },
+        {
+          "type": "image",
+          "displayName": "Reference line",
+          "box": [
+            46,
+            1168,
+            1086,
+            4
+          ],
+          "role": "graphic",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n8"
+          ],
+          "isolationColor": "#adb5bb",
+          "styleRef": "review-18",
+          "id": "b6.2"
+        }
+      ],
+      "styleRef": "review-17",
+      "evidence": "assistant-review",
+      "boundsInference": "Grouped bounds reviewed from screenshot",
+      "id": "b6"
+    },
+    {
+      "type": "selector",
+      "displayName": "Time ranges",
+      "box": [
+        48,
+        1400,
+        831,
+        96
+      ],
+      "children": [
+        {
+          "type": "button",
+          "displayName": "1D range · selected",
+          "box": [
+            48,
+            1402,
+            98,
+            92
+          ],
+          "children": [
+            {
+              "type": "text",
+              "displayName": "1D label",
+              "text": "1D",
+              "box": [
+                69,
+                1433,
+                48,
+                31
+              ],
+              "styleRef": "s-d5c47995",
+              "inkHeightPx": 31,
+              "evidence": "ocr+assistant-review",
+              "sourceNodeIds": [
+                "n14"
+              ],
+              "id": "b7.1.1"
+            }
+          ],
+          "styleRef": "review-19",
+          "evidence": "assistant-review",
+          "boundsInference": "Grouped bounds reviewed from screenshot",
+          "id": "b7.1"
+        },
+        {
+          "type": "text",
+          "displayName": "1W range",
+          "text": "1W",
+          "box": [
+            179,
+            1433,
+            69,
+            31
+          ],
+          "styleRef": "s-f910ea34",
+          "inkHeightPx": 31,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n15"
+          ],
+          "id": "b7.2"
+        },
+        {
+          "type": "text",
+          "displayName": "1M range",
+          "text": "1M",
+          "box": [
+            292,
+            1430,
+            120,
+            38
+          ],
+          "styleRef": "s-f910ea34",
+          "inkHeightPx": 38,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n13"
+          ],
+          "id": "b7.3"
+        },
+        {
+          "type": "text",
+          "displayName": "3M range",
+          "text": "3M",
+          "box": [
+            417,
+            1430,
+            116,
+            37
+          ],
+          "styleRef": "s-f910ea34",
+          "inkHeightPx": 37,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n13"
+          ],
+          "id": "b7.4"
+        },
+        {
+          "type": "text",
+          "displayName": "6M range",
+          "text": "6M",
+          "box": [
+            537,
+            1430,
+            120,
+            37
+          ],
+          "styleRef": "s-f910ea34",
+          "inkHeightPx": 37,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n13"
+          ],
+          "id": "b7.5"
+        },
+        {
+          "type": "text",
+          "displayName": "YTD range",
+          "text": "YTD",
+          "box": [
+            661,
+            1430,
+            97,
+            37
+          ],
+          "styleRef": "s-f910ea34",
+          "inkHeightPx": 37,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n13"
+          ],
+          "id": "b7.6"
+        },
+        {
+          "type": "text",
+          "displayName": "1Y range",
+          "text": "1Y",
+          "box": [
+            795,
+            1430,
+            54,
+            38
+          ],
+          "styleRef": "s-f910ea34",
+          "inkHeightPx": 38,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n13"
+          ],
+          "id": "b7.7"
+        }
+      ],
+      "styleRef": null,
+      "evidence": "assistant-review",
+      "boundsInference": "Grouped bounds reviewed from screenshot",
+      "id": "b7"
+    },
+    {
+      "type": "toolbar",
+      "displayName": "Chart tools",
+      "box": [
+        905,
+        1416,
+        231,
+        63
+      ],
+      "children": [
+        {
+          "type": "image",
+          "displayName": "Settings icon",
+          "box": [
+            912,
+            1416,
+            54,
+            61
+          ],
+          "role": "icon",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n10"
+          ],
+          "id": "b8.1"
+        },
+        {
+          "type": "image",
+          "displayName": "Layout icon",
+          "box": [
+            997,
+            1419,
+            59,
+            54
+          ],
+          "role": "icon",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n11"
+          ],
+          "id": "b8.2"
+        },
+        {
+          "type": "image",
+          "displayName": "Expand icon",
+          "box": [
+            1087,
+            1418,
+            49,
+            54
+          ],
+          "role": "icon",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n12",
+            "n16"
+          ],
+          "id": "b8.3"
+        }
+      ],
+      "styleRef": null,
+      "evidence": "assistant-review",
+      "boundsInference": "Grouped bounds reviewed from screenshot",
+      "id": "b8"
+    },
+    {
+      "type": "row",
+      "displayName": "Margin buying power",
+      "box": [
+        48,
+        1560,
+        1087,
+        164
+      ],
+      "children": [
+        {
+          "type": "text",
+          "displayName": "Buying-power label",
+          "text": "Margin buying power",
+          "box": [
+            48,
+            1622,
+            419,
+            49
+          ],
+          "styleRef": "s-b3c504a3",
+          "inkHeightPx": 49,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n18"
+          ],
+          "id": "b9.1"
+        },
+        {
+          "type": "text",
+          "displayName": "Buying-power amount",
+          "text": "$11.02",
+          "box": [
+            914,
+            1615,
+            173,
+            54
+          ],
+          "styleRef": "s-b3c504a3",
+          "inkHeightPx": 54,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n17"
+          ],
+          "id": "b9.2"
+        },
+        {
+          "type": "image",
+          "displayName": "Chevron icon",
+          "box": [
+            1092,
+            1614,
+            42,
+            52
+          ],
+          "role": "icon",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n17"
+          ],
+          "id": "b9.3"
+        }
+      ],
+      "styleRef": null,
+      "evidence": "assistant-review",
+      "boundsInference": "Grouped bounds reviewed from screenshot",
+      "id": "b9"
+    },
+    {
+      "type": "card",
+      "displayName": "Options promotion",
+      "box": [
+        46,
+        1789,
+        1087,
+        319
+      ],
+      "children": [
+        {
+          "type": "text",
+          "displayName": "Card title",
+          "text": "Options trading enabled",
+          "box": [
+            82,
+            1833,
+            492,
+            45
+          ],
+          "styleRef": "review-20",
+          "inkHeightPx": 45,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n20"
+          ],
+          "matteMode": "preserve",
+          "id": "b10.1"
+        },
+        {
+          "type": "text",
+          "displayName": "Rebate description",
+          "text": "Earn a $0.06-$0.18 rebate per stock & ETF contract, based",
+          "box": [
+            82,
+            1902,
+            1000,
+            45
+          ],
+          "styleRef": "review-21",
+          "inkHeightPx": 45,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n21"
+          ],
+          "matteMode": "preserve",
+          "id": "b10.2"
+        },
+        {
+          "type": "text",
+          "displayName": "Description continuation",
+          "text": "on your monthly trading volume.",
+          "box": [
+            82,
+            1946,
+            553,
+            38
+          ],
+          "styleRef": "review-22",
+          "inkHeightPx": 38,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n22"
+          ],
+          "matteMode": "preserve",
+          "id": "b10.3"
+        },
+        {
+          "type": "text",
+          "displayName": "Explore Options action",
+          "text": "Explore Options ›",
+          "box": [
+            82,
+            2026,
+            368,
+            45
+          ],
+          "styleRef": "review-20",
+          "inkHeightPx": 45,
+          "evidence": "ocr+assistant-review",
+          "sourceNodeIds": [
+            "n23"
+          ],
+          "matteMode": "preserve",
+          "id": "b10.4"
+        },
+        {
+          "type": "image",
+          "displayName": "Close icon",
+          "box": [
+            1060,
+            1830,
+            31,
+            31
+          ],
+          "role": "icon",
+          "evidence": "pixel-region+assistant-review",
+          "sourceNodeIds": [
+            "n19"
+          ],
+          "id": "b10.5"
+        }
+      ],
+      "styleRef": "review-23",
+      "evidence": "assistant-review",
+      "boundsInference": "Grouped bounds reviewed from screenshot",
+      "matteMode": "preserve",
+      "id": "b10"
+    },
+    {
+      "type": "navigation",
+      "displayName": "Bottom navigation",
+      "box": [
+        64,
+        2160,
+        1055,
+        162
+      ],
+      "children": [
+        {
+          "type": "button",
+          "displayName": "Portfolio · selected",
+          "box": [
+            76,
+            2168,
+            225,
+            153
+          ],
+          "children": [
+            {
+              "type": "image",
+              "displayName": "Portfolio icon",
+              "box": [
+                156,
+                2200,
+                62,
+                60
+              ],
+              "role": "icon",
+              "evidence": "pixel-region+assistant-review",
+              "sourceNodeIds": [
+                "n24"
+              ],
+              "id": "b11.1.1"
+            },
+            {
+              "type": "text",
+              "displayName": "Portfolio label",
+              "text": "Portfolio",
+              "box": [
+                120,
+                2276,
+                128,
+                33
+              ],
+              "styleRef": "s-c06480e4",
+              "inkHeightPx": 33,
+              "evidence": "ocr+assistant-review",
+              "sourceNodeIds": [
+                "n29.2"
+              ],
+              "id": "b11.1.2"
+            }
+          ],
+          "styleRef": "review-24",
+          "evidence": "assistant-review",
+          "boundsInference": "Grouped bounds reviewed from screenshot",
+          "matteMode": "preserve",
+          "id": "b11.1"
+        },
+        {
+          "type": "button",
+          "displayName": "Markets",
+          "box": [
+            306,
+            2188,
+            154,
+            125
+          ],
+          "children": [
+            {
+              "type": "image",
+              "displayName": "Markets icon",
+              "box": [
+                354,
+                2201,
+                69,
+                65
+              ],
+              "role": "icon",
+              "evidence": "pixel-region+assistant-review",
+              "sourceNodeIds": [
+                "n26"
+              ],
+              "id": "b11.2.1"
+            },
+            {
+              "type": "text",
+              "displayName": "Markets label",
+              "text": "Markets",
+              "box": [
+                326,
+                2277,
+                121,
+                32
+              ],
+              "styleRef": "s-88738fe3",
+              "inkHeightPx": 32,
+              "evidence": "ocr+assistant-review",
+              "sourceNodeIds": [
+                "n29.3"
+              ],
+              "id": "b11.2.2"
+            }
+          ],
+          "styleRef": null,
+          "evidence": "assistant-review",
+          "boundsInference": "Grouped bounds reviewed from screenshot",
+          "id": "b11.2"
+        },
+        {
+          "type": "button",
+          "displayName": "Search",
+          "box": [
+            517,
+            2188,
+            138,
+            125
+          ],
+          "children": [
+            {
+              "type": "image",
+              "displayName": "Search icon",
+              "box": [
+                558,
+                2198,
+                65,
+                67
+              ],
+              "role": "icon",
+              "evidence": "pixel-region+assistant-review",
+              "sourceNodeIds": [
+                "n25"
+              ],
+              "id": "b11.3.1"
+            },
+            {
+              "type": "text",
+              "displayName": "Search label",
+              "text": "Search",
+              "box": [
+                536,
+                2280,
+                107,
+                29
+              ],
+              "styleRef": "s-e20cda01",
+              "inkHeightPx": 29,
+              "evidence": "ocr+assistant-review",
+              "sourceNodeIds": [
+                "n29.4"
+              ],
+              "id": "b11.3.2"
+            }
+          ],
+          "styleRef": null,
+          "evidence": "assistant-review",
+          "boundsInference": "Grouped bounds reviewed from screenshot",
+          "id": "b11.3"
+        },
+        {
+          "type": "button",
+          "displayName": "Inbox",
+          "box": [
+            724,
+            2188,
+            135,
+            125
+          ],
+          "children": [
+            {
+              "type": "image",
+              "displayName": "Inbox icon",
+              "box": [
+                761,
+                2201,
+                60,
+                65
+              ],
+              "role": "icon",
+              "evidence": "pixel-region+assistant-review",
+              "sourceNodeIds": [
+                "n28"
+              ],
+              "id": "b11.4.1"
+            },
+            {
+              "type": "text",
+              "displayName": "Inbox label",
+              "text": "Inbox",
+              "box": [
+                746,
+                2280,
+                89,
+                28
+              ],
+              "styleRef": "s-e20cda01",
+              "inkHeightPx": 28,
+              "evidence": "ocr+assistant-review",
+              "sourceNodeIds": [
+                "n29.5"
+              ],
+              "id": "b11.4.2"
+            }
+          ],
+          "styleRef": null,
+          "evidence": "assistant-review",
+          "boundsInference": "Grouped bounds reviewed from screenshot",
+          "id": "b11.4"
+        },
+        {
+          "type": "button",
+          "displayName": "Agents",
+          "box": [
+            912,
+            2188,
+            153,
+            125
+          ],
+          "children": [
+            {
+              "type": "image",
+              "displayName": "Agents icon",
+              "box": [
+                960,
+                2198,
+                64,
+                65
+              ],
+              "role": "icon",
+              "evidence": "pixel-region+assistant-review",
+              "sourceNodeIds": [
+                "n27"
+              ],
+              "id": "b11.5.1"
+            },
+            {
+              "type": "text",
+              "displayName": "Agents label",
+              "text": "Agents",
+              "box": [
+                938,
+                2277,
+                107,
+                34
+              ],
+              "styleRef": "s-e20cda01",
+              "inkHeightPx": 34,
+              "evidence": "ocr+assistant-review",
+              "sourceNodeIds": [
+                "n29.7"
+              ],
+              "id": "b11.5.2"
+            }
+          ],
+          "styleRef": null,
+          "evidence": "assistant-review",
+          "boundsInference": "Grouped bounds reviewed from screenshot",
+          "id": "b11.5"
+        }
+      ],
+      "styleRef": "review-25",
+      "evidence": "assistant-review",
+      "boundsInference": "Grouped bounds reviewed from screenshot",
+      "matteMode": "preserve",
+      "id": "b11"
+    }
+  ],
+  "styles": {
+    "s-c06480e4": {
+      "textColor": "#171717",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-88738fe3": {
+      "textColor": "#1a1a1a",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-e20cda01": {
+      "textColor": "#181818",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-b3c504a3": {
+      "textColor": "#000000",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-1c21881f": {
+      "textColor": "#737373",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-f910ea34": {
+      "textColor": "#adb5bc",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-d5c47995": {
+      "textColor": "#55a32b",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "review-16": {
+      "fill": "#ffffff",
+      "cornerRadiusPxEstimate": 66,
+      "shadow": "Present; exact blur unknown"
+    },
+    "review-17": {
+      "stroke": "#54a32d"
+    },
+    "review-18": {
+      "stroke": "#adb5bb"
+    },
+    "review-19": {
+      "fill": "#edfad6",
+      "border": {
+        "color": "#87bc64",
+        "widthPx": null
+      },
+      "cornerRadiusPxEstimate": 12
+    },
+    "review-20": {
+      "textColor": "#ffffff",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "review-21": {
+      "textColor": "#b6b7c0",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "review-22": {
+      "textColor": "#b1b4bf",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "review-23": {
+      "backgroundKind": "gradient",
+      "cornerRadiusPxEstimate": 26
+    },
+    "review-24": {
+      "fill": "#ececec",
+      "cornerRadiusPxEstimate": 75
+    },
+    "review-25": {
+      "fill": "#ffffff",
+      "cornerRadiusPxEstimate": 81,
+      "shadow": "Present; exact blur unknown"
+    }
+  },
+  "background": "#ffffff",
+  "methods": {
+    "styles": "Cluster border colors within 6/channel and radius estimates within 4px; retain node measurements.",
+    "radius": "Approximate circular-corner fit to edge pixels; not an original CSS radius."
+  },
+  "unknowns": [
+    "Exact fonts, layout rules and behavior need inference.",
+    "Image regions identify pixels; original vectors and transparency are unknown.",
+    "Role inference targets simple stacked forms; inspect other layouts."
+  ],
+  "semanticReview": {
+    "method": "Assistant review of screenshot and local OCR regions",
+    "rawRegions": 29,
+    "mainComponents": 11,
+    "groupedBounds": "Reviewed estimates, not recovered layout constraints",
+    "corrections": [
+      "Menu, theme, markets, change-arrow, info and chevron glyphs are graphics rather than OCR text.",
+      "Gradient-card text colors measured separately from its dark background.",
+      "Faint text behind the bottom navigation is excluded."
+    ]
+  }
+}

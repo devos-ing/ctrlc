@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "e5bf668099caad9a67825bd4ef277012feeca7235160f85c1c6cdbc86c3421fe",
+  "imageSize": [
+    1125,
+    2556
+  ],
+  "roi": [
+    0,
+    215,
+    1125,
+    1200
+  ],
+  "coordinates": "Top-left origin, ROI-relative pixels after EXIF orientation",
+  "llmCalls": 0,
+  "nodes": [
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        476,
+        81,
+        156,
+        160
+      ],
+      "evidence": "pixel-region",
+      "id": "n1"
+    },
+    {
+      "type": "text",
+      "text": "Log in or sign up",
+      "box": [
+        266,
+        356,
+        593,
+        72
+      ],
+      "styleRef": "s-b3c504a3",
+      "inkHeightPx": 72,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n2"
+    },
+    {
+      "type": "input",
+      "box": [
+        87,
+        478,
+        951,
+        126
+      ],
+      "label": "jsmith.mobbin1@gmail.com",
+      "styleRef": "s-6049942a",
+      "styleMeasurements": {
+        "fill": "#e0e0e0",
+        "border": null,
+        "cornerRadiusPxEstimate": 24
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": "jsmith.mobbin1@gmail.com",
+          "box": [
+            136,
+            520,
+            615,
+            50
+          ],
+          "styleRef": "s-b3c504a3",
+          "inkHeightPx": 50,
+          "ocrConfidence": 1,
+          "evidence": "ocr",
+          "id": "n3.1"
+        },
+        {
+          "type": "image",
+          "box": [
+            943,
+            518,
+            47,
+            47
+          ],
+          "role": "icon",
+          "evidence": "pixel-region",
+          "id": "n3.2"
+        }
+      ],
+      "evidence": "ocr+pixel-region",
+      "roleInference": "heuristic",
+      "id": "n3"
+    },
+    {
+      "type": "button",
+      "box": [
+        84,
+        639,
+        957,
+        132
+      ],
+      "label": "Continue",
+      "styleRef": "s-04a9fd60",
+      "styleMeasurements": {
+        "fill": "#070707",
+        "border": null,
+        "cornerRadiusPxEstimate": 20
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": "Continue",
+          "box": [
+            442,
+            686,
+            226,
+            38
+          ],
+          "styleRef": "s-2118ebe9",
+          "inkHeightPx": 38,
+          "ocrConfidence": 1,
+          "evidence": "ocr",
+          "id": "n4.1"
+        }
+      ],
+      "evidence": "ocr+pixel-region",
+      "roleInference": "heuristic",
+      "id": "n4"
+    },
+    {
+      "type": "text",
+      "text": "or",
+      "box": [
+        540,
+        818,
+        50,
+        32
+      ],
+      "styleRef": "s-b73bd9c8",
+      "inkHeightPx": 32,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "separator",
+      "id": "n5"
+    },
+    {
+      "type": "button",
+      "box": [
+        84,
+        887,
+        957,
+        132
+      ],
+      "label": "Continue with Google",
+      "styleRef": "s-60588170",
+      "styleMeasurements": {
+        "fill": "#f6f6f6",
+        "border": {
+          "color": "#c6c6c6",
+          "widthPx": null
+        },
+        "cornerRadiusPxEstimate": 24
+      },
+      "children": [
+        {
+          "type": "image",
+          "box": [
+            260,
+            923,
+            61,
+            60
+          ],
+          "role": "icon",
+          "evidence": "pixel-region",
+          "id": "n6.1"
+        },
+        {
+          "type": "text",
+          "text": "Continue with Google",
+          "box": [
+            349,
+            926,
+            501,
+            58
+          ],
+          "styleRef": "s-b3c504a3",
+          "inkHeightPx": 58,
+          "ocrConfidence": 1,
+          "evidence": "ocr",
+          "rawText": "G Continue with Google",
+          "labelNormalization": "heuristic",
+          "id": "n6.2"
+        }
+      ],
+      "evidence": "ocr+pixel-region",
+      "roleInference": "heuristic",
+      "id": "n6"
+    },
+    {
+      "type": "button",
+      "box": [
+        84,
+        1049,
+        957,
+        132
+      ],
+      "label": "Continue with Apple",
+      "styleRef": "s-60588170",
+      "styleMeasurements": {
+        "fill": "#f6f6f6",
+        "border": {
+          "color": "#c4c4c4",
+          "widthPx": null
+        },
+        "cornerRadiusPxEstimate": 20
+      },
+      "children": [
+        {
+          "type": "image",
+          "box": [
+            285,
+            1085,
+            49,
+            60
+          ],
+          "role": "icon",
+          "evidence": "pixel-region",
+          "id": "n7.1"
+        },
+        {
+          "type": "text",
+          "text": "Continue with Apple",
+          "box": [
+            358,
+            1096,
+            469,
+            48
+          ],
+          "styleRef": "s-b3c504a3",
+          "inkHeightPx": 48,
+          "ocrConfidence": 1,
+          "evidence": "ocr",
+          "rawText": "• Continue with Apple",
+          "labelNormalization": "heuristic",
+          "id": "n7.2"
+        }
+      ],
+      "evidence": "ocr+pixel-region",
+      "roleInference": "heuristic",
+      "id": "n7"
+    }
+  ],
+  "styles": {
+    "s-b3c504a3": {
+      "textColor": "#000000",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-6049942a": {
+      "fill": "#e0e0e0",
+      "border": null,
+      "cornerRadiusPxEstimate": 24
+    },
+    "s-2118ebe9": {
+      "textColor": "#ffffff",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-04a9fd60": {
+      "fill": "#070707",
+      "border": null,
+      "cornerRadiusPxEstimate": 20
+    },
+    "s-60588170": {
+      "fill": "#f6f6f6",
+      "border": {
+        "color": "#c6c6c6",
+        "widthPx": null
+      },
+      "cornerRadiusPxEstimate": 24
+    },
+    "s-b73bd9c8": {
+      "textColor": "#626262",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    }
+  },
+  "background": "#f6f6f6",
+  "methods": {
+    "styles": "Cluster border colors within 6/channel and radius estimates within 4px; retain node measurements.",
+    "radius": "Approximate circular-corner fit to edge pixels; not an original CSS radius."
+  },
+  "unknowns": [
+    "Exact fonts, layout rules and behavior need inference.",
+    "Image regions identify pixels; original vectors and transparency are unknown.",
+    "Role inference targets simple stacked forms; inspect other layouts."
+  ]
+}

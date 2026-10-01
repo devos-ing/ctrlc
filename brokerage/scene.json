@@ -1,0 +1,676 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "4bd97abda0c55a465346f3ecd18a8521360ab6bdf32fda0b7334786169dc6661",
+  "imageSize": [
+    1179,
+    2676
+  ],
+  "roi": [
+    0,
+    150,
+    1179,
+    2370
+  ],
+  "coordinates": "Top-left origin, ROI-relative pixels after EXIF orientation",
+  "llmCalls": 0,
+  "nodes": [
+    {
+      "type": "text",
+      "text": "°",
+      "box": [
+        1028,
+        62,
+        72,
+        69
+      ],
+      "styleRef": "s-88738fe3",
+      "inkHeightPx": 69,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n1"
+    },
+    {
+      "type": "text",
+      "text": "E Brokerage",
+      "box": [
+        99,
+        67,
+        296,
+        60
+      ],
+      "styleRef": "s-e20cda01",
+      "inkHeightPx": 60,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n2"
+    },
+    {
+      "type": "text",
+      "text": "$17.16",
+      "box": [
+        48,
+        251,
+        278,
+        90
+      ],
+      "styleRef": "s-b3c504a3",
+      "inkHeightPx": 90,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n3"
+    },
+    {
+      "type": "text",
+      "text": "Return",
+      "box": [
+        48,
+        434,
+        141,
+        42
+      ],
+      "styleRef": "s-b3c504a3",
+      "inkHeightPx": 42,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n4"
+    },
+    {
+      "type": "text",
+      "text": "Allocation",
+      "box": [
+        832,
+        436,
+        214,
+        40
+      ],
+      "styleRef": "s-1c21881f",
+      "inkHeightPx": 40,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n5"
+    },
+    {
+      "type": "text",
+      "text": "Income Account value",
+      "box": [
+        247,
+        437,
+        519,
+        38
+      ],
+      "styleRef": "s-1c21881f",
+      "inkHeightPx": 38,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n6"
+    },
+    {
+      "type": "text",
+      "text": "7 $0.04 (0.23%) today ©",
+      "box": [
+        48,
+        606,
+        522,
+        45
+      ],
+      "styleRef": "s-02f14cb5",
+      "inkHeightPx": 45,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n7"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        46,
+        746,
+        718,
+        525
+      ],
+      "evidence": "pixel-region",
+      "id": "n8"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        48,
+        1402,
+        98,
+        92
+      ],
+      "evidence": "pixel-region",
+      "id": "n9"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        916,
+        1424,
+        41,
+        44
+      ],
+      "evidence": "pixel-region",
+      "id": "n10"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        1004,
+        1424,
+        44,
+        44
+      ],
+      "evidence": "pixel-region",
+      "id": "n11"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        1103,
+        1424,
+        29,
+        29
+      ],
+      "evidence": "pixel-region",
+      "id": "n12"
+    },
+    {
+      "type": "text",
+      "text": "1M 3M 6M YTD 1Y",
+      "box": [
+        292,
+        1430,
+        557,
+        38
+      ],
+      "styleRef": "s-f910ea34",
+      "inkHeightPx": 38,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n13"
+    },
+    {
+      "type": "text",
+      "text": "1D",
+      "box": [
+        69,
+        1433,
+        48,
+        31
+      ],
+      "styleRef": "s-d5c47995",
+      "inkHeightPx": 31,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n14"
+    },
+    {
+      "type": "text",
+      "text": "1W",
+      "box": [
+        179,
+        1433,
+        69,
+        31
+      ],
+      "styleRef": "s-5de18830",
+      "inkHeightPx": 31,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n15"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        1089,
+        1433,
+        35,
+        35
+      ],
+      "evidence": "pixel-region",
+      "id": "n16"
+    },
+    {
+      "type": "text",
+      "text": "$11.02 >",
+      "box": [
+        914,
+        1614,
+        221,
+        54
+      ],
+      "styleRef": "s-b3c504a3",
+      "inkHeightPx": 54,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n17"
+    },
+    {
+      "type": "text",
+      "text": "Margin buying power",
+      "box": [
+        48,
+        1622,
+        419,
+        49
+      ],
+      "styleRef": "s-b3c504a3",
+      "inkHeightPx": 49,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n18"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        46,
+        1789,
+        1087,
+        319
+      ],
+      "evidence": "pixel-region",
+      "id": "n19"
+    },
+    {
+      "type": "text",
+      "text": "Options trading enabled",
+      "box": [
+        82,
+        1833,
+        492,
+        45
+      ],
+      "styleRef": "s-6c56f091",
+      "inkHeightPx": 45,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n20"
+    },
+    {
+      "type": "text",
+      "text": "Earn a $0.06-$0.18 rebate per stock & ETF contract, based",
+      "box": [
+        82,
+        1902,
+        1000,
+        45
+      ],
+      "styleRef": "s-6ed93261",
+      "inkHeightPx": 45,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n21"
+    },
+    {
+      "type": "text",
+      "text": "on your monthly trading volume.",
+      "box": [
+        82,
+        1946,
+        553,
+        38
+      ],
+      "styleRef": "s-ffdfde56",
+      "inkHeightPx": 38,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n22"
+    },
+    {
+      "type": "text",
+      "text": "Explore Options ›",
+      "box": [
+        82,
+        2026,
+        368,
+        45
+      ],
+      "styleRef": "s-6da89820",
+      "inkHeightPx": 45,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n23"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        76,
+        2170,
+        221,
+        68
+      ],
+      "evidence": "pixel-region",
+      "id": "n24"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        558,
+        2198,
+        52,
+        41
+      ],
+      "evidence": "pixel-region",
+      "id": "n25"
+    },
+    {
+      "type": "text",
+      "text": "ill",
+      "box": [
+        354,
+        2201,
+        69,
+        65
+      ],
+      "styleRef": "s-e20cda01",
+      "inkHeightPx": 65,
+      "ocrConfidence": 1,
+      "evidence": "ocr",
+      "role": "text",
+      "id": "n26"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        963,
+        2201,
+        59,
+        37
+      ],
+      "evidence": "pixel-region",
+      "id": "n27"
+    },
+    {
+      "type": "image",
+      "role": "unknown-asset",
+      "box": [
+        763,
+        2203,
+        57,
+        35
+      ],
+      "evidence": "pixel-region",
+      "id": "n28"
+    },
+    {
+      "type": "container",
+      "box": [
+        68,
+        2245,
+        1048,
+        125
+      ],
+      "label": "Portfolio Markets Agents Search Inbox Poruono",
+      "styleRef": "s-d3da96e5",
+      "styleMeasurements": {
+        "fill": "#fefefe",
+        "border": {
+          "color": "#ececec",
+          "widthPx": null
+        },
+        "cornerRadiusPxEstimate": 16
+      },
+      "children": [
+        {
+          "type": "text",
+          "text": "Poruono",
+          "box": [
+            48,
+            2322,
+            221,
+            47
+          ],
+          "styleRef": "s-ebc9419d",
+          "inkHeightPx": 47,
+          "ocrConfidence": 1,
+          "evidence": "ocr",
+          "id": "n29.1"
+        },
+        {
+          "type": "text",
+          "text": "Portfolio",
+          "box": [
+            120,
+            2276,
+            128,
+            33
+          ],
+          "styleRef": "s-c06480e4",
+          "inkHeightPx": 33,
+          "ocrConfidence": 1,
+          "evidence": "ocr",
+          "id": "n29.2"
+        },
+        {
+          "type": "text",
+          "text": "Markets",
+          "box": [
+            326,
+            2277,
+            121,
+            32
+          ],
+          "styleRef": "s-88738fe3",
+          "inkHeightPx": 32,
+          "ocrConfidence": 1,
+          "evidence": "ocr",
+          "id": "n29.3"
+        },
+        {
+          "type": "text",
+          "text": "Search",
+          "box": [
+            536,
+            2280,
+            107,
+            29
+          ],
+          "styleRef": "s-e20cda01",
+          "inkHeightPx": 29,
+          "ocrConfidence": 1,
+          "evidence": "ocr",
+          "id": "n29.4"
+        },
+        {
+          "type": "text",
+          "text": "Inbox",
+          "box": [
+            746,
+            2280,
+            89,
+            28
+          ],
+          "styleRef": "s-e20cda01",
+          "inkHeightPx": 28,
+          "ocrConfidence": 1,
+          "evidence": "ocr",
+          "id": "n29.5"
+        },
+        {
+          "type": "image",
+          "box": [
+            880,
+            2343,
+            100,
+            11
+          ],
+          "role": "icon",
+          "evidence": "pixel-region",
+          "id": "n29.6"
+        },
+        {
+          "type": "text",
+          "text": "Agents",
+          "box": [
+            938,
+            2277,
+            107,
+            34
+          ],
+          "styleRef": "s-e20cda01",
+          "inkHeightPx": 34,
+          "ocrConfidence": 1,
+          "evidence": "ocr",
+          "id": "n29.7"
+        },
+        {
+          "type": "image",
+          "box": [
+            1025,
+            2336,
+            38,
+            17
+          ],
+          "role": "icon",
+          "evidence": "pixel-region",
+          "id": "n29.8"
+        },
+        {
+          "type": "image",
+          "box": [
+            1077,
+            2327,
+            29,
+            25
+          ],
+          "role": "icon",
+          "evidence": "pixel-region",
+          "id": "n29.9"
+        }
+      ],
+      "evidence": "ocr+pixel-region",
+      "roleInference": "heuristic",
+      "id": "n29"
+    }
+  ],
+  "styles": {
+    "s-c06480e4": {
+      "textColor": "#171717",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-88738fe3": {
+      "textColor": "#1a1a1a",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-e20cda01": {
+      "textColor": "#181818",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-ebc9419d": {
+      "textColor": "#cbcbcb",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-d3da96e5": {
+      "fill": "#fefefe",
+      "border": {
+        "color": "#ececec",
+        "widthPx": null
+      },
+      "cornerRadiusPxEstimate": 16
+    },
+    "s-b3c504a3": {
+      "textColor": "#000000",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-1c21881f": {
+      "textColor": "#737373",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-02f14cb5": {
+      "textColor": "#747474",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-f910ea34": {
+      "textColor": "#adb5bc",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-d5c47995": {
+      "textColor": "#55a32b",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-5de18830": {
+      "textColor": "#adb3ba",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-6c56f091": {
+      "textColor": "#16245b",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-6ed93261": {
+      "textColor": "#182862",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-ffdfde56": {
+      "textColor": "#111a42",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    },
+    "s-6da89820": {
+      "textColor": "#090f21",
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null
+    }
+  },
+  "background": "#ffffff",
+  "methods": {
+    "styles": "Cluster border colors within 6/channel and radius estimates within 4px; retain node measurements.",
+    "radius": "Approximate circular-corner fit to edge pixels; not an original CSS radius."
+  },
+  "unknowns": [
+    "Exact fonts, layout rules and behavior need inference.",
+    "Image regions identify pixels; original vectors and transparency are unknown.",
+    "Role inference targets simple stacked forms; inspect other layouts."
+  ]
+}

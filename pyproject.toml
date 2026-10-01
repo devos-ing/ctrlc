@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ctrlc"
+version = "0.1.0"
+description = "Local screenshot measurement and standalone UI inspector tools"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["Pillow>=10", "numpy>=1.24"]
+
+[project.optional-dependencies]
+test = ["build>=1", "setuptools>=68", "wheel"]
+
+[project.scripts]
+ctrlc = "ctrlc.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ctrlc*"]
+
+[tool.setuptools.package-data]
+ctrlc = ["assets/*.html", "assets/*.js", "assets/*.swift"]

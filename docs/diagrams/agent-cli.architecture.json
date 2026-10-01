@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Proposed ctrlc architecture",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1220,
+      680
+    ]
+  },
+  "components": [
+    {
+      "id": "calling-agent",
+      "type": "external",
+      "label": "Calling agent",
+      "sublabel": "Codex / Claude / others",
+      "pos": [
+        500,
+        25
+      ],
+      "size": [
+        220,
+        90
+      ]
+    },
+    {
+      "id": "command-boundary",
+      "type": "backend",
+      "label": "ctrlc",
+      "sublabel": "parse / dispatch / JSON",
+      "tag": "cli.py",
+      "pos": [
+        500,
+        155
+      ],
+      "size": [
+        220,
+        105
+      ]
+    },
+    {
+      "id": "extract-workflow",
+      "type": "backend",
+      "label": "extract",
+      "sublabel": "screenshot / OCR / cache",
+      "pos": [
+        95,
+        335
+      ],
+      "size": [
+        220,
+        95
+      ]
+    },
+    {
+      "id": "render-workflow",
+      "type": "backend",
+      "label": "render",
+      "sublabel": "scene + matching screenshot",
+      "pos": [
+        500,
+        335
+      ],
+      "size": [
+        220,
+        95
+      ]
+    },
+    {
+      "id": "serve-workflow",
+      "type": "backend",
+      "label": "serve",
+      "sublabel": "serve selected HTML",
+      "pos": [
+        905,
+        335
+      ],
+      "size": [
+        220,
+        95
+      ]
+    },
+    {
+      "id": "saved-evidence",
+      "type": "database",
+      "label": "Scene + packet",
+      "sublabel": "scene.json / packet.json",
+      "pos": [
+        95,
+        530
+      ],
+      "size": [
+        220,
+        95
+      ]
+    },
+    {
+      "id": "inspector-document",
+      "type": "database",
+      "label": "Inspector HTML",
+      "sublabel": "white panels / bundled pixels",
+      "pos": [
+        500,
+        530
+      ],
+      "size": [
+        220,
+        95
+      ]
+    },
+    {
+      "id": "preview-endpoint",
+      "type": "frontend",
+      "label": "Local preview",
+      "sublabel": "127.0.0.1 + chosen port",
+      "pos": [
+        905,
+        530
+      ],
+      "size": [
+        220,
+        95
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Reusable existing workflows",
+      "wraps": [
+        "extract-workflow",
+        "render-workflow",
+        "serve-workflow"
+      ],
+      "pad": 30
+    }
+  ],
+  "connections": [
+    {
+      "id": "agent-invokes-cli",
+      "from": "calling-agent",
+      "to": "command-boundary",
+      "label": "shell argv",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "variant": "emphasis",
+      "labelDy": 30
+    },
+    {
+      "id": "dispatch-extraction",
+      "from": "command-boundary",
+      "to": "extract-workflow",
+      "label": "function call",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "id": "dispatch-rendering",
+      "from": "command-boundary",
+      "to": "render-workflow",
+      "label": "function call",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "variant": "emphasis",
+      "labelDy": 50
+    },
+    {
+      "id": "dispatch-preview",
+      "from": "command-boundary",
+      "to": "serve-workflow",
+      "label": "function call",
+      "fromSide": "right",
+      "toSide": "top"
+    },
+    {
+      "id": "extract-saves-evidence",
+      "from": "extract-workflow",
+      "to": "saved-evidence",
+      "label": "write artifacts",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 60
+    },
+    {
+      "id": "render-saves-html",
+      "from": "render-workflow",
+      "to": "inspector-document",
+      "label": "write HTML",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "variant": "emphasis",
+      "labelDy": 60
+    },
+    {
+      "id": "serve-opens-endpoint",
+      "from": "serve-workflow",
+      "to": "preview-endpoint",
+      "label": "localhost HTTP",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "labelDy": 60
+    },
+    {
+      "id": "render-reads-evidence",
+      "from": "saved-evidence",
+      "to": "render-workflow",
+      "label": "read saved scene",
+      "fromSide": "right",
+      "toSide": "left",
+      "variant": "dashed"
+    },
+    {
+      "id": "serve-reads-html",
+      "from": "inspector-document",
+      "to": "serve-workflow",
+      "label": "read HTML",
+      "fromSide": "right",
+      "toSide": "left",
+      "variant": "dashed"
+    }
+  ],
+  "cards": []
+}

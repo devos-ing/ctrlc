@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.cache/
+.scratch/
+build/
+dist/
+*.egg-info/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.visual-check.*
+docs/diagrams/*.receipt.json
