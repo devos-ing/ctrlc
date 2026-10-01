@@ -6,6 +6,8 @@ integration in `ctrlc`.
 
 ![ctrlc demo preview](demo/assets/ctrlc-demo.gif)
 
+[Download the MP4 demo](demo/assets/ctrlc-demo.mp4)
+
 ## Tested agent runtimes
 
 | Agent runtime | Model | Test status |
