@@ -57,14 +57,24 @@ For installation and PATH setup, see [README Installation](README.md#installatio
 Attach a screenshot or provide a local image path with this prompt.
 
 ```text
-Use ctrlc to analyze the screenshot I've attached, or the local image path I've provided.
-Use the attachment's local file if one is available. Otherwise, save the original attachment locally without resizing it.
-If you can't access or save the attachment, ask me for a local file path.
-Save the results in a new output folder unless I specify one, and tell me where it is.
-Extract the application UI with --inspector, read the reported packet.json once, and open the inspector.
-Keep the measured bounds and colors. Mark details you can't verify as unknown.
-If you change the inspector's styling, render the saved scene without extracting again.
+Use `ctrlc extract --inspector` on this screenshot's app UI.
+Read `packet.json` once and open the inspector. Preserve measured bounds and colors; mark unverified details unknown.
+For styling changes, render the saved scene.
 ```
+
+Use the original attachment or supplied path without resizing it. If the
+screenshot is inaccessible, ask for a local path. Save results in a new folder
+unless the caller specifies one, and report the output path.
+
+**Extraction command:**
+
+```bash
+ctrlc extract screenshot.png --out result --inspector
+```
+
+Add `--roi x,y,width,height` to select the application region. Add `--depth 1`
+to request top-level sections. The agent reads the packet and opens the
+generated inspector; `--inspector` only renders the HTML.
 
 After semantic review, render the saved scene with:
 

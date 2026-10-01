@@ -73,9 +73,7 @@ your own OCR data with `--ocr-json`. See [the OCR format](PATTERN.md#supplied-oc
 ### Ask an agent to install it
 
 ```text
-Install ctrlc with `curl -fsSL https://raw.githubusercontent.com/devos-ing/ctrlc/main/install.sh | sh`.
-The script installs uv if needed and checks `ctrlc --version` after installation.
-If ctrlc isn't on PATH, use the full path printed by the script.
+Install ctrlc: `curl -fsSL https://raw.githubusercontent.com/devos-ing/ctrlc/main/install.sh | sh`.
 ```
 
 ## Try it
@@ -84,14 +82,25 @@ Attach a screenshot and give this prompt to an agent that can run shell
 commands. You can also provide a local file path:
 
 ```text
-Use ctrlc to analyze the screenshot I've attached, or the local image path I've provided.
-Use the attachment's local file if one is available. Otherwise, save the original attachment locally without resizing it.
-If you can't access or save the attachment, ask me for a local file path.
-Save the results in a new output folder unless I specify one, and tell me where it is.
-Extract the application UI with --inspector, read the reported packet.json once, and open the inspector.
-Keep the measured bounds and colors. Mark details you can't verify as unknown.
-If you change the inspector's styling, render the saved scene without extracting again.
+Use `ctrlc extract --inspector` on this screenshot's app UI.
+Read `packet.json` once and open the inspector. Preserve measured bounds and colors; mark unverified details unknown.
+For styling changes, render the saved scene.
 ```
+
+Use the original attachment or supplied local path without resizing it. If the
+agent cannot access the screenshot, provide a local path. Save results in a new
+folder unless you specify one.
+
+**Extraction command:**
+
+```bash
+ctrlc extract screenshot.png --out result --inspector
+```
+
+Add `--roi x,y,width,height` to select the application region. Add `--depth 1`
+to request top-level sections. `--inspector` creates the HTML file; the agent
+opens it after reading the packet. See [hierarchy depths](#choose-a-hierarchy-depth)
+for later refinement.
 
 To try the included brokerage example, run these commands from the repository
 root:
