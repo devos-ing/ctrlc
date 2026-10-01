@@ -1,4 +1,11 @@
 .venv/
+node_modules/
+apps/web/node_modules/
+apps/web/dist/
+apps/web/public/showcases/
+apps/web/src/generated/showcases.ts
+apps/web/test-results/
+apps/web/playwright-report/
 __pycache__/
 *.py[cod]
 .cache/

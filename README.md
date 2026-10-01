@@ -134,6 +134,50 @@ uv run --extra test python -m unittest test_extract_ui test_render_inspector -v
 node --test test_alpha_matte.js
 ```
 
+### Showcase website
+
+The curated website lives in `apps/web`; its workspace uses Bun while the
+existing Python package and release remain managed by uv. From the repository
+root, install the JavaScript workspace and start the site with:
+
+```bash
+bun install
+bun run web:dev
+```
+
+The development server uses `http://127.0.0.1:5173`. To build and inspect the
+production static files locally:
+
+```bash
+bun run web:build
+bun run web:preview
+```
+
+The preview serves TanStack Start's prerendered client output as static files.
+It does not start the Start server runtime. The E2E command builds the site and
+checks the published clipboard command, saved-node highlighting, detail route,
+mobile tap, keyboard selection, and Escape return flow:
+
+```bash
+bun run web:test:e2e
+```
+
+`showcases/catalog.json` is the source for curated entries. Each record points
+to an existing scene and matching screenshot and records whether the scene has
+received semantic review. Build preparation checks the source hash, oriented
+image dimensions, scene version, and unique recursive node IDs before using
+`ctrlc.rendering.render_scene` to create each self-contained inspector. It
+does not extract screenshots or run OCR.
+
+The showcase adapter keeps saved node boxes ROI-relative. Gallery highlights add
+the ROI origin once and scale into the screenshot's displayed image area. A
+detail URL may include `?node=<id>`; the web page validates the ID and passes it
+to the embedded inspector as `#node=<encoded-id>`. The inspector also supports
+hash changes after load. The website replaces the fragment within the iframe's
+current history entry, so browser Back follows the detail route and keeps the
+inspector document focused. Embedded Escape requests are accepted only from the
+same-origin inspector iframe, while standalone inspector behavior stays intact.
+
 To call the workflows from Python, use `run_extraction`, `render_scene`, and
 `create_preview_server`. The renderer template and native OCR helper are in
 `ctrlc/assets/`.

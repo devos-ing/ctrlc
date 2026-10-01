@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "brokerage",
+    "title": "Brokerage",
+    "context": "Portfolio overview",
+    "scene": "brokerage/reviewed-scene.json",
+    "source": "brokerage/source.png",
+    "reviewed": true
+  },
+  {
+    "slug": "sign-in",
+    "title": "Sign in",
+    "context": "Authentication",
+    "scene": "sample/scene.json",
+    "source": "sample/source.png",
+    "reviewed": false
+  }
+]

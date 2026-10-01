@@ -1,6 +1,6 @@
 # ctrlc showcase website
 
-Status: planned.
+Status: implemented.
 
 [Figma layout draft](../design/website-figma.md): desktop, mobile, and representative hover states.
 
@@ -85,6 +85,22 @@ Load screenshot previews lazily below the hero. Load full inspector documents on
 2. Connect the existing renderer to the detail route and selected-node interface. Add the sign-in entry through the same catalog. Check nested bounds, nonzero ROI origins, resizing, and loading failures.
 3. Complete keyboard and touch inspection, prerendered routes, metadata, and the static build. Prepare a local preview before choosing a hosting target.
 
+Implementation notes: the catalog is `showcases/catalog.json`; build preparation
+is `apps/web/scripts/prepare_showcases.py`. It validates every recursive node
+and screenshot/scene pair, then generates `apps/web/public/showcases/` and the
+typed browser data consumed by the app. The Vite build prerenders `/` and each
+catalog slug with link crawling disabled. Static files are written to
+`apps/web/dist/client`; `bun run web:preview` serves that directory without a
+TanStack Start runtime.
+
+The detail selection bridge is `?node=<id>` on the showcase route and
+`#node=<encoded-id>` in the generated inspector. The bridge validates node IDs
+before use and follows later inspector hash changes. The website replaces the
+iframe hash in the current history entry, keeping browser Back aligned with the
+detail route while preserving iframe focus. In embedded use, inspector messages
+require both the current origin and iframe window source; Escape closes the
+detail route. Standalone inspector Escape behavior remains unchanged.
+
 Use GPT-6 Luna with xhigh effort for implementation and GPT-6.1 Sol with high or xhigh effort for review, following the established project workflow.
 
 ## Verification
@@ -94,7 +110,10 @@ Keep verification at the browser E2E level:
 - Desktop flow: copy the real command, hover a known nested element, verify bounds at two preview sizes, open its inspector, and clear selection.
 - Mobile and keyboard flow: reach the same detail view without hover, select an element, and return to the gallery.
 
-Run the production build and inspect the prerendered output, including direct navigation to a showcase route. Run existing CLI checks only if the renderer changes. Do not add unit tests that restate coordinate formulas or component markup.
+Run `bun run web:test:e2e` for the production static build and two real-browser
+flows. The local preview is `bun run web:preview`. Run existing CLI checks when
+the renderer template changes. Do not add unit tests that restate coordinate
+formulas or component markup.
 
 ## References
 

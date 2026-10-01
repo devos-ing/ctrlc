@@ -1,0 +1,14 @@
+{
+  "name": "ctrlc-workspace",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "web:dev": "bun run --filter @ctrlc/web dev",
+    "web:build": "bun run --filter @ctrlc/web build",
+    "web:preview": "bun run --filter @ctrlc/web preview",
+    "web:typecheck": "bun run --filter @ctrlc/web typecheck",
+    "web:test:e2e": "bun run --filter @ctrlc/web test:e2e"
+  }
+}

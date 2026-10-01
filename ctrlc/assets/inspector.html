@@ -425,6 +425,24 @@
         inspect();
         place();
         save();
+        if (window.parent !== window) {
+          window.parent.postMessage({type: 'ctrlc-inspector-select', node: id}, window.location.origin);
+        }
+      }
+
+      function applyHashSelection(clearWhenMissing = false) {
+        const params = new URLSearchParams(window.location.hash.slice(1));
+        if (!clearWhenMissing && !params.has('node')) return;
+        applySelection(params.get('node'));
+      }
+
+      function applySelection(id) {
+        selected = id && lookup.has(id) ? id : null;
+        pinned = Boolean(selected);
+        hovered = false;
+        focused = false;
+        inspect();
+        place();
       }
 
       function restore(state) {
@@ -453,6 +471,9 @@
       root.addEventListener('keydown', event => {
         root.dataset.keyboard = 'true';
         if (event.key === 'Escape') {
+          if (window.parent !== window) {
+            window.parent.postMessage({type: 'ctrlc-inspector-close'}, window.location.origin);
+          }
           pinned = false; hovered = false; focused = false;
           selected = null; inspect(); place(); toggle.focus(); save();
         }
@@ -475,6 +496,7 @@
           0, 0, screenCanvas.width, screenCanvas.height);
         makePieces();
         restore(window.openai?.widgetState);
+        if (new URLSearchParams(window.location.hash.slice(1)).has('node')) applyHashSelection();
         place();
         requestAnimationFrame(() => { root.dataset.ready = 'true'; });
         let lastWidth = board.getBoundingClientRect().width;
@@ -487,6 +509,12 @@
           if (resized) requestAnimationFrame(() => requestAnimationFrame(() => { root.dataset.ready = 'true'; }));
         }).observe(board);
       };
+      window.addEventListener('hashchange', () => applyHashSelection(true));
+      window.addEventListener('message', event => {
+        if (event.origin !== window.location.origin || event.source !== window.parent) return;
+        if (event.data?.type !== 'ctrlc-inspector-sync-selection') return;
+        applySelection(typeof event.data.node === 'string' ? event.data.node : null);
+      });
       source.onerror = () => { root.querySelector('.el-empty').textContent = 'Screenshot could not be loaded.'; };
       source.src = '__IMAGE_DATA_URL__';
     })();
