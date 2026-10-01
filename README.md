@@ -42,18 +42,24 @@ root.
 Native Vision OCR requires macOS and `swiftc`. On other platforms, provide
 compatible OCR data with `--ocr-json`.
 
-## Usage
-
-Copy this prompt into a shell-capable agent:
+### Agent install prompt
 
 ```text
 If uv is missing, install it from https://docs.astral.sh/uv/getting-started/installation/.
-Install ctrlc 0.1.0 with `uv tool install https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl`; add `--force` if already installed. Check `ctrlc --version` and `ctrlc --help`.
-If `ctrlc` is not on PATH, invoke it by its full path under the directory printed by `uv tool dir --bin`.
-Set SCREENSHOT_PATH and OUTPUT_DIR from user-supplied paths. Ask only for missing paths. Inspect the screenshot, exclude OS chrome when present, and choose the application ROI in upright pixels; ask if bounds are unclear.
-Run `ctrlc extract "$SCREENSHOT_PATH" --roi X,Y,W,H --out "$OUTPUT_DIR" --inspector`. If native Vision OCR is unavailable, use `--ocr-json` only with compatible OCR supplied by the user; ask if missing.
-Check the success JSON and read its reported packet once. Review uncertain roles and grouping. Preserve measured bounds and colors; leave font, responsive, or behavior details unknown only when evidence is insufficient.
-Open the reported inspector HTML. If HTTP is needed, start `ctrlc serve "$OUTPUT_DIR/inspector.html" --port 0` in the background and open its URL. For style requests, render the reviewed scene with the same screenshot; do not extract again.
+Install ctrlc 0.1.0 with `uv tool install https://github.com/devos-ing/ctrlc/releases/download/v0.1.0/ctrlc-0.1.0-py3-none-any.whl`.
+Add `--force` to replace an existing installation. Verify `ctrlc --version`.
+If ctrlc is not on PATH, use its full path in the directory reported by `uv tool dir --bin`.
+```
+
+## Usage
+
+Replace the paths below, then copy this prompt into a shell-capable agent:
+
+```text
+Use ctrlc to analyze <screenshot-path> and save results in <output-directory>.
+Extract the application UI with --inspector, read the reported packet once, and open the inspector.
+Preserve measured bounds and colors. Mark unsupported details as unknown.
+For styling changes, render the saved scene without extracting again.
 ```
 
 The included brokerage example can be rendered and previewed from the checkout:
