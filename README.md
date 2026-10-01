@@ -13,10 +13,13 @@ want an agent to review names, roles, or grouping, the agent handles that part.
 
 ## Which agents have been tested?
 
-So far, only Codex with GPT-6.1 Sol, `gpt-6.1-sol`, has been tested. Other Codex
-models, Claude Code, and other agents, including those using GLM or Grok, haven't
-been tested. Getting the CLI to run doesn't tell you how well an agent will
-review names, roles, or grouping.
+We've tested:
+
+- Codex with GPT-6.1 Sol, `gpt-6.1-sol`.
+- GLM 5.3.
+
+Other models, including Grok, haven't been tested. Getting the CLI to run
+doesn't tell you how well an agent will review names, roles, or grouping.
 
 ## Installation
 
