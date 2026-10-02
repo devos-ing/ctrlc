@@ -87,7 +87,8 @@ Load screenshot previews lazily below the hero. Load full inspector documents on
 3. Complete keyboard and touch inspection, prerendered routes, metadata, and the static build. Prepare a local preview before choosing a hosting target.
 
 Implementation notes: the catalog is `showcases/catalog.json`; build preparation
-is `apps/web/scripts/prepare_showcases.py`. It validates every recursive node
+is `apps/web/scripts/prepare_showcases.py`. It accepts exact integer
+`schemaVersion` values 1 and 2 and validates every recursive node
 and screenshot/scene pair, then generates `apps/web/public/showcases/` and the
 typed browser data consumed by the app. The Vite build prerenders `/` and each
 catalog slug with link crawling disabled. Static files are written to

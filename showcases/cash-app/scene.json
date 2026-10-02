@@ -1,0 +1,503 @@
+{
+  "schemaVersion": 2,
+  "sourceSha256": "89763b35b5106308fdc24bbccd2c26c491cb65a408ec663a3cf695312a73dba7",
+  "imageSize": [
+    1179,
+    2676
+  ],
+  "roi": [
+    0,
+    150,
+    1179,
+    2401
+  ],
+  "coordinates": "Top-left origin, ROI-relative pixels after EXIF orientation",
+  "llmCalls": 0,
+  "styles": {
+    "s-2118ebe9": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#ffffff"
+    },
+    "s-33aaea91": {
+      "border": null,
+      "cornerRadiusPxEstimate": 80,
+      "fill": "#5bc83d"
+    },
+    "s-4c804f06": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#337a22"
+    },
+    "s-5c3ecc5c": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#000100"
+    },
+    "s-b3c504a3": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#000000"
+    },
+    "s-c4ec4cf2": {
+      "border": null,
+      "cornerRadiusPxEstimate": 88,
+      "fill": "#000000"
+    }
+  },
+  "background": "#65dd45",
+  "methods": {
+    "radius": "Approximate circular-corner fit to edge pixels; not an original CSS radius.",
+    "styles": "Cluster border colors within 6/channel and radius estimates within 4px; retain node measurements."
+  },
+  "unknowns": [
+    "Exact fonts, layout rules and behavior need inference.",
+    "Image regions identify pixels; original vectors and transparency are unknown.",
+    "Role inference targets simple stacked forms; inspect other layouts."
+  ],
+  "nodes": [
+    {
+      "id": "g1-afe3449e8889b8",
+      "type": "container",
+      "role": "section",
+      "displayName": "Shortcut row",
+      "label": "B9 Q",
+      "box": [
+        48,
+        55,
+        1085,
+        135
+      ],
+      "level": 1,
+      "evidenceRefs": [
+        "ev-d0dba9f2d49bc6",
+        "ev-b6570b3cf13aea",
+        "ev-1ee87beaed9aee",
+        "ev-46261a724282dd",
+        "ev-44726d2d0f6eca",
+        "ev-5d336326f8ff96",
+        "ev-c9e8dfda796a75"
+      ],
+      "provenance": {
+        "kind": "inference",
+        "boundsMethod": "child-union",
+        "evidenceRefs": [
+          "ev-d0dba9f2d49bc6",
+          "ev-b6570b3cf13aea",
+          "ev-1ee87beaed9aee",
+          "ev-46261a724282dd",
+          "ev-44726d2d0f6eca",
+          "ev-5d336326f8ff96",
+          "ev-c9e8dfda796a75"
+        ],
+        "nameMethod": "spatial-pattern"
+      },
+      "children": []
+    },
+    {
+      "box": [
+        450,
+        422,
+        265,
+        237
+      ],
+      "evidence": "ocr",
+      "id": "ev-29b29f5cab48e9",
+      "inkHeightPx": 237,
+      "ocrConfidence": 1,
+      "role": "text",
+      "styleRef": "s-b3c504a3",
+      "text": "$1",
+      "type": "text",
+      "level": 1,
+      "evidenceRefs": [
+        "ev-29b29f5cab48e9"
+      ],
+      "provenance": {
+        "kind": "measurement",
+        "boundsMethod": "measured-pixel-or-ocr",
+        "evidenceRefs": [
+          "ev-29b29f5cab48e9"
+        ]
+      },
+      "displayName": "$1"
+    },
+    {
+      "id": "g1-168f58a8a2243e",
+      "type": "container",
+      "role": "section",
+      "displayName": "3",
+      "label": "3 1",
+      "box": [
+        206,
+        904,
+        770,
+        56
+      ],
+      "level": 1,
+      "evidenceRefs": [
+        "ev-4842feb9a2a141",
+        "ev-d737b48faed4c0",
+        "ev-fb4701d6700f8d"
+      ],
+      "provenance": {
+        "kind": "inference",
+        "boundsMethod": "child-union",
+        "evidenceRefs": [
+          "ev-4842feb9a2a141",
+          "ev-d737b48faed4c0",
+          "ev-fb4701d6700f8d"
+        ],
+        "nameMethod": "ocr-text"
+      },
+      "children": []
+    },
+    {
+      "id": "g1-4f58a753e69535",
+      "type": "container",
+      "role": "section",
+      "displayName": "5",
+      "label": "5",
+      "box": [
+        201,
+        1106,
+        774,
+        57
+      ],
+      "level": 1,
+      "evidenceRefs": [
+        "ev-e1f1aadff06823",
+        "ev-4f5db32e080fd3",
+        "ev-46b86185fa03f6"
+      ],
+      "provenance": {
+        "kind": "inference",
+        "boundsMethod": "child-union",
+        "evidenceRefs": [
+          "ev-e1f1aadff06823",
+          "ev-4f5db32e080fd3",
+          "ev-46b86185fa03f6"
+        ],
+        "nameMethod": "ocr-text"
+      },
+      "children": []
+    },
+    {
+      "id": "g1-49a2dad3fe5302",
+      "type": "container",
+      "role": "section",
+      "displayName": "7",
+      "label": "7 8 9",
+      "box": [
+        202,
+        1309,
+        774,
+        56
+      ],
+      "level": 1,
+      "evidenceRefs": [
+        "ev-00f2b4e521ec1c",
+        "ev-6c7fc4319b3165",
+        "ev-0617b16aaac34b"
+      ],
+      "provenance": {
+        "kind": "inference",
+        "boundsMethod": "child-union",
+        "evidenceRefs": [
+          "ev-00f2b4e521ec1c",
+          "ev-6c7fc4319b3165",
+          "ev-0617b16aaac34b"
+        ],
+        "nameMethod": "ocr-text"
+      },
+      "children": []
+    },
+    {
+      "id": "g1-ee11f90821f091",
+      "type": "container",
+      "role": "section",
+      "displayName": "<",
+      "label": "< •",
+      "box": [
+        206,
+        1494,
+        767,
+        97
+      ],
+      "level": 1,
+      "evidenceRefs": [
+        "ev-50aa4a7eabdd78",
+        "ev-4acbb796fb18cd",
+        "ev-1c8bd7c5929eca"
+      ],
+      "provenance": {
+        "kind": "inference",
+        "boundsMethod": "child-union",
+        "evidenceRefs": [
+          "ev-50aa4a7eabdd78",
+          "ev-4acbb796fb18cd",
+          "ev-1c8bd7c5929eca"
+        ],
+        "nameMethod": "ocr-text"
+      },
+      "children": []
+    },
+    {
+      "id": "g1-918ba9804c5320",
+      "type": "container",
+      "role": "section",
+      "displayName": "Pool",
+      "label": "Pool Request",
+      "box": [
+        48,
+        1719,
+        1083,
+        159
+      ],
+      "level": 1,
+      "evidenceRefs": [
+        "ev-c40e5ff1cd0441",
+        "ev-943c13883eebd7",
+        "ev-d4a471c61c87d0"
+      ],
+      "provenance": {
+        "kind": "inference",
+        "boundsMethod": "child-union",
+        "evidenceRefs": [
+          "ev-c40e5ff1cd0441",
+          "ev-943c13883eebd7",
+          "ev-d4a471c61c87d0"
+        ],
+        "nameMethod": "ocr-text"
+      },
+      "children": []
+    },
+    {
+      "box": [
+        47,
+        1911,
+        1086,
+        160
+      ],
+      "evidence": "ocr+pixel-region",
+      "id": "ev-3237d5f308bc76",
+      "label": "Pay",
+      "roleInference": "heuristic",
+      "styleMeasurements": {
+        "border": null,
+        "cornerRadiusPxEstimate": 88,
+        "fill": "#000000"
+      },
+      "styleRef": "s-c4ec4cf2",
+      "type": "container",
+      "level": 1,
+      "evidenceRefs": [
+        "ev-3237d5f308bc76"
+      ],
+      "provenance": {
+        "kind": "measurement",
+        "boundsMethod": "measured-pixel-or-ocr",
+        "evidenceRefs": [
+          "ev-3237d5f308bc76"
+        ]
+      },
+      "displayName": "Pay"
+    },
+    {
+      "id": "g1-8a2a8029ec61fd",
+      "type": "container",
+      "role": "section",
+      "displayName": "Shortcut row",
+      "label": "$ $1",
+      "box": [
+        279,
+        2160,
+        622,
+        162
+      ],
+      "level": 1,
+      "evidenceRefs": [
+        "ev-fdd5f435c96257",
+        "ev-5386be1e36f4d6",
+        "ev-379ad434a0eec9",
+        "ev-6505ece39e1abe"
+      ],
+      "provenance": {
+        "kind": "inference",
+        "boundsMethod": "child-union",
+        "evidenceRefs": [
+          "ev-fdd5f435c96257",
+          "ev-5386be1e36f4d6",
+          "ev-379ad434a0eec9",
+          "ev-6505ece39e1abe"
+        ],
+        "nameMethod": "spatial-pattern"
+      },
+      "children": []
+    }
+  ],
+  "hierarchy": {
+    "algorithmVersion": 21,
+    "requestedDepth": 1,
+    "supportedDepth": 3,
+    "rootCount": 9,
+    "candidateAudit": {
+      "ev-d0dba9f2d49bc6": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-b6570b3cf13aea": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-1ee87beaed9aee": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-46261a724282dd": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-44726d2d0f6eca": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-5d336326f8ff96": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-c9e8dfda796a75": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-29b29f5cab48e9": {
+        "status": "included",
+        "reason": "retained as a measured root because no section group was verified"
+      },
+      "ev-4842feb9a2a141": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-d737b48faed4c0": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-fb4701d6700f8d": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-e1f1aadff06823": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-4f5db32e080fd3": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-46b86185fa03f6": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-00f2b4e521ec1c": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-6c7fc4319b3165": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-0617b16aaac34b": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-50aa4a7eabdd78": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-4acbb796fb18cd": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-1c8bd7c5929eca": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-c40e5ff1cd0441": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-943c13883eebd7": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-e1dd5d70c12da5": {
+        "status": "retained",
+        "reason": "measured content remains available as raw evidence"
+      },
+      "ev-92d2aa88041194": {
+        "status": "retained",
+        "reason": "measured content remains available as raw evidence"
+      },
+      "ev-d4a471c61c87d0": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-c6dd80f229d314": {
+        "status": "retained",
+        "reason": "measured content remains available as raw evidence"
+      },
+      "ev-3237d5f308bc76": {
+        "status": "included",
+        "reason": "retained as a measured root because no section group was verified"
+      },
+      "ev-0d55b2222520e0": {
+        "status": "retained",
+        "reason": "measured content remains available as raw evidence"
+      },
+      "ev-11cece58366b9a": {
+        "status": "retained",
+        "reason": "measured content remains available as raw evidence"
+      },
+      "ev-8e22b003913b5b": {
+        "status": "retained",
+        "reason": "measured content remains available as raw evidence"
+      },
+      "ev-fdd5f435c96257": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-5386be1e36f4d6": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-379ad434a0eec9": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-6505ece39e1abe": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      }
+    },
+    "achievedDepth": 1,
+    "completedPasses": [
+      1
+    ],
+    "availableDepth": 1,
+    "passTimingsSeconds": {
+      "1": 0.00021
+    },
+    "stopReason": "requested_depth_reached",
+    "recursiveNodeCount": 9,
+    "measurementSha256": "3f486e361094b08299c843a8fd8b2e4f4586b2b9c7729fb8d339f215de4c12f8"
+  },
+  "measurementArtifact": {
+    "path": "measurements-3f486e361094b082.json",
+    "sha256": "3f486e361094b08299c843a8fd8b2e4f4586b2b9c7729fb8d339f215de4c12f8",
+    "schemaVersion": 1
+  }
+}

@@ -1,0 +1,746 @@
+{
+  "schemaVersion": 2,
+  "sourceSha256": "47cceafc14181859dfd910f77d3d5d0770866b10fd03d1cf5cb8959630dbfece",
+  "imageSize": [
+    1180,
+    2676
+  ],
+  "roi": [
+    0,
+    150,
+    1180,
+    2406
+  ],
+  "coordinates": "Top-left origin, ROI-relative pixels after EXIF orientation",
+  "llmCalls": 0,
+  "styles": {
+    "s-01198102": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#858489"
+    },
+    "s-02f14cb5": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#747474"
+    },
+    "s-0ebf888a": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#030003"
+    },
+    "s-10ba983c": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#767676"
+    },
+    "s-13b61f8a": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#6586a8"
+    },
+    "s-1c21881f": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#737373"
+    },
+    "s-1ce60ece": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#787679"
+    },
+    "s-26357f49": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#fff9f9"
+    },
+    "s-335c56f0": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#8e8d92"
+    },
+    "s-442161f2": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#787878"
+    },
+    "s-48c290c5": {
+      "border": {
+        "color": "#e3e1e4",
+        "widthPx": null
+      },
+      "cornerRadiusPxEstimate": null,
+      "fill": "#fefefe"
+    },
+    "s-4faf7ed3": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#030308"
+    },
+    "s-5fc150e1": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#615e61"
+    },
+    "s-6441ee88": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#020206"
+    },
+    "s-676ba9bd": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#777478"
+    },
+    "s-875ba0a0": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#717171"
+    },
+    "s-9334b530": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#848388"
+    },
+    "s-b06ee3fd": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#ffe7e2"
+    },
+    "s-b3c504a3": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#000000"
+    },
+    "s-bf38baf1": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#706d71"
+    },
+    "s-cddb8865": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#cda4a0"
+    },
+    "s-d21e89db": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#87868b"
+    },
+    "s-d5966240": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#818085"
+    },
+    "s-db51cbaf": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#88878c"
+    },
+    "s-eb4aade9": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#767376"
+    },
+    "s-f1cf4d40": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#f6a09b"
+    },
+    "s-f7fc0bdc": {
+      "fontFamily": null,
+      "fontSizePx": null,
+      "fontWeight": null,
+      "textColor": "#010005"
+    }
+  },
+  "background": "#fefefe",
+  "methods": {
+    "radius": "Approximate circular-corner fit to edge pixels; not an original CSS radius.",
+    "styles": "Cluster border colors within 6/channel and radius estimates within 4px; retain node measurements."
+  },
+  "unknowns": [
+    "Exact fonts, layout rules and behavior need inference.",
+    "Image regions identify pixels; original vectors and transparency are unknown.",
+    "Role inference targets simple stacked forms; inspect other layouts."
+  ],
+  "nodes": [
+    {
+      "id": "g1-8f7a9e7f378477",
+      "type": "container",
+      "role": "section",
+      "displayName": "April 28, 2026 )",
+      "label": "April 28, 2026 ) Sun Mon Tue Wed Thu Fri Sat 26 27 28 29 30 2 1",
+      "box": [
+        76,
+        41,
+        996,
+        228
+      ],
+      "level": 1,
+      "evidenceRefs": [
+        "ev-2cc359fb87c875",
+        "ev-1ea71fbe672d8d",
+        "ev-55985ab26ae12d",
+        "ev-347e48aef488bf",
+        "ev-3e9bdbdcfa9db6",
+        "ev-270bd3c1cac5d3",
+        "ev-e4554da380f57a",
+        "ev-aa4b97a0a31f44",
+        "ev-bae6e28778988c",
+        "ev-8b71e7d9ea758e",
+        "ev-2aa530f4ab55d3",
+        "ev-c7355f6932bf1c",
+        "ev-4c3c6f01c89b2e",
+        "ev-5e068ead1b40ca",
+        "ev-727ca0e0cc78dc",
+        "ev-4e837413db5e30"
+      ],
+      "provenance": {
+        "kind": "inference",
+        "boundsMethod": "child-union",
+        "evidenceRefs": [
+          "ev-2cc359fb87c875",
+          "ev-1ea71fbe672d8d",
+          "ev-55985ab26ae12d",
+          "ev-347e48aef488bf",
+          "ev-3e9bdbdcfa9db6",
+          "ev-270bd3c1cac5d3",
+          "ev-e4554da380f57a",
+          "ev-aa4b97a0a31f44",
+          "ev-bae6e28778988c",
+          "ev-8b71e7d9ea758e",
+          "ev-2aa530f4ab55d3",
+          "ev-c7355f6932bf1c",
+          "ev-4c3c6f01c89b2e",
+          "ev-5e068ead1b40ca",
+          "ev-727ca0e0cc78dc",
+          "ev-4e837413db5e30"
+        ],
+        "nameMethod": "ocr-text"
+      },
+      "children": []
+    },
+    {
+      "id": "g1-4cc2d90037e17f",
+      "type": "container",
+      "role": "section",
+      "displayName": "(D) CO",
+      "label": "(D) CO 9:00 AM C 9:00 Rise and Shine",
+      "box": [
+        0,
+        314,
+        1180,
+        341
+      ],
+      "level": 1,
+      "evidenceRefs": [
+        "ev-9ddb49a5e39494",
+        "ev-b293c0c18f781b",
+        "ev-e9f8cb4861fa2f",
+        "ev-1beebbb588cbe8",
+        "ev-9d70dc7fb2a769",
+        "ev-84244ac2b5b596",
+        "ev-d17602b836f4ef",
+        "ev-3d9683f0f42911",
+        "ev-9e06029eadf31a",
+        "ev-0221b3e7f3a4c0",
+        "ev-cb285cc841e3b2",
+        "ev-547d90d707502a",
+        "ev-277b8aebc12426"
+      ],
+      "provenance": {
+        "kind": "inference",
+        "boundsMethod": "child-union",
+        "evidenceRefs": [
+          "ev-9ddb49a5e39494",
+          "ev-b293c0c18f781b",
+          "ev-e9f8cb4861fa2f",
+          "ev-1beebbb588cbe8",
+          "ev-9d70dc7fb2a769",
+          "ev-84244ac2b5b596",
+          "ev-d17602b836f4ef",
+          "ev-3d9683f0f42911",
+          "ev-9e06029eadf31a",
+          "ev-0221b3e7f3a4c0",
+          "ev-cb285cc841e3b2",
+          "ev-547d90d707502a",
+          "ev-277b8aebc12426"
+        ],
+        "nameMethod": "ocr-text"
+      },
+      "children": []
+    },
+    {
+      "id": "g1-b81d02a2be53a3",
+      "type": "container",
+      "role": "section",
+      "displayName": "Zz Past moments, gained insights.",
+      "label": "Zz Past moments, gained insights. 10:00 11:00 11:00-11:45 AM (45 min) Clean Up 11:45 2:00 Task ahead! 8m to prep. 5:22 Tap here to learn the basics Get Started with Structured! 5:35 Start structuring your day Add Your First Task + v 0/5 › 5:40 Don't forget anything Fill Your Inbox 5:45 Timeline Settings Inbox Al 5:0",
+      "box": [
+        0,
+        706,
+        1180,
+        1700
+      ],
+      "level": 1,
+      "evidenceRefs": [
+        "ev-2cc01cdff9372e",
+        "ev-5882a9b7f11195",
+        "ev-b767a27312449b",
+        "ev-207e9382f6d633",
+        "ev-dcde11383fa3f4",
+        "ev-e6d775656d117a",
+        "ev-967b3ddee31f99",
+        "ev-470396b2955490",
+        "ev-16c2f5daabd5e0",
+        "ev-2c9193df30b2ed",
+        "ev-7c6ad6c1bcf747",
+        "ev-de0959b9efa9c4",
+        "ev-fd3db9cf9517eb",
+        "ev-f49f986c71ed4b",
+        "ev-e0fe7d99d987b4",
+        "ev-12f1086f5c73bf",
+        "ev-8c820b3a7b37af",
+        "ev-6dd231ce95c61e",
+        "ev-8b2a03d77f9733",
+        "ev-18292535d9071c",
+        "ev-07806f12783a1d",
+        "ev-93c64de23caa34",
+        "ev-dda809e0960ef9",
+        "ev-e6a007e1a084ce",
+        "ev-8240158585f962",
+        "ev-32a62c9b0eebef",
+        "ev-50f4d133737b25",
+        "ev-1d1f01d56dc004",
+        "ev-a866a631e70b40",
+        "ev-75101ab590e0d5",
+        "ev-43142c9dedc490",
+        "ev-0d0f5428f88209",
+        "ev-a5e953838d4a99",
+        "ev-7e3680f2130f40",
+        "ev-1bcd5768882282",
+        "ev-23749309851809",
+        "ev-97a24074763f9b",
+        "ev-6c48e6cee23cbe",
+        "ev-b686bd916a68c7",
+        "ev-4eab581c97a5c2",
+        "ev-e470d9a4e38a5a",
+        "ev-68b43ef62a9c0a",
+        "ev-c2dbed2f054f54",
+        "ev-80009c92e14fd5",
+        "ev-bd1c7e8c259bca",
+        "ev-b9c77aa79f75e8",
+        "ev-d03ccd91e7020c"
+      ],
+      "provenance": {
+        "kind": "inference",
+        "boundsMethod": "child-union",
+        "evidenceRefs": [
+          "ev-2cc01cdff9372e",
+          "ev-5882a9b7f11195",
+          "ev-b767a27312449b",
+          "ev-207e9382f6d633",
+          "ev-dcde11383fa3f4",
+          "ev-e6d775656d117a",
+          "ev-967b3ddee31f99",
+          "ev-470396b2955490",
+          "ev-16c2f5daabd5e0",
+          "ev-2c9193df30b2ed",
+          "ev-7c6ad6c1bcf747",
+          "ev-de0959b9efa9c4",
+          "ev-fd3db9cf9517eb",
+          "ev-f49f986c71ed4b",
+          "ev-e0fe7d99d987b4",
+          "ev-12f1086f5c73bf",
+          "ev-8c820b3a7b37af",
+          "ev-6dd231ce95c61e",
+          "ev-8b2a03d77f9733",
+          "ev-18292535d9071c",
+          "ev-07806f12783a1d",
+          "ev-93c64de23caa34",
+          "ev-dda809e0960ef9",
+          "ev-e6a007e1a084ce",
+          "ev-8240158585f962",
+          "ev-32a62c9b0eebef",
+          "ev-50f4d133737b25",
+          "ev-1d1f01d56dc004",
+          "ev-a866a631e70b40",
+          "ev-75101ab590e0d5",
+          "ev-43142c9dedc490",
+          "ev-0d0f5428f88209",
+          "ev-a5e953838d4a99",
+          "ev-7e3680f2130f40",
+          "ev-1bcd5768882282",
+          "ev-23749309851809",
+          "ev-97a24074763f9b",
+          "ev-6c48e6cee23cbe",
+          "ev-b686bd916a68c7",
+          "ev-4eab581c97a5c2",
+          "ev-e470d9a4e38a5a",
+          "ev-68b43ef62a9c0a",
+          "ev-c2dbed2f054f54",
+          "ev-80009c92e14fd5",
+          "ev-bd1c7e8c259bca",
+          "ev-b9c77aa79f75e8",
+          "ev-d03ccd91e7020c"
+        ],
+        "nameMethod": "ocr-text"
+      },
+      "children": []
+    }
+  ],
+  "hierarchy": {
+    "algorithmVersion": 21,
+    "requestedDepth": 1,
+    "supportedDepth": 3,
+    "rootCount": 3,
+    "candidateAudit": {
+      "ev-2cc359fb87c875": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-1ea71fbe672d8d": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-55985ab26ae12d": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-347e48aef488bf": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-3e9bdbdcfa9db6": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-270bd3c1cac5d3": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-e4554da380f57a": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-aa4b97a0a31f44": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-bae6e28778988c": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-8b71e7d9ea758e": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-2aa530f4ab55d3": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-c7355f6932bf1c": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-4c3c6f01c89b2e": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-5e068ead1b40ca": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-727ca0e0cc78dc": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-4e837413db5e30": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-9e06029eadf31a": {
+        "status": "grouped",
+        "reason": "retained in an inferred component around its measured parent"
+      },
+      "ev-d17602b836f4ef": {
+        "status": "grouped",
+        "reason": "retained in an inferred component around its measured parent"
+      },
+      "ev-9ddb49a5e39494": {
+        "status": "included",
+        "reason": "measured parent was flattened because it does not fully contain every child"
+      },
+      "ev-3d9683f0f42911": {
+        "status": "grouped",
+        "reason": "retained in an inferred component around its measured parent"
+      },
+      "ev-0221b3e7f3a4c0": {
+        "status": "grouped",
+        "reason": "retained in an inferred component around its measured parent"
+      },
+      "ev-cb285cc841e3b2": {
+        "status": "grouped",
+        "reason": "retained in an inferred component around its measured parent"
+      },
+      "ev-547d90d707502a": {
+        "status": "grouped",
+        "reason": "retained in an inferred component around its measured parent"
+      },
+      "ev-277b8aebc12426": {
+        "status": "grouped",
+        "reason": "retained in an inferred component around its measured parent"
+      },
+      "ev-b293c0c18f781b": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-e9f8cb4861fa2f": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-1beebbb588cbe8": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-9d70dc7fb2a769": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-84244ac2b5b596": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-2cc01cdff9372e": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-5882a9b7f11195": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-b767a27312449b": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-207e9382f6d633": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-dcde11383fa3f4": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-e6d775656d117a": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-967b3ddee31f99": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-470396b2955490": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-16c2f5daabd5e0": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-2c9193df30b2ed": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-7c6ad6c1bcf747": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-de0959b9efa9c4": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-fd3db9cf9517eb": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-f49f986c71ed4b": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-e0fe7d99d987b4": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-12f1086f5c73bf": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-8c820b3a7b37af": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-6dd231ce95c61e": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-8b2a03d77f9733": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-18292535d9071c": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-07806f12783a1d": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-93c64de23caa34": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-dda809e0960ef9": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-e6a007e1a084ce": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-8240158585f962": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-32a62c9b0eebef": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-50f4d133737b25": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-1d1f01d56dc004": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-a866a631e70b40": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-75101ab590e0d5": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-43142c9dedc490": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-0d0f5428f88209": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-a5e953838d4a99": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-7e3680f2130f40": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-1bcd5768882282": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-23749309851809": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-97a24074763f9b": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-6c48e6cee23cbe": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-b686bd916a68c7": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-4eab581c97a5c2": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-e470d9a4e38a5a": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-68b43ef62a9c0a": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-c2dbed2f054f54": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-80009c92e14fd5": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-bd1c7e8c259bca": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-b9c77aa79f75e8": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      },
+      "ev-d03ccd91e7020c": {
+        "status": "included",
+        "reason": "grouped into a useful section"
+      }
+    },
+    "achievedDepth": 1,
+    "completedPasses": [
+      1
+    ],
+    "availableDepth": 1,
+    "passTimingsSeconds": {
+      "1": 0.000379
+    },
+    "stopReason": "requested_depth_reached",
+    "recursiveNodeCount": 3,
+    "measurementSha256": "889c71a51e2f7f2a1bca114d894fa8c0cc575ca1878c27b8db398b252d2399e7"
+  },
+  "measurementArtifact": {
+    "path": "measurements-889c71a51e2f7f2a.json",
+    "sha256": "889c71a51e2f7f2a1bca114d894fa8c0cc575ca1878c27b8db398b252d2399e7",
+    "schemaVersion": 1
+  }
+}

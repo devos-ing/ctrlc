@@ -4,6 +4,7 @@ type SceneNode = {
   id: string
   type: string
   box: [number, number, number, number]
+  displayName?: string
   children?: SceneNode[]
 }
 
@@ -167,3 +168,44 @@ test('mobile tap and keyboard select only the saved root and reject nested links
   await expect(page.getByRole('heading', { name: 'Showcase not found' })).toBeVisible()
   await context.close()
 })
+
+type ShowcaseRootFlow = {
+  slug: string
+  title: string
+  rootId: string
+  rootName: string
+}
+
+const addedShowcaseRootFlows: ShowcaseRootFlow[] = [
+  { slug: 'cash-app', title: 'Cash App', rootId: 'cash-keypad', rootName: 'Number keypad' },
+  { slug: 'structured', title: 'Structured', rootId: 'g1-8f7a9e7f378477', rootName: 'Date and week selector' },
+]
+
+for (const showcase of addedShowcaseRootFlows) {
+  test(`${showcase.title} scene shows and selects its saved root`, async ({ page }) => {
+    await page.goto('/')
+    const preview = page.getByRole('link', { name: `Open ${showcase.title} inspector` })
+    await expect(preview).toBeVisible()
+    const scene = await expectRootOnlyScene(page, showcase.slug)
+    const root = scene.nodes.find((node) => node.id === showcase.rootId)
+    expect(root?.displayName).toBe(showcase.rootName)
+
+    await preview.scrollIntoViewIfNeeded()
+    const point = await savedNodePoint(page, showcase.slug, showcase.rootId)
+    await page.mouse.move(point.x, point.y)
+    await expect(preview.locator('.node-label')).toHaveText(showcase.rootName)
+    await expect(preview.locator(`[data-node-id="${showcase.rootId}"]`)).toBeVisible()
+    await page.mouse.click(point.x, point.y)
+    await expect(page).toHaveURL(new RegExp(`/showcases/${showcase.slug}\\?node=${showcase.rootId}$`))
+    const inspector = page.frameLocator(`iframe[title="${showcase.title} saved scene inspector"]`)
+    await expect(inspector.locator('.el-selected-title')).toHaveText(showcase.rootName)
+    await expectRootOnlyInspector(inspector)
+
+    await page.goto(`/showcases/${showcase.slug}?node=${showcase.rootId}`)
+    await expect(inspector.locator('.el-selected-title')).toHaveText(showcase.rootName)
+    await page.setViewportSize({ width: 393, height: 844 })
+    await expect(page.getByRole('heading', { name: showcase.title })).toBeVisible()
+    await expect(inspector.locator('.el-selected-title')).toHaveText(showcase.rootName)
+    await expectRootOnlyInspector(inspector)
+  })
+}

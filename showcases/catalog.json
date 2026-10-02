@@ -14,5 +14,21 @@
     "scene": "sample/scene.json",
     "source": "sample/source.png",
     "reviewed": false
+  },
+  {
+    "slug": "cash-app",
+    "title": "Cash App",
+    "context": "Payment keypad",
+    "scene": "showcases/cash-app/reviewed-scene.json",
+    "source": "showcases/cash-app/source.png",
+    "reviewed": true
+  },
+  {
+    "slug": "structured",
+    "title": "Structured",
+    "context": "Daily timeline",
+    "scene": "showcases/structured/reviewed-scene.json",
+    "source": "showcases/structured/source.png",
+    "reviewed": true
   }
 ]

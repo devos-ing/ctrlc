@@ -50,8 +50,9 @@ def finite_number(value: Any) -> bool:
 
 
 def validate_scene(scene: Any, slug: str) -> list[dict[str, Any]]:
-    if not isinstance(scene, dict) or scene.get("schemaVersion") != 1:
-        raise CatalogError(f"{slug}: scene schemaVersion must be 1")
+    if (not isinstance(scene, dict) or type(scene.get("schemaVersion")) is not int
+            or scene["schemaVersion"] not in (1, 2)):
+        raise CatalogError(f"{slug}: scene schemaVersion must be integer 1 or 2")
 
     image_size = scene.get("imageSize")
     roi = scene.get("roi")

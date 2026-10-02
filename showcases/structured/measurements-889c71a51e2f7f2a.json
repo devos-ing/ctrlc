@@ -1,0 +1,4176 @@
+{
+  "schemaVersion": 1,
+  "measurementVersion": 14,
+  "sourceSha256": "47cceafc14181859dfd910f77d3d5d0770866b10fd03d1cf5cb8959630dbfece",
+  "imageSize": [
+    1180,
+    2676
+  ],
+  "roi": [
+    0,
+    150,
+    1180,
+    2406
+  ],
+  "coordinates": "Top-left origin, ROI-relative pixels after EXIF orientation",
+  "ocrProvider": {
+    "kind": "native-vision",
+    "languages": "en-US",
+    "helperSha256": "1ebbaee265f4c175385cfd83511923503e383296fc27794d63b9c4a139617819",
+    "platform": "26.6.2"
+  },
+  "ocr": {
+    "height": 2406,
+    "texts": [
+      {
+        "box": [
+          76,
+          41,
+          612,
+          102
+        ],
+        "confidence": 1,
+        "text": "April 28, 2026 )",
+        "words": [
+          {
+            "box": [
+              76,
+              47,
+              189,
+              97
+            ],
+            "text": "April"
+          },
+          {
+            "box": [
+              276,
+              45,
+              130,
+              96
+            ],
+            "text": "28,"
+          },
+          {
+            "box": [
+              417,
+              42,
+              224,
+              97
+            ],
+            "text": "2026"
+          },
+          {
+            "box": [
+              652,
+              41,
+              36,
+              94
+            ],
+            "text": ")"
+          }
+        ]
+      },
+      {
+        "box": [
+          105,
+          147,
+          66,
+          35
+        ],
+        "confidence": 1,
+        "text": "Sun",
+        "words": [
+          {
+            "box": [
+              105,
+              147,
+              66,
+              35
+            ],
+            "text": "Sun"
+          }
+        ]
+      },
+      {
+        "box": [
+          251,
+          147,
+          73,
+          35
+        ],
+        "confidence": 1,
+        "text": "Mon",
+        "words": [
+          {
+            "box": [
+              251,
+              147,
+              73,
+              35
+            ],
+            "text": "Mon"
+          }
+        ]
+      },
+      {
+        "box": [
+          405,
+          147,
+          66,
+          35
+        ],
+        "confidence": 1,
+        "text": "Tue",
+        "words": [
+          {
+            "box": [
+              405,
+              147,
+              66,
+              35
+            ],
+            "text": "Tue"
+          }
+        ]
+      },
+      {
+        "box": [
+          548,
+          147,
+          77,
+          35
+        ],
+        "confidence": 1,
+        "text": "Wed",
+        "words": [
+          {
+            "box": [
+              548,
+              147,
+              77,
+              35
+            ],
+            "text": "Wed"
+          }
+        ]
+      },
+      {
+        "box": [
+          702,
+          147,
+          70,
+          35
+        ],
+        "confidence": 1,
+        "text": "Thu",
+        "words": [
+          {
+            "box": [
+              702,
+              147,
+              70,
+              35
+            ],
+            "text": "Thu"
+          }
+        ]
+      },
+      {
+        "box": [
+          866,
+          147,
+          49,
+          35
+        ],
+        "confidence": 1,
+        "text": "Fri",
+        "words": [
+          {
+            "box": [
+              866,
+              147,
+              49,
+              35
+            ],
+            "text": "Fri"
+          }
+        ]
+      },
+      {
+        "box": [
+          1009,
+          147,
+          63,
+          35
+        ],
+        "confidence": 1,
+        "text": "Sat",
+        "words": [
+          {
+            "box": [
+              1009,
+              147,
+              63,
+              35
+            ],
+            "text": "Sat"
+          }
+        ]
+      },
+      {
+        "box": [
+          105,
+          220,
+          66,
+          45
+        ],
+        "confidence": 1,
+        "text": "26",
+        "words": [
+          {
+            "box": [
+              105,
+              220,
+              66,
+              45
+            ],
+            "text": "26"
+          }
+        ]
+      },
+      {
+        "box": [
+          255,
+          220,
+          70,
+          49
+        ],
+        "confidence": 1,
+        "text": "27",
+        "words": [
+          {
+            "box": [
+              255,
+              220,
+              70,
+              49
+            ],
+            "text": "27"
+          }
+        ]
+      },
+      {
+        "box": [
+          405,
+          220,
+          70,
+          45
+        ],
+        "confidence": 1,
+        "text": "28",
+        "words": [
+          {
+            "box": [
+              405,
+              220,
+              70,
+              45
+            ],
+            "text": "28"
+          }
+        ]
+      },
+      {
+        "box": [
+          555,
+          220,
+          66,
+          45
+        ],
+        "confidence": 1,
+        "text": "29",
+        "words": [
+          {
+            "box": [
+              555,
+              220,
+              66,
+              45
+            ],
+            "text": "29"
+          }
+        ]
+      },
+      {
+        "box": [
+          705,
+          220,
+          70,
+          45
+        ],
+        "confidence": 1,
+        "text": "30",
+        "words": [
+          {
+            "box": [
+              705,
+              220,
+              70,
+              45
+            ],
+            "text": "30"
+          }
+        ]
+      },
+      {
+        "box": [
+          1023,
+          220,
+          35,
+          45
+        ],
+        "confidence": 1,
+        "text": "2",
+        "words": [
+          {
+            "box": [
+              1023,
+              220,
+              35,
+              45
+            ],
+            "text": "2"
+          }
+        ]
+      },
+      {
+        "box": [
+          873,
+          224,
+          28,
+          42
+        ],
+        "confidence": 1,
+        "text": "1",
+        "words": [
+          {
+            "box": [
+              873,
+              224,
+              28,
+              42
+            ],
+            "text": "1"
+          }
+        ]
+      },
+      {
+        "box": [
+          377,
+          314,
+          122,
+          42
+        ],
+        "confidence": 0.5,
+        "text": "(D)",
+        "words": [
+          {
+            "box": [
+              377,
+              314,
+              122,
+              42
+            ],
+            "text": "(D)"
+          }
+        ]
+      },
+      {
+        "box": [
+          98,
+          315,
+          70,
+          45
+        ],
+        "confidence": 1,
+        "text": "CO",
+        "words": [
+          {
+            "box": [
+              98,
+              315,
+              70,
+              45
+            ],
+            "text": "CO"
+          }
+        ]
+      },
+      {
+        "box": [
+          353,
+          483,
+          199,
+          35
+        ],
+        "confidence": 1,
+        "text": "9:00 AM C",
+        "words": [
+          {
+            "box": [
+              353,
+              483,
+              88,
+              35
+            ],
+            "text": "9:00"
+          },
+          {
+            "box": [
+              445,
+              483,
+              61,
+              35
+            ],
+            "text": "AM"
+          },
+          {
+            "box": [
+              511,
+              483,
+              41,
+              35
+            ],
+            "text": "C"
+          }
+        ]
+      },
+      {
+        "box": [
+          49,
+          521,
+          77,
+          31
+        ],
+        "confidence": 1,
+        "text": "9:00",
+        "words": [
+          {
+            "box": [
+              49,
+              521,
+              77,
+              31
+            ],
+            "text": "9:00"
+          }
+        ]
+      },
+      {
+        "box": [
+          353,
+          542,
+          353,
+          46
+        ],
+        "confidence": 1,
+        "text": "Rise and Shine",
+        "words": [
+          {
+            "box": [
+              353,
+              542,
+              104,
+              46
+            ],
+            "text": "Rise"
+          },
+          {
+            "box": [
+              462,
+              542,
+              98,
+              46
+            ],
+            "text": "and"
+          },
+          {
+            "box": [
+              566,
+              542,
+              139,
+              46
+            ],
+            "text": "Shine"
+          }
+        ]
+      },
+      {
+        "box": [
+          345,
+          706,
+          637,
+          63
+        ],
+        "confidence": 1,
+        "text": "Zz Past moments, gained insights.",
+        "words": [
+          {
+            "box": [
+              345,
+              706,
+              51,
+              51
+            ],
+            "text": "Zz"
+          },
+          {
+            "box": [
+              401,
+              707,
+              88,
+              52
+            ],
+            "text": "Past"
+          },
+          {
+            "box": [
+              495,
+              709,
+              188,
+              54
+            ],
+            "text": "moments,"
+          },
+          {
+            "box": [
+              688,
+              712,
+              126,
+              52
+            ],
+            "text": "gained"
+          },
+          {
+            "box": [
+              820,
+              715,
+              162,
+              54
+            ],
+            "text": "insights."
+          }
+        ]
+      },
+      {
+        "box": [
+          31,
+          717,
+          94,
+          32
+        ],
+        "confidence": 1,
+        "text": "10:00",
+        "words": [
+          {
+            "box": [
+              31,
+              717,
+              94,
+              32
+            ],
+            "text": "10:00"
+          }
+        ]
+      },
+      {
+        "box": [
+          31,
+          832,
+          94,
+          32
+        ],
+        "confidence": 1,
+        "text": "11:00",
+        "words": [
+          {
+            "box": [
+              31,
+              832,
+              94,
+              32
+            ],
+            "text": "11:00"
+          }
+        ]
+      },
+      {
+        "box": [
+          349,
+          948,
+          457,
+          38
+        ],
+        "confidence": 1,
+        "text": "11:00-11:45 AM (45 min)",
+        "words": [
+          {
+            "box": [
+              349,
+              948,
+              228,
+              38
+            ],
+            "text": "11:00-11:45"
+          },
+          {
+            "box": [
+              582,
+              948,
+              67,
+              38
+            ],
+            "text": "AM"
+          },
+          {
+            "box": [
+              653,
+              948,
+              67,
+              38
+            ],
+            "text": "(45"
+          },
+          {
+            "box": [
+              724,
+              948,
+              82,
+              38
+            ],
+            "text": "min)"
+          }
+        ]
+      },
+      {
+        "box": [
+          352,
+          1005,
+          224,
+          56
+        ],
+        "confidence": 1,
+        "text": "Clean Up",
+        "words": [
+          {
+            "box": [
+              352,
+              1007,
+              144,
+              55
+            ],
+            "text": "Clean"
+          },
+          {
+            "box": [
+              502,
+              1005,
+              75,
+              54
+            ],
+            "text": "Up"
+          }
+        ]
+      },
+      {
+        "box": [
+          31,
+          1143,
+          94,
+          32
+        ],
+        "confidence": 1,
+        "text": "11:45",
+        "words": [
+          {
+            "box": [
+              31,
+              1143,
+              94,
+              32
+            ],
+            "text": "11:45"
+          }
+        ]
+      },
+      {
+        "box": [
+          52,
+          1234,
+          73,
+          31
+        ],
+        "confidence": 1,
+        "text": "2:00",
+        "words": [
+          {
+            "box": [
+              52,
+              1234,
+              73,
+              31
+            ],
+            "text": "2:00"
+          }
+        ]
+      },
+      {
+        "box": [
+          401,
+          1254,
+          455,
+          46
+        ],
+        "confidence": 1,
+        "text": "Task ahead! 8m to prep.",
+        "words": [
+          {
+            "box": [
+              401,
+              1254,
+              93,
+              41
+            ],
+            "text": "Task"
+          },
+          {
+            "box": [
+              499,
+              1256,
+              132,
+              41
+            ],
+            "text": "ahead!"
+          },
+          {
+            "box": [
+              635,
+              1258,
+              69,
+              40
+            ],
+            "text": "8m"
+          },
+          {
+            "box": [
+              708,
+              1259,
+              40,
+              40
+            ],
+            "text": "to"
+          },
+          {
+            "box": [
+              752,
+              1259,
+              104,
+              41
+            ],
+            "text": "prep."
+          }
+        ]
+      },
+      {
+        "box": [
+          52,
+          1367,
+          73,
+          35
+        ],
+        "confidence": 1,
+        "text": "5:22",
+        "words": [
+          {
+            "box": [
+              52,
+              1367,
+              73,
+              35
+            ],
+            "text": "5:22"
+          }
+        ]
+      },
+      {
+        "box": [
+          352,
+          1391,
+          503,
+          44
+        ],
+        "confidence": 1,
+        "text": "Tap here to learn the basics",
+        "words": [
+          {
+            "box": [
+              352,
+              1395,
+              69,
+              40
+            ],
+            "text": "Tap"
+          },
+          {
+            "box": [
+              425,
+              1394,
+              88,
+              40
+            ],
+            "text": "here"
+          },
+          {
+            "box": [
+              518,
+              1393,
+              39,
+              39
+            ],
+            "text": "to"
+          },
+          {
+            "box": [
+              562,
+              1393,
+              98,
+              40
+            ],
+            "text": "learn"
+          },
+          {
+            "box": [
+              664,
+              1392,
+              64,
+              40
+            ],
+            "text": "the"
+          },
+          {
+            "box": [
+              733,
+              1391,
+              123,
+              40
+            ],
+            "text": "basics"
+          }
+        ]
+      },
+      {
+        "box": [
+          353,
+          1451,
+          394,
+          49
+        ],
+        "confidence": 1,
+        "text": "Get Started with",
+        "words": [
+          {
+            "box": [
+              353,
+              1451,
+              92,
+              49
+            ],
+            "text": "Get"
+          },
+          {
+            "box": [
+              451,
+              1451,
+              184,
+              49
+            ],
+            "text": "Started"
+          },
+          {
+            "box": [
+              641,
+              1451,
+              106,
+              49
+            ],
+            "text": "with"
+          }
+        ]
+      },
+      {
+        "box": [
+          353,
+          1539,
+          283,
+          52
+        ],
+        "confidence": 1,
+        "text": "Structured!",
+        "words": [
+          {
+            "box": [
+              353,
+              1539,
+              283,
+              52
+            ],
+            "text": "Structured!"
+          }
+        ]
+      },
+      {
+        "box": [
+          52,
+          1658,
+          73,
+          35
+        ],
+        "confidence": 1,
+        "text": "5:35",
+        "words": [
+          {
+            "box": [
+              52,
+              1658,
+              73,
+              35
+            ],
+            "text": "5:35"
+          }
+        ]
+      },
+      {
+        "box": [
+          353,
+          1700,
+          468,
+          38
+        ],
+        "confidence": 1,
+        "text": "Start structuring your day",
+        "words": [
+          {
+            "box": [
+              353,
+              1700,
+              95,
+              38
+            ],
+            "text": "Start"
+          },
+          {
+            "box": [
+              453,
+              1700,
+              204,
+              38
+            ],
+            "text": "structuring"
+          },
+          {
+            "box": [
+              662,
+              1700,
+              85,
+              38
+            ],
+            "text": "your"
+          },
+          {
+            "box": [
+              752,
+              1700,
+              68,
+              38
+            ],
+            "text": "day"
+          }
+        ]
+      },
+      {
+        "box": [
+          353,
+          1756,
+          464,
+          49
+        ],
+        "confidence": 1,
+        "text": "Add Your First Task",
+        "words": [
+          {
+            "box": [
+              353,
+              1756,
+              102,
+              49
+            ],
+            "text": "Add"
+          },
+          {
+            "box": [
+              461,
+              1756,
+              114,
+              48
+            ],
+            "text": "Your"
+          },
+          {
+            "box": [
+              581,
+              1756,
+              114,
+              48
+            ],
+            "text": "First"
+          },
+          {
+            "box": [
+              701,
+              1756,
+              116,
+              49
+            ],
+            "text": "Task"
+          }
+        ]
+      },
+      {
+        "box": [
+          216,
+          1780,
+          38,
+          35
+        ],
+        "confidence": 1,
+        "text": "+",
+        "words": [
+          {
+            "box": [
+              216,
+              1780,
+              38,
+              35
+            ],
+            "text": "+"
+          }
+        ]
+      },
+      {
+        "box": [
+          384,
+          1853,
+          143,
+          35
+        ],
+        "confidence": 1,
+        "text": "v 0/5 ›",
+        "words": [
+          {
+            "box": [
+              384,
+              1853,
+              39,
+              35
+            ],
+            "text": "v"
+          },
+          {
+            "box": [
+              428,
+              1853,
+              70,
+              35
+            ],
+            "text": "0/5"
+          },
+          {
+            "box": [
+              502,
+              1853,
+              25,
+              35
+            ],
+            "text": "›"
+          }
+        ]
+      },
+      {
+        "box": [
+          52,
+          1906,
+          73,
+          31
+        ],
+        "confidence": 1,
+        "text": "5:40",
+        "words": [
+          {
+            "box": [
+              52,
+              1906,
+              73,
+              31
+            ],
+            "text": "5:40"
+          }
+        ]
+      },
+      {
+        "box": [
+          353,
+          1944,
+          384,
+          42
+        ],
+        "confidence": 1,
+        "text": "Don't forget anything",
+        "words": [
+          {
+            "box": [
+              353,
+              1944,
+              100,
+              42
+            ],
+            "text": "Don't"
+          },
+          {
+            "box": [
+              458,
+              1944,
+              116,
+              42
+            ],
+            "text": "forget"
+          },
+          {
+            "box": [
+              579,
+              1944,
+              158,
+              42
+            ],
+            "text": "anything"
+          }
+        ]
+      },
+      {
+        "box": [
+          353,
+          2004,
+          335,
+          49
+        ],
+        "confidence": 1,
+        "text": "Fill Your Inbox",
+        "words": [
+          {
+            "box": [
+              353,
+              2004,
+              74,
+              49
+            ],
+            "text": "Fill"
+          },
+          {
+            "box": [
+              433,
+              2004,
+              110,
+              49
+            ],
+            "text": "Your"
+          },
+          {
+            "box": [
+              549,
+              2004,
+              139,
+              49
+            ],
+            "text": "Inbox"
+          }
+        ]
+      },
+      {
+        "box": [
+          52,
+          2126,
+          73,
+          31
+        ],
+        "confidence": 1,
+        "text": "5:45",
+        "words": [
+          {
+            "box": [
+              52,
+              2126,
+              73,
+              31
+            ],
+            "text": "5:45"
+          }
+        ]
+      },
+      {
+        "box": [
+          311,
+          2283,
+          140,
+          32
+        ],
+        "confidence": 1,
+        "text": "Timeline",
+        "words": [
+          {
+            "box": [
+              311,
+              2283,
+              140,
+              32
+            ],
+            "text": "Timeline"
+          }
+        ]
+      },
+      {
+        "box": [
+          716,
+          2283,
+          140,
+          35
+        ],
+        "confidence": 1,
+        "text": "Settings",
+        "words": [
+          {
+            "box": [
+              716,
+              2283,
+              140,
+              35
+            ],
+            "text": "Settings"
+          }
+        ]
+      },
+      {
+        "box": [
+          129,
+          2287,
+          98,
+          29
+        ],
+        "confidence": 1,
+        "text": "Inbox",
+        "words": [
+          {
+            "box": [
+              129,
+              2287,
+              98,
+              29
+            ],
+            "text": "Inbox"
+          }
+        ]
+      },
+      {
+        "box": [
+          566,
+          2287,
+          38,
+          28
+        ],
+        "confidence": 1,
+        "text": "Al",
+        "words": [
+          {
+            "box": [
+              566,
+              2287,
+              38,
+              28
+            ],
+            "text": "Al"
+          }
+        ]
+      },
+      {
+        "box": [
+          52,
+          2312,
+          52,
+          31
+        ],
+        "confidence": 1,
+        "text": "5:0",
+        "words": [
+          {
+            "box": [
+              52,
+              2312,
+              52,
+              31
+            ],
+            "text": "5:0"
+          }
+        ]
+      }
+    ],
+    "width": 1180
+  },
+  "candidates": [
+    {
+      "evidenceId": "ev-2cc359fb87c875",
+      "legacyId": "n1",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "April 28, 2026 )",
+        "box": [
+          76,
+          41,
+          612,
+          102
+        ],
+        "styleRef": "s-0ebf888a",
+        "inkHeightPx": 102,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-1ea71fbe672d8d",
+      "legacyId": "n2",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Sun",
+        "box": [
+          105,
+          147,
+          66,
+          35
+        ],
+        "styleRef": "s-db51cbaf",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-55985ab26ae12d",
+      "legacyId": "n3",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Mon",
+        "box": [
+          251,
+          147,
+          73,
+          35
+        ],
+        "styleRef": "s-335c56f0",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-347e48aef488bf",
+      "legacyId": "n4",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Tue",
+        "box": [
+          405,
+          147,
+          66,
+          35
+        ],
+        "styleRef": "s-9334b530",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-3e9bdbdcfa9db6",
+      "legacyId": "n5",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Wed",
+        "box": [
+          548,
+          147,
+          77,
+          35
+        ],
+        "styleRef": "s-01198102",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-270bd3c1cac5d3",
+      "legacyId": "n6",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Thu",
+        "box": [
+          702,
+          147,
+          70,
+          35
+        ],
+        "styleRef": "s-d5966240",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-e4554da380f57a",
+      "legacyId": "n7",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Fri",
+        "box": [
+          866,
+          147,
+          49,
+          35
+        ],
+        "styleRef": "s-9334b530",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-aa4b97a0a31f44",
+      "legacyId": "n8",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Sat",
+        "box": [
+          1009,
+          147,
+          63,
+          35
+        ],
+        "styleRef": "s-d21e89db",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-bae6e28778988c",
+      "legacyId": "n9",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          391,
+          190,
+          88,
+          75
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-8b71e7d9ea758e",
+      "legacyId": "n10",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "26",
+        "box": [
+          105,
+          220,
+          66,
+          45
+        ],
+        "styleRef": "s-6441ee88",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-2aa530f4ab55d3",
+      "legacyId": "n11",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "27",
+        "box": [
+          255,
+          220,
+          70,
+          49
+        ],
+        "styleRef": "s-f7fc0bdc",
+        "inkHeightPx": 49,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-c7355f6932bf1c",
+      "legacyId": "n12",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "28",
+        "box": [
+          405,
+          220,
+          70,
+          45
+        ],
+        "styleRef": "s-26357f49",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-4c3c6f01c89b2e",
+      "legacyId": "n13",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "29",
+        "box": [
+          555,
+          220,
+          66,
+          45
+        ],
+        "styleRef": "s-4faf7ed3",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-5e068ead1b40ca",
+      "legacyId": "n14",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "30",
+        "box": [
+          705,
+          220,
+          70,
+          45
+        ],
+        "styleRef": "s-6441ee88",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-727ca0e0cc78dc",
+      "legacyId": "n15",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "2",
+        "box": [
+          1023,
+          220,
+          35,
+          45
+        ],
+        "styleRef": "s-f7fc0bdc",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-4e837413db5e30",
+      "legacyId": "n16",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "1",
+        "box": [
+          873,
+          224,
+          28,
+          42
+        ],
+        "styleRef": "s-f7fc0bdc",
+        "inkHeightPx": 42,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-9e06029eadf31a",
+      "legacyId": "n17.3",
+      "parentEvidenceId": "ev-9ddb49a5e39494",
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "(D)",
+        "box": [
+          377,
+          314,
+          122,
+          42
+        ],
+        "styleRef": "s-f1cf4d40",
+        "inkHeightPx": 42,
+        "ocrConfidence": 0.5,
+        "evidence": "ocr"
+      }
+    },
+    {
+      "evidenceId": "ev-d17602b836f4ef",
+      "legacyId": "n17.1",
+      "parentEvidenceId": "ev-9ddb49a5e39494",
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "CO",
+        "box": [
+          98,
+          315,
+          70,
+          45
+        ],
+        "styleRef": "s-13b61f8a",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "evidence": "ocr"
+      }
+    },
+    {
+      "evidenceId": "ev-9ddb49a5e39494",
+      "legacyId": "n17",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [
+        "ev-d17602b836f4ef",
+        "ev-3d9683f0f42911",
+        "ev-9e06029eadf31a",
+        "ev-0221b3e7f3a4c0",
+        "ev-cb285cc841e3b2",
+        "ev-547d90d707502a",
+        "ev-277b8aebc12426"
+      ],
+      "node": {
+        "type": "container",
+        "box": [
+          0,
+          316,
+          1180,
+          106
+        ],
+        "label": "(D) CO",
+        "styleRef": "s-48c290c5",
+        "styleMeasurements": {
+          "fill": "#fefefe",
+          "border": {
+            "color": "#e3e1e4",
+            "widthPx": null
+          },
+          "cornerRadiusPxEstimate": null
+        },
+        "evidence": "ocr+pixel-region",
+        "roleInference": "heuristic"
+      }
+    },
+    {
+      "evidenceId": "ev-3d9683f0f42911",
+      "legacyId": "n17.2",
+      "parentEvidenceId": "ev-9ddb49a5e39494",
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "box": [
+          250,
+          328,
+          67,
+          27
+        ],
+        "role": "icon",
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-0221b3e7f3a4c0",
+      "legacyId": "n17.4",
+      "parentEvidenceId": "ev-9ddb49a5e39494",
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "box": [
+          550,
+          328,
+          67,
+          26
+        ],
+        "role": "icon",
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-cb285cc841e3b2",
+      "legacyId": "n17.5",
+      "parentEvidenceId": "ev-9ddb49a5e39494",
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "box": [
+          701,
+          328,
+          67,
+          27
+        ],
+        "role": "icon",
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-547d90d707502a",
+      "legacyId": "n17.6",
+      "parentEvidenceId": "ev-9ddb49a5e39494",
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "box": [
+          851,
+          328,
+          68,
+          26
+        ],
+        "role": "icon",
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-277b8aebc12426",
+      "legacyId": "n17.7",
+      "parentEvidenceId": "ev-9ddb49a5e39494",
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "box": [
+          1002,
+          328,
+          68,
+          27
+        ],
+        "role": "icon",
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-b293c0c18f781b",
+      "legacyId": "n18",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          149,
+          448,
+          170,
+          207
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-e9f8cb4861fa2f",
+      "legacyId": "n19",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "9:00 AM C",
+        "box": [
+          353,
+          483,
+          199,
+          35
+        ],
+        "styleRef": "s-02f14cb5",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-1beebbb588cbe8",
+      "legacyId": "n20",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          1027,
+          500,
+          70,
+          68
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-9d70dc7fb2a769",
+      "legacyId": "n21",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "9:00",
+        "box": [
+          49,
+          521,
+          77,
+          31
+        ],
+        "styleRef": "s-02f14cb5",
+        "inkHeightPx": 31,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-84244ac2b5b596",
+      "legacyId": "n22",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Rise and Shine",
+        "box": [
+          353,
+          542,
+          353,
+          46
+        ],
+        "styleRef": "s-b3c504a3",
+        "inkHeightPx": 46,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-2cc01cdff9372e",
+      "legacyId": "n23",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Zz Past moments, gained insights.",
+        "box": [
+          345,
+          706,
+          637,
+          63
+        ],
+        "styleRef": "s-676ba9bd",
+        "inkHeightPx": 63,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-5882a9b7f11195",
+      "legacyId": "n24",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "10:00",
+        "box": [
+          31,
+          717,
+          94,
+          32
+        ],
+        "styleRef": "s-442161f2",
+        "inkHeightPx": 32,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-b767a27312449b",
+      "legacyId": "n25",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          149,
+          806,
+          170,
+          387
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-207e9382f6d633",
+      "legacyId": "n26",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "11:00",
+        "box": [
+          31,
+          832,
+          94,
+          32
+        ],
+        "styleRef": "s-10ba983c",
+        "inkHeightPx": 32,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-dcde11383fa3f4",
+      "legacyId": "n27",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "11:00-11:45 AM (45 min)",
+        "box": [
+          349,
+          948,
+          457,
+          38
+        ],
+        "styleRef": "s-1c21881f",
+        "inkHeightPx": 38,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-e6d775656d117a",
+      "legacyId": "n28",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          1027,
+          966,
+          70,
+          68
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-967b3ddee31f99",
+      "legacyId": "n29",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Clean Up",
+        "box": [
+          352,
+          1005,
+          224,
+          56
+        ],
+        "styleRef": "s-b3c504a3",
+        "inkHeightPx": 56,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-470396b2955490",
+      "legacyId": "n30",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "11:45",
+        "box": [
+          31,
+          1143,
+          94,
+          32
+        ],
+        "styleRef": "s-10ba983c",
+        "inkHeightPx": 32,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-16c2f5daabd5e0",
+      "legacyId": "n31",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "2:00",
+        "box": [
+          52,
+          1234,
+          73,
+          31
+        ],
+        "styleRef": "s-442161f2",
+        "inkHeightPx": 31,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-2c9193df30b2ed",
+      "legacyId": "n32",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          345,
+          1248,
+          40,
+          44
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-7c6ad6c1bcf747",
+      "legacyId": "n33",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Task ahead! 8m to prep.",
+        "box": [
+          401,
+          1254,
+          455,
+          46
+        ],
+        "styleRef": "s-875ba0a0",
+        "inkHeightPx": 46,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-de0959b9efa9c4",
+      "legacyId": "n34",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          151,
+          1350,
+          166,
+          811
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-fd3db9cf9517eb",
+      "legacyId": "n35",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "5:22",
+        "box": [
+          52,
+          1367,
+          73,
+          35
+        ],
+        "styleRef": "s-b3c504a3",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-f49f986c71ed4b",
+      "legacyId": "n36",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Tap here to learn the basics",
+        "box": [
+          352,
+          1391,
+          503,
+          44
+        ],
+        "styleRef": "s-02f14cb5",
+        "inkHeightPx": 44,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-e0fe7d99d987b4",
+      "legacyId": "n37",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Get Started with",
+        "box": [
+          353,
+          1451,
+          394,
+          49
+        ],
+        "styleRef": "s-b3c504a3",
+        "inkHeightPx": 49,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-12f1086f5c73bf",
+      "legacyId": "n38",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          1027,
+          1486,
+          70,
+          68
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-8c820b3a7b37af",
+      "legacyId": "n39",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Structured!",
+        "box": [
+          353,
+          1539,
+          283,
+          52
+        ],
+        "styleRef": "s-b3c504a3",
+        "inkHeightPx": 52,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-6dd231ce95c61e",
+      "legacyId": "n40",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          358,
+          1617,
+          37,
+          35
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-8b2a03d77f9733",
+      "legacyId": "n41",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "5:35",
+        "box": [
+          52,
+          1658,
+          73,
+          35
+        ],
+        "styleRef": "s-10ba983c",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-18292535d9071c",
+      "legacyId": "n42",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Start structuring your day",
+        "box": [
+          353,
+          1700,
+          468,
+          38
+        ],
+        "styleRef": "s-eb4aade9",
+        "inkHeightPx": 38,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-07806f12783a1d",
+      "legacyId": "n43",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Add Your First Task",
+        "box": [
+          353,
+          1756,
+          464,
+          49
+        ],
+        "styleRef": "s-b3c504a3",
+        "inkHeightPx": 49,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-93c64de23caa34",
+      "legacyId": "n44",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          1027,
+          1763,
+          70,
+          68
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-dda809e0960ef9",
+      "legacyId": "n45",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "+",
+        "box": [
+          216,
+          1780,
+          38,
+          35
+        ],
+        "styleRef": "s-b06ee3fd",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-e6a007e1a084ce",
+      "legacyId": "n46",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          354,
+          1834,
+          197,
+          67
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-8240158585f962",
+      "legacyId": "n47",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          592,
+          1849,
+          37,
+          35
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-32a62c9b0eebef",
+      "legacyId": "n48",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "v 0/5 ›",
+        "box": [
+          384,
+          1853,
+          143,
+          35
+        ],
+        "styleRef": "s-5fc150e1",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-50f4d133737b25",
+      "legacyId": "n49",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "5:40",
+        "box": [
+          52,
+          1906,
+          73,
+          31
+        ],
+        "styleRef": "s-1ce60ece",
+        "inkHeightPx": 31,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-1d1f01d56dc004",
+      "legacyId": "n50",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Don't forget anything",
+        "box": [
+          353,
+          1944,
+          384,
+          42
+        ],
+        "styleRef": "s-eb4aade9",
+        "inkHeightPx": 42,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-a866a631e70b40",
+      "legacyId": "n51",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          1029,
+          1995,
+          68,
+          68
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-75101ab590e0d5",
+      "legacyId": "n52",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Fill Your Inbox",
+        "box": [
+          353,
+          2004,
+          335,
+          49
+        ],
+        "styleRef": "s-0ebf888a",
+        "inkHeightPx": 49,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-43142c9dedc490",
+      "legacyId": "n53",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          358,
+          2083,
+          37,
+          35
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-0d0f5428f88209",
+      "legacyId": "n54",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "5:45",
+        "box": [
+          52,
+          2126,
+          73,
+          31
+        ],
+        "styleRef": "s-02f14cb5",
+        "inkHeightPx": 31,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-a5e953838d4a99",
+      "legacyId": "n55",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          933,
+          2159,
+          188,
+          192
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-7e3680f2130f40",
+      "legacyId": "n56",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          666,
+          2188,
+          164,
+          78
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-1bcd5768882282",
+      "legacyId": "n57",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          336,
+          2192,
+          29,
+          30
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-23749309851809",
+      "legacyId": "n58",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          136,
+          2196,
+          142,
+          99
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-97a24074763f9b",
+      "legacyId": "n59",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          553,
+          2201,
+          30,
+          30
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-6c48e6cee23cbe",
+      "legacyId": "n60",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          548,
+          2211,
+          94,
+          59
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-b686bd916a68c7",
+      "legacyId": "n61",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          336,
+          2223,
+          143,
+          45
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-4eab581c97a5c2",
+      "legacyId": "n62",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          1012,
+          2233,
+          168,
+          173
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-e470d9a4e38a5a",
+      "legacyId": "n63",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          0,
+          2240,
+          171,
+          166
+        ],
+        "evidence": "pixel-region"
+      }
+    },
+    {
+      "evidenceId": "ev-68b43ef62a9c0a",
+      "legacyId": "n64",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Timeline",
+        "box": [
+          311,
+          2283,
+          140,
+          32
+        ],
+        "styleRef": "s-cddb8865",
+        "inkHeightPx": 32,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-c2dbed2f054f54",
+      "legacyId": "n65",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Settings",
+        "box": [
+          716,
+          2283,
+          140,
+          35
+        ],
+        "styleRef": "s-0ebf888a",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-80009c92e14fd5",
+      "legacyId": "n66",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Inbox",
+        "box": [
+          129,
+          2287,
+          98,
+          29
+        ],
+        "styleRef": "s-0ebf888a",
+        "inkHeightPx": 29,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-bd1c7e8c259bca",
+      "legacyId": "n67",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "Al",
+        "box": [
+          566,
+          2287,
+          38,
+          28
+        ],
+        "styleRef": "s-0ebf888a",
+        "inkHeightPx": 28,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-b9c77aa79f75e8",
+      "legacyId": "n68",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "text",
+        "text": "5:0",
+        "box": [
+          52,
+          2312,
+          52,
+          31
+        ],
+        "styleRef": "s-bf38baf1",
+        "inkHeightPx": 31,
+        "ocrConfidence": 1,
+        "evidence": "ocr",
+        "role": "text"
+      }
+    },
+    {
+      "evidenceId": "ev-d03ccd91e7020c",
+      "legacyId": "n69",
+      "parentEvidenceId": null,
+      "childEvidenceIds": [],
+      "node": {
+        "type": "image",
+        "role": "unknown-asset",
+        "box": [
+          177,
+          2345,
+          112,
+          57
+        ],
+        "evidence": "pixel-region"
+      }
+    }
+  ],
+  "pixelRegions": [
+    {
+      "evidenceId": "px-8ae232ff18af3f",
+      "box": [
+        0,
+        0,
+        1180,
+        505
+      ],
+      "fill": "#f5f4f9",
+      "coherence": 0.6547,
+      "method": "low-contrast-connected-region"
+    },
+    {
+      "evidenceId": "px-ae07c2941484df",
+      "box": [
+        0,
+        386,
+        1180,
+        120
+      ],
+      "fill": "#fefefe",
+      "coherence": 0.8591,
+      "edgePixels": 2118,
+      "method": "connected-edge-contour"
+    },
+    {
+      "evidenceId": "px-4d9cbaa957df46",
+      "box": [
+        43,
+        2157,
+        1096,
+        246
+      ],
+      "fill": "#fdfafd",
+      "coherence": 0.7086,
+      "method": "low-contrast-connected-region"
+    }
+  ],
+  "localRegions": [],
+  "measuredScene": {
+    "background": "#fefefe",
+    "coordinates": "Top-left origin, ROI-relative pixels after EXIF orientation",
+    "imageSize": [
+      1180,
+      2676
+    ],
+    "llmCalls": 0,
+    "methods": {
+      "radius": "Approximate circular-corner fit to edge pixels; not an original CSS radius.",
+      "styles": "Cluster border colors within 6/channel and radius estimates within 4px; retain node measurements."
+    },
+    "nodes": [
+      {
+        "box": [
+          76,
+          41,
+          612,
+          102
+        ],
+        "evidence": "ocr",
+        "id": "n1",
+        "inkHeightPx": 102,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-0ebf888a",
+        "text": "April 28, 2026 )",
+        "type": "text"
+      },
+      {
+        "box": [
+          105,
+          147,
+          66,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n2",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-db51cbaf",
+        "text": "Sun",
+        "type": "text"
+      },
+      {
+        "box": [
+          251,
+          147,
+          73,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n3",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-335c56f0",
+        "text": "Mon",
+        "type": "text"
+      },
+      {
+        "box": [
+          405,
+          147,
+          66,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n4",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-9334b530",
+        "text": "Tue",
+        "type": "text"
+      },
+      {
+        "box": [
+          548,
+          147,
+          77,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n5",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-01198102",
+        "text": "Wed",
+        "type": "text"
+      },
+      {
+        "box": [
+          702,
+          147,
+          70,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n6",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-d5966240",
+        "text": "Thu",
+        "type": "text"
+      },
+      {
+        "box": [
+          866,
+          147,
+          49,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n7",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-9334b530",
+        "text": "Fri",
+        "type": "text"
+      },
+      {
+        "box": [
+          1009,
+          147,
+          63,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n8",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-d21e89db",
+        "text": "Sat",
+        "type": "text"
+      },
+      {
+        "box": [
+          391,
+          190,
+          88,
+          75
+        ],
+        "evidence": "pixel-region",
+        "id": "n9",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          105,
+          220,
+          66,
+          45
+        ],
+        "evidence": "ocr",
+        "id": "n10",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-6441ee88",
+        "text": "26",
+        "type": "text"
+      },
+      {
+        "box": [
+          255,
+          220,
+          70,
+          49
+        ],
+        "evidence": "ocr",
+        "id": "n11",
+        "inkHeightPx": 49,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-f7fc0bdc",
+        "text": "27",
+        "type": "text"
+      },
+      {
+        "box": [
+          405,
+          220,
+          70,
+          45
+        ],
+        "evidence": "ocr",
+        "id": "n12",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-26357f49",
+        "text": "28",
+        "type": "text"
+      },
+      {
+        "box": [
+          555,
+          220,
+          66,
+          45
+        ],
+        "evidence": "ocr",
+        "id": "n13",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-4faf7ed3",
+        "text": "29",
+        "type": "text"
+      },
+      {
+        "box": [
+          705,
+          220,
+          70,
+          45
+        ],
+        "evidence": "ocr",
+        "id": "n14",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-6441ee88",
+        "text": "30",
+        "type": "text"
+      },
+      {
+        "box": [
+          1023,
+          220,
+          35,
+          45
+        ],
+        "evidence": "ocr",
+        "id": "n15",
+        "inkHeightPx": 45,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-f7fc0bdc",
+        "text": "2",
+        "type": "text"
+      },
+      {
+        "box": [
+          873,
+          224,
+          28,
+          42
+        ],
+        "evidence": "ocr",
+        "id": "n16",
+        "inkHeightPx": 42,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-f7fc0bdc",
+        "text": "1",
+        "type": "text"
+      },
+      {
+        "box": [
+          0,
+          316,
+          1180,
+          106
+        ],
+        "children": [
+          {
+            "box": [
+              98,
+              315,
+              70,
+              45
+            ],
+            "evidence": "ocr",
+            "id": "n17.1",
+            "inkHeightPx": 45,
+            "ocrConfidence": 1,
+            "styleRef": "s-13b61f8a",
+            "text": "CO",
+            "type": "text"
+          },
+          {
+            "box": [
+              250,
+              328,
+              67,
+              27
+            ],
+            "evidence": "pixel-region",
+            "id": "n17.2",
+            "role": "icon",
+            "type": "image"
+          },
+          {
+            "box": [
+              377,
+              314,
+              122,
+              42
+            ],
+            "evidence": "ocr",
+            "id": "n17.3",
+            "inkHeightPx": 42,
+            "ocrConfidence": 0.5,
+            "styleRef": "s-f1cf4d40",
+            "text": "(D)",
+            "type": "text"
+          },
+          {
+            "box": [
+              550,
+              328,
+              67,
+              26
+            ],
+            "evidence": "pixel-region",
+            "id": "n17.4",
+            "role": "icon",
+            "type": "image"
+          },
+          {
+            "box": [
+              701,
+              328,
+              67,
+              27
+            ],
+            "evidence": "pixel-region",
+            "id": "n17.5",
+            "role": "icon",
+            "type": "image"
+          },
+          {
+            "box": [
+              851,
+              328,
+              68,
+              26
+            ],
+            "evidence": "pixel-region",
+            "id": "n17.6",
+            "role": "icon",
+            "type": "image"
+          },
+          {
+            "box": [
+              1002,
+              328,
+              68,
+              27
+            ],
+            "evidence": "pixel-region",
+            "id": "n17.7",
+            "role": "icon",
+            "type": "image"
+          }
+        ],
+        "evidence": "ocr+pixel-region",
+        "id": "n17",
+        "label": "(D) CO",
+        "roleInference": "heuristic",
+        "styleMeasurements": {
+          "border": {
+            "color": "#e3e1e4",
+            "widthPx": null
+          },
+          "cornerRadiusPxEstimate": null,
+          "fill": "#fefefe"
+        },
+        "styleRef": "s-48c290c5",
+        "type": "container"
+      },
+      {
+        "box": [
+          149,
+          448,
+          170,
+          207
+        ],
+        "evidence": "pixel-region",
+        "id": "n18",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          353,
+          483,
+          199,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n19",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-02f14cb5",
+        "text": "9:00 AM C",
+        "type": "text"
+      },
+      {
+        "box": [
+          1027,
+          500,
+          70,
+          68
+        ],
+        "evidence": "pixel-region",
+        "id": "n20",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          49,
+          521,
+          77,
+          31
+        ],
+        "evidence": "ocr",
+        "id": "n21",
+        "inkHeightPx": 31,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-02f14cb5",
+        "text": "9:00",
+        "type": "text"
+      },
+      {
+        "box": [
+          353,
+          542,
+          353,
+          46
+        ],
+        "evidence": "ocr",
+        "id": "n22",
+        "inkHeightPx": 46,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-b3c504a3",
+        "text": "Rise and Shine",
+        "type": "text"
+      },
+      {
+        "box": [
+          345,
+          706,
+          637,
+          63
+        ],
+        "evidence": "ocr",
+        "id": "n23",
+        "inkHeightPx": 63,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-676ba9bd",
+        "text": "Zz Past moments, gained insights.",
+        "type": "text"
+      },
+      {
+        "box": [
+          31,
+          717,
+          94,
+          32
+        ],
+        "evidence": "ocr",
+        "id": "n24",
+        "inkHeightPx": 32,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-442161f2",
+        "text": "10:00",
+        "type": "text"
+      },
+      {
+        "box": [
+          149,
+          806,
+          170,
+          387
+        ],
+        "evidence": "pixel-region",
+        "id": "n25",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          31,
+          832,
+          94,
+          32
+        ],
+        "evidence": "ocr",
+        "id": "n26",
+        "inkHeightPx": 32,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-10ba983c",
+        "text": "11:00",
+        "type": "text"
+      },
+      {
+        "box": [
+          349,
+          948,
+          457,
+          38
+        ],
+        "evidence": "ocr",
+        "id": "n27",
+        "inkHeightPx": 38,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-1c21881f",
+        "text": "11:00-11:45 AM (45 min)",
+        "type": "text"
+      },
+      {
+        "box": [
+          1027,
+          966,
+          70,
+          68
+        ],
+        "evidence": "pixel-region",
+        "id": "n28",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          352,
+          1005,
+          224,
+          56
+        ],
+        "evidence": "ocr",
+        "id": "n29",
+        "inkHeightPx": 56,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-b3c504a3",
+        "text": "Clean Up",
+        "type": "text"
+      },
+      {
+        "box": [
+          31,
+          1143,
+          94,
+          32
+        ],
+        "evidence": "ocr",
+        "id": "n30",
+        "inkHeightPx": 32,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-10ba983c",
+        "text": "11:45",
+        "type": "text"
+      },
+      {
+        "box": [
+          52,
+          1234,
+          73,
+          31
+        ],
+        "evidence": "ocr",
+        "id": "n31",
+        "inkHeightPx": 31,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-442161f2",
+        "text": "2:00",
+        "type": "text"
+      },
+      {
+        "box": [
+          345,
+          1248,
+          40,
+          44
+        ],
+        "evidence": "pixel-region",
+        "id": "n32",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          401,
+          1254,
+          455,
+          46
+        ],
+        "evidence": "ocr",
+        "id": "n33",
+        "inkHeightPx": 46,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-875ba0a0",
+        "text": "Task ahead! 8m to prep.",
+        "type": "text"
+      },
+      {
+        "box": [
+          151,
+          1350,
+          166,
+          811
+        ],
+        "evidence": "pixel-region",
+        "id": "n34",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          52,
+          1367,
+          73,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n35",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-b3c504a3",
+        "text": "5:22",
+        "type": "text"
+      },
+      {
+        "box": [
+          352,
+          1391,
+          503,
+          44
+        ],
+        "evidence": "ocr",
+        "id": "n36",
+        "inkHeightPx": 44,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-02f14cb5",
+        "text": "Tap here to learn the basics",
+        "type": "text"
+      },
+      {
+        "box": [
+          353,
+          1451,
+          394,
+          49
+        ],
+        "evidence": "ocr",
+        "id": "n37",
+        "inkHeightPx": 49,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-b3c504a3",
+        "text": "Get Started with",
+        "type": "text"
+      },
+      {
+        "box": [
+          1027,
+          1486,
+          70,
+          68
+        ],
+        "evidence": "pixel-region",
+        "id": "n38",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          353,
+          1539,
+          283,
+          52
+        ],
+        "evidence": "ocr",
+        "id": "n39",
+        "inkHeightPx": 52,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-b3c504a3",
+        "text": "Structured!",
+        "type": "text"
+      },
+      {
+        "box": [
+          358,
+          1617,
+          37,
+          35
+        ],
+        "evidence": "pixel-region",
+        "id": "n40",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          52,
+          1658,
+          73,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n41",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-10ba983c",
+        "text": "5:35",
+        "type": "text"
+      },
+      {
+        "box": [
+          353,
+          1700,
+          468,
+          38
+        ],
+        "evidence": "ocr",
+        "id": "n42",
+        "inkHeightPx": 38,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-eb4aade9",
+        "text": "Start structuring your day",
+        "type": "text"
+      },
+      {
+        "box": [
+          353,
+          1756,
+          464,
+          49
+        ],
+        "evidence": "ocr",
+        "id": "n43",
+        "inkHeightPx": 49,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-b3c504a3",
+        "text": "Add Your First Task",
+        "type": "text"
+      },
+      {
+        "box": [
+          1027,
+          1763,
+          70,
+          68
+        ],
+        "evidence": "pixel-region",
+        "id": "n44",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          216,
+          1780,
+          38,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n45",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-b06ee3fd",
+        "text": "+",
+        "type": "text"
+      },
+      {
+        "box": [
+          354,
+          1834,
+          197,
+          67
+        ],
+        "evidence": "pixel-region",
+        "id": "n46",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          592,
+          1849,
+          37,
+          35
+        ],
+        "evidence": "pixel-region",
+        "id": "n47",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          384,
+          1853,
+          143,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n48",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-5fc150e1",
+        "text": "v 0/5 ›",
+        "type": "text"
+      },
+      {
+        "box": [
+          52,
+          1906,
+          73,
+          31
+        ],
+        "evidence": "ocr",
+        "id": "n49",
+        "inkHeightPx": 31,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-1ce60ece",
+        "text": "5:40",
+        "type": "text"
+      },
+      {
+        "box": [
+          353,
+          1944,
+          384,
+          42
+        ],
+        "evidence": "ocr",
+        "id": "n50",
+        "inkHeightPx": 42,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-eb4aade9",
+        "text": "Don't forget anything",
+        "type": "text"
+      },
+      {
+        "box": [
+          1029,
+          1995,
+          68,
+          68
+        ],
+        "evidence": "pixel-region",
+        "id": "n51",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          353,
+          2004,
+          335,
+          49
+        ],
+        "evidence": "ocr",
+        "id": "n52",
+        "inkHeightPx": 49,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-0ebf888a",
+        "text": "Fill Your Inbox",
+        "type": "text"
+      },
+      {
+        "box": [
+          358,
+          2083,
+          37,
+          35
+        ],
+        "evidence": "pixel-region",
+        "id": "n53",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          52,
+          2126,
+          73,
+          31
+        ],
+        "evidence": "ocr",
+        "id": "n54",
+        "inkHeightPx": 31,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-02f14cb5",
+        "text": "5:45",
+        "type": "text"
+      },
+      {
+        "box": [
+          933,
+          2159,
+          188,
+          192
+        ],
+        "evidence": "pixel-region",
+        "id": "n55",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          666,
+          2188,
+          164,
+          78
+        ],
+        "evidence": "pixel-region",
+        "id": "n56",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          336,
+          2192,
+          29,
+          30
+        ],
+        "evidence": "pixel-region",
+        "id": "n57",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          136,
+          2196,
+          142,
+          99
+        ],
+        "evidence": "pixel-region",
+        "id": "n58",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          553,
+          2201,
+          30,
+          30
+        ],
+        "evidence": "pixel-region",
+        "id": "n59",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          548,
+          2211,
+          94,
+          59
+        ],
+        "evidence": "pixel-region",
+        "id": "n60",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          336,
+          2223,
+          143,
+          45
+        ],
+        "evidence": "pixel-region",
+        "id": "n61",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          1012,
+          2233,
+          168,
+          173
+        ],
+        "evidence": "pixel-region",
+        "id": "n62",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          0,
+          2240,
+          171,
+          166
+        ],
+        "evidence": "pixel-region",
+        "id": "n63",
+        "role": "unknown-asset",
+        "type": "image"
+      },
+      {
+        "box": [
+          311,
+          2283,
+          140,
+          32
+        ],
+        "evidence": "ocr",
+        "id": "n64",
+        "inkHeightPx": 32,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-cddb8865",
+        "text": "Timeline",
+        "type": "text"
+      },
+      {
+        "box": [
+          716,
+          2283,
+          140,
+          35
+        ],
+        "evidence": "ocr",
+        "id": "n65",
+        "inkHeightPx": 35,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-0ebf888a",
+        "text": "Settings",
+        "type": "text"
+      },
+      {
+        "box": [
+          129,
+          2287,
+          98,
+          29
+        ],
+        "evidence": "ocr",
+        "id": "n66",
+        "inkHeightPx": 29,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-0ebf888a",
+        "text": "Inbox",
+        "type": "text"
+      },
+      {
+        "box": [
+          566,
+          2287,
+          38,
+          28
+        ],
+        "evidence": "ocr",
+        "id": "n67",
+        "inkHeightPx": 28,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-0ebf888a",
+        "text": "Al",
+        "type": "text"
+      },
+      {
+        "box": [
+          52,
+          2312,
+          52,
+          31
+        ],
+        "evidence": "ocr",
+        "id": "n68",
+        "inkHeightPx": 31,
+        "ocrConfidence": 1,
+        "role": "text",
+        "styleRef": "s-bf38baf1",
+        "text": "5:0",
+        "type": "text"
+      },
+      {
+        "box": [
+          177,
+          2345,
+          112,
+          57
+        ],
+        "evidence": "pixel-region",
+        "id": "n69",
+        "role": "unknown-asset",
+        "type": "image"
+      }
+    ],
+    "roi": [
+      0,
+      150,
+      1180,
+      2406
+    ],
+    "schemaVersion": 1,
+    "sourceSha256": "47cceafc14181859dfd910f77d3d5d0770866b10fd03d1cf5cb8959630dbfece",
+    "styles": {
+      "s-01198102": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#858489"
+      },
+      "s-02f14cb5": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#747474"
+      },
+      "s-0ebf888a": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#030003"
+      },
+      "s-10ba983c": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#767676"
+      },
+      "s-13b61f8a": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#6586a8"
+      },
+      "s-1c21881f": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#737373"
+      },
+      "s-1ce60ece": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#787679"
+      },
+      "s-26357f49": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#fff9f9"
+      },
+      "s-335c56f0": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#8e8d92"
+      },
+      "s-442161f2": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#787878"
+      },
+      "s-48c290c5": {
+        "border": {
+          "color": "#e3e1e4",
+          "widthPx": null
+        },
+        "cornerRadiusPxEstimate": null,
+        "fill": "#fefefe"
+      },
+      "s-4faf7ed3": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#030308"
+      },
+      "s-5fc150e1": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#615e61"
+      },
+      "s-6441ee88": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#020206"
+      },
+      "s-676ba9bd": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#777478"
+      },
+      "s-875ba0a0": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#717171"
+      },
+      "s-9334b530": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#848388"
+      },
+      "s-b06ee3fd": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#ffe7e2"
+      },
+      "s-b3c504a3": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#000000"
+      },
+      "s-bf38baf1": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#706d71"
+      },
+      "s-cddb8865": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#cda4a0"
+      },
+      "s-d21e89db": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#87868b"
+      },
+      "s-d5966240": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#818085"
+      },
+      "s-db51cbaf": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#88878c"
+      },
+      "s-eb4aade9": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#767376"
+      },
+      "s-f1cf4d40": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#f6a09b"
+      },
+      "s-f7fc0bdc": {
+        "fontFamily": null,
+        "fontSizePx": null,
+        "fontWeight": null,
+        "textColor": "#010005"
+      }
+    },
+    "unknowns": [
+      "Exact fonts, layout rules and behavior need inference.",
+      "Image regions identify pixels; original vectors and transparency are unknown.",
+      "Role inference targets simple stacked forms; inspect other layouts."
+    ]
+  },
+  "unknowns": [
+    "Exact fonts, layout rules and behavior need inference.",
+    "Image regions identify pixels; original vectors and transparency are unknown.",
+    "Role inference targets simple stacked forms; inspect other layouts."
+  ],
+  "evidenceSha256": "817ea034ca133f078ee587e41f031f82edcf1f2609caea7120d79041592c3213"
+}
